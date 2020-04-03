@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace DoenaSoft.SixDegreesOfDVDProfiler
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     public partial class MainForm : Form
     {

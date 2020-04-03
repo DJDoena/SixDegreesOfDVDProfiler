@@ -1,4 +1,4 @@
-﻿namespace DoenaSoft.SixDegreesOfDVDProfiler
+﻿namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     partial class MainForm
     {
