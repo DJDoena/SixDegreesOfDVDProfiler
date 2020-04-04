@@ -10,6 +10,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private readonly Persons _persons;
 
+        private PersonKey _sourcePersonKey;
+
         private PersonKey _targetPersonKey;
 
         public ConnectionFinder(Persons persons)
@@ -17,44 +19,83 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             _persons = persons ?? throw new ArgumentNullException(nameof(persons));
         }
 
-        public Steps Find(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth)
+        public IEnumerable<Steps> FindForward(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth)
         {
-            if (Init(startPerson, targetPerson, out var startingEntries, out var steps))
+            if (Init(sourcePerson, targetPerson, out var startingEntries, out var steps))
             {
-                return steps;
+                yield return steps;
+
+                yield break;
             }
 
             for (byte targetSubLevel = 0; targetSubLevel < maxSearchDepth; targetSubLevel++)
             {
-                var result = Find(startingEntries, targetSubLevel);
+                var results = startingEntries.SelectMany(startingEntry => FindForward(startingEntry, targetSubLevel));
 
-                if (result != null)
+                if (results.Any())
                 {
-                    return result;
+                    foreach (var result in results)
+                    {
+                        yield return result;
+                    }
+
+                    yield break;
                 }
             }
-
-            return null;
         }
 
-        public Steps FindReverse(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth)
+        private IEnumerable<Steps> FindForward(ProfileEntry startingEntry, byte targetSubLevel)
         {
-            if (Init(startPerson, targetPerson, out var startingEntries, out var steps))
+            var profiles = GetSubProfiles(startingEntry, 0, targetSubLevel, new Steps());
+
+            var matches = profiles.Where(IsPersonMatch);
+
+            var results = matches.Select(m => m.Steps);
+
+            return results;
+        }
+
+        public IEnumerable<Steps> FindReverse(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth)
+        {
+            if (Init(sourcePerson, targetPerson, out var startingEntries, out var steps))
             {
-                return steps;
+                yield return steps;
+
+                yield break;
             }
 
             if (maxSearchDepth == 0)
             {
-                return null;
+                yield break;
             }
 
-            for (byte targetSubLevel = (byte)(maxSearchDepth - 1); targetSubLevel >= 0; targetSubLevel--)
+            for (byte targetSubLevel = maxSearchDepth; targetSubLevel > 0; targetSubLevel--)
             {
-                var result = Find(startingEntries, targetSubLevel);
+                var result = FindReverse(startingEntries, (byte)(targetSubLevel - 1));
 
                 if (result != null)
                 {
+                    yield return result;
+
+                    yield break;
+                }
+            }
+        }
+
+        private Steps FindReverse(ProfileEntries startingEntries, byte targetSubLevel)
+        {
+            foreach (var startingEntry in startingEntries)
+            {
+                var profiles = GetSubProfiles(startingEntry, 0, targetSubLevel, new Steps());
+
+                var matches = profiles.Where(IsPersonMatch);
+
+                var match = matches.FirstOrDefault(IsNotReverseDisqualified); //everything but the first is just too performance-heavy
+
+                if (match != null)
+                {
+                    var result = match.Steps;
+
                     return result;
                 }
             }
@@ -62,24 +103,24 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return null;
         }
 
-        private bool Init(IPerson startPerson, IPerson targetPerson, out ProfileEntries startingEntries, out Steps steps)
+        private bool Init(IPerson sourcePerson, IPerson targetPerson, out ProfileEntries startingEntries, out Steps steps)
         {
-            if (startPerson == null)
+            if (sourcePerson == null)
             {
-                throw new ArgumentNullException(nameof(startPerson));
+                throw new ArgumentNullException(nameof(sourcePerson));
             }
             else if (targetPerson == null)
             {
                 throw new ArgumentNullException(nameof(targetPerson));
             }
 
-            var startPersonKey = new PersonKey(startPerson);
+            _sourcePersonKey = new PersonKey(sourcePerson);
 
             _targetPersonKey = new PersonKey(targetPerson);
 
-            if (!_persons.TryGetValue(startPersonKey, out startingEntries))
+            if (!_persons.TryGetValue(_sourcePersonKey, out startingEntries))
             {
-                throw new PersonNotInCollectionException(startPerson);
+                throw new PersonNotInCollectionException(sourcePerson);
             }
 
             if (!_persons.TryGetValue(_targetPersonKey, out _))
@@ -87,7 +128,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 throw new PersonNotInCollectionException(targetPerson);
             }
 
-            if (startPersonKey.Equals(_targetPersonKey))
+            if (_sourcePersonKey.Equals(_targetPersonKey))
             {
                 steps = new Steps();
 
@@ -99,44 +140,19 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return false;
         }
 
-        #region Find
-
-        private Steps Find(ProfileEntries startingEntries, byte targetSubLevel)
+        /// <summary>
+        /// source person may only appear in last step, otherwise it's an invalid chain
+        /// target person may only appear in last step, otherwise it's an invalid chain
+        /// </summary>
+        private bool IsNotReverseDisqualified(DeepProfiles profile)
         {
-            foreach (var startingEntry in startingEntries)
-            {
-                var steps = new Steps();
+            var steps = profile.Steps.GetSteps().ToList();
 
-                var profiles = GetSubProfiles(startingEntry, 0, targetSubLevel, steps);
+            var isDisqualified = steps.Any(s => IsPersonMatch(s.Left, _sourcePersonKey))
+                || steps.Any(s => IsPersonMatch(s.Right, _targetPersonKey));
 
-                var result = Find(profiles);
-
-                if (result != null)
-                {
-                    return result;
-                }
-            }
-
-            return null;
+            return !isDisqualified;
         }
-
-        private Steps Find(IEnumerable<DeepProfiles> deepProfiles)
-        {
-            var match = deepProfiles.FirstOrDefault(dp => dp.Profile.PersonKey.Equals(_targetPersonKey));
-
-            if (match != null)
-            {
-                var result = match.Steps;
-
-                return result;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        #endregion
 
         #region GetSubProfiles
 
@@ -192,8 +208,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             var titles = entries.Select(e => e.Title);
 
             var result = !profileIds.Contains(profile.ProfileId)
-                && !persons.Contains(profile.PersonKey)
-                && !titles.Contains(profile.Title);
+                && !persons.Any(p => IsPersonMatch(p, profile.PersonKey)
+                && !titles.Contains(profile.Title));
 
             return result;
         }
@@ -205,6 +221,28 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             var result = stepList.Select(s => s.Left).Concat(stepList.Select(s => s.Right));
 
             return result;
+        }
+
+        #endregion
+
+        #region IsPersonMatch
+
+        private bool IsPersonMatch(ProfileEntry entry, PersonKey personKey) => entry.CoProfiles.Any(p => IsPersonMatch(p.PersonKey, personKey));
+
+        private bool IsPersonMatch(DeepProfiles profiles) => IsPersonMatch(profiles.Profile.PersonKey, _targetPersonKey);
+
+        private static bool IsPersonMatch(PersonKey left, PersonKey right)
+        {
+            if (left.GetHashCode() != right.GetHashCode())
+            {
+                return false;
+            }
+            else
+            {
+                var equals = left.Equals(right);
+
+                return equals;
+            }
         }
 
         #endregion

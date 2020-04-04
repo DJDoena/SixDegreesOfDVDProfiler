@@ -8,7 +8,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     public static class SixDegrees
     {
-        public static Steps Find(IEnumerable<DVD> collection, IPerson startPerson, IPerson targetPerson, byte maxSearchDepth, bool considerCast = true, bool considerCrew = false)
+        public static IEnumerable<Steps> FindForward(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, bool considerCast = true, bool considerCrew = false)
         {
             if (collection == null)
             {
@@ -18,9 +18,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 throw new ArgumentException("Collection contains profiles that are null", nameof(collection));
             }
-            else if (startPerson == null)
+            else if (sourcePerson == null)
             {
-                throw new ArgumentNullException(nameof(startPerson));
+                throw new ArgumentNullException(nameof(sourcePerson));
             }
             else if (targetPerson == null)
             {
@@ -29,7 +29,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var persons = (new PersonsBuilder()).Build(collection, considerCast, considerCrew);
 
-            var result = (new ConnectionFinder(persons)).Find(startPerson, targetPerson, maxSearchDepth);
+            var result = (new ConnectionFinder(persons)).FindForward(sourcePerson, targetPerson, maxSearchDepth);
 
             return result;
         }

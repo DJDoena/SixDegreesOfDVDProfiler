@@ -176,11 +176,19 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void OnStartShortSearchButtonClick(object sender, EventArgs e)
         {
-            Find((new ConnectionFinder(Persons)).Find);
+            Find((new ConnectionFinder(Persons)).FindForward);
         }
 
         private void OnStartLongSearchButtonClick(object sender, EventArgs e)
         {
+            if (MaxSearchDepthUpDown.Value > 3)
+            {
+                if (MessageBox.Show("Reverse search may take a long time with a larger depth. Do you really wish to continue?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
             Find((new ConnectionFinder(Persons)).FindReverse);
         }
 
@@ -221,25 +229,27 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var rightPerson = new SearchPerson(RightFirstNameTextBox.Text, RightMiddleNameTextBox.Text, RightLastNameTextBox.Text, (ushort)RightBirthYearUpDown.Value);
 
-            var result = find(leftPerson, rightPerson, (byte)MaxSearchDepthUpDown.Value);
+            var results = find(leftPerson, rightPerson, (byte)MaxSearchDepthUpDown.Value);
 
-            if (result == null)
+            var firstResult = results.FirstOrDefault();
+
+            if (firstResult == null)
             {
                 MessageBox.Show("No connection found.", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (result.Degree == 0)
+            else if (firstResult.Degree == 0)
             {
                 MessageBox.Show("Left and right are the same person. Their degree of separation is: 0", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                using (var resultForm = new ResultForm(new[] { result }))
+                using (var resultForm = new ResultForm(firstResult, results))
                 {
                     resultForm.ShowDialog();
                 }
             }
         }
 
-        private delegate Steps FindDelegate(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth);
+        private delegate IEnumerable<Steps> FindDelegate(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth);
     }
 }

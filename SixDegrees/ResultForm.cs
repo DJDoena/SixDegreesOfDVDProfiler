@@ -14,7 +14,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private readonly BackgroundWorker _worker;
 
-        internal ResultForm(IEnumerable<Steps> results)
+        internal ResultForm(Steps firstResult, IEnumerable<Steps> results)
         {
             _results = results;
 
@@ -23,9 +23,15 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 WorkerSupportsCancellation = true,
             };
 
-            _worker.DoWork += OnDoWork;
-
             InitializeComponent();
+
+            var firstRow = CreateRow(firstResult);
+
+            ResultListView.Items.Add(firstRow);
+
+            firstRow.Selected = true;
+
+            _worker.DoWork += OnDoWork;
         }
 
         private void OnResultFormLoad(object sender, EventArgs e)
@@ -35,45 +41,56 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void OnDoWork(object sender, DoWorkEventArgs e)
         {
+            var isFirstRow = true;
+
             foreach (var result in _results)
             {
-                var first = result.GetSteps().First();
-
-                var last = result.GetSteps().Last();
-
-                var subItems = new[] { result.Degree.ToString(), first.Left.Profile.Title, last.Right.Profile.Title };
-
-                var row = new ListViewItem(subItems)
+                if (isFirstRow)
                 {
-                    Tag = result,
-                };
+                    isFirstRow = false;
+
+                    continue;
+                }
 
                 if (_worker.CancellationPending)
                 {
                     break;
                 }
 
-                ResultListView.Invoke(new Action(() =>
-                {
-                    ResultListView.Items.Add(row);
+                var row = CreateRow(result);
 
-                    if (ResultListView.Items.Count == 1)
-                    {
-                        ResultListView.Items[0].Selected = true;
-                    }
-                }));
+                ResultListView.Invoke(new Action(() => ResultListView.Items.Add(row)));
             }
+        }
+
+        private static ListViewItem CreateRow(Steps result)
+        {
+            var first = result.GetSteps().First();
+
+            var last = result.GetSteps().Last();
+
+            var subItems = new[] { result.Degree.ToString(), first.Left.Profile.Title, last.Right.Profile.Title };
+
+            var row = new ListViewItem(subItems)
+            {
+                Tag = result,
+            };
+
+            return row;
         }
 
         private void OnResultListViewSelectedIndexChanged(object sender, EventArgs e)
         {
             StepsListView.Items.Clear();
 
-            var steps = (Steps)ResultListView.SelectedItems[0].Tag;
+            if (ResultListView.SelectedItems.Count > 0)
+            {
+                var steps = (Steps)ResultListView.SelectedItems[0].Tag;
 
-            var rows = steps.GetSteps().Select(GetStepRow).ToArray();
+                var rows = steps.GetSteps().Select(GetStepRow).ToArray();
 
-            StepsListView.Items.AddRange(rows);
+                StepsListView.Items.AddRange(rows);
+            }
         }
 
         private static ListViewItem GetStepRow(Step step)
