@@ -41,11 +41,12 @@
     <Compile Include="..\SixDegrees\Properties\SixDegrees.AssemblyInfo.cs">
       <Link>Properties\SixDegrees.AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Finder.cs" />
-    <Compile Include="Profiles.cs" />
+    <Compile Include="ConnectionFinder.cs" />
+    <Compile Include="PersonFormatter.cs" />
+    <Compile Include="ProfileEntries.cs" />
     <Compile Include="SixDegrees.cs" />
     <Compile Include="PersonNotInCollectionException.cs" />
-    <Compile Include="GraphBuilder.cs" />
+    <Compile Include="PersonsBuilder.cs" />
     <Compile Include="Persons.cs" />
     <Compile Include="ProfileEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

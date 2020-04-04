@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 
@@ -13,6 +14,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 throw new ArgumentNullException(nameof(collection));
             }
+            else if (collection.Any(p => p == null))
+            {
+                throw new ArgumentException("Collection contains profiles that are null", nameof(collection));
+            }
             else if (startPerson == null)
             {
                 throw new ArgumentNullException(nameof(startPerson));
@@ -22,9 +27,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 throw new ArgumentNullException(nameof(targetPerson));
             }
 
-            var persons = (new GraphBuilder()).Build(collection, considerCast, considerCrew);
+            var persons = (new PersonsBuilder()).Build(collection, considerCast, considerCrew);
 
-            var result = (new Finder(persons)).Find(startPerson, targetPerson, maxSearchDepth);
+            var result = (new ConnectionFinder(persons)).Find(startPerson, targetPerson, maxSearchDepth);
 
             return result;
         }

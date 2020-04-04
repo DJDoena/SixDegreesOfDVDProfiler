@@ -18,23 +18,46 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         public CrewMember CrewMember => Person as CrewMember;
 
+        internal string ProfileId { get; }
+
+        internal string Title { get; }
+
         internal PersonKey PersonKey { get; }
 
-        internal Profiles CoProfiles { get; }
+        internal ProfileEntries CoProfiles { get; }
 
         internal ProfileEntry(DVD profile, IPerson person)
         {
             Profile = profile;
             Person = person;
-            CoProfiles = new Profiles();
+            CoProfiles = new ProfileEntries();
             PersonKey = new PersonKey(person);
-            _hashCode = Profile.ID.GetHashCode() ^ PersonKey.GetHashCode();
+            ProfileId = Profile.ID;
+            Title = BuildTitle(Profile);
+            _hashCode = ProfileId.GetHashCode() ^ PersonKey.GetHashCode();
         }
 
         public override int GetHashCode() => _hashCode;
 
         public override bool Equals(object obj) => Equals(obj as ProfileEntry);
 
-        public bool Equals(ProfileEntry other) => Profile.ID.Equals(other?.Profile.ID) && PersonKey.Equals(other?.PersonKey);
+        public bool Equals(ProfileEntry other) => ProfileId.Equals(other?.ProfileId) && PersonKey.Equals(other?.PersonKey);
+
+        private static string BuildTitle(DVD profile)
+        {
+            var title = profile.Title?.Trim() ?? string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(profile.OriginalTitle))
+            {
+                title = profile.OriginalTitle.Trim();
+            }
+
+            if (profile.ProductionYear > 0)
+            {
+                title = $"{title} ({profile.ProductionYear})";
+            }
+
+            return title;
+        }
     }
 }

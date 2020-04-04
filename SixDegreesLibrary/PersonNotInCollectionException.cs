@@ -5,8 +5,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     public sealed class PersonNotInCollectionException : Exception
     {
-        public PersonNotInCollectionException(IPerson person) : base($"{person} was not found in collection.")
+        public IPerson Person { get; }
+
+        internal PersonNotInCollectionException(IPerson person) : base($"{PersonFormatter.GetName(person)} was not found in collection.")
         {
+            Person = person;
         }
     }
 }

@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
+    [DebuggerDisplay("Degree: {Degree}")]
     public sealed class Steps
     {
         private readonly List<Step> _steps;
+
+        public byte Degree => (byte)_steps.Count;
 
         internal Steps()
         {

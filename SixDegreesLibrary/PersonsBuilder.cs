@@ -6,11 +6,11 @@ using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    public sealed class GraphBuilder
+    public sealed class PersonsBuilder
     {
         private Persons _persons;
 
-        private Dictionary<string, Profiles> _profiles;
+        private Dictionary<string, ProfileEntries> _profiles;
 
         public Persons Build(IEnumerable<DVD> collection, bool considerCast = true, bool considerCrew = false)
         {
@@ -18,10 +18,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 throw new ArgumentNullException(nameof(collection));
             }
+            else if (collection.Any(p => p == null))
+            {
+                throw new ArgumentException("Collection contains profiles that are null", nameof(collection));
+            }
 
             _persons = new Persons();
 
-            _profiles = new Dictionary<string, Profiles>();
+            _profiles = new Dictionary<string, ProfileEntries>();
 
             foreach (var profile in collection)
             {
@@ -42,7 +46,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             if (!_profiles.TryGetValue(profile.ID, out var profileProfileItems))
             {
-                profileProfileItems = new Profiles();
+                profileProfileItems = new ProfileEntries();
 
                 _profiles.Add(profile.ID, profileProfileItems);
             }
@@ -64,7 +68,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private void AddPersonToRoot(IEnumerable<IPerson> persons, DVD profile, HashSet<PersonKey> processedPersonsInProfile, Profiles profileProfileItems)
+        private void AddPersonToRoot(IEnumerable<IPerson> persons, DVD profile, HashSet<PersonKey> processedPersonsInProfile, ProfileEntries profileProfileItems)
         {
             foreach (var person in persons)
             {
@@ -77,7 +81,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                 if (!_persons.TryGetValue(key, out var personProfileItems))
                 {
-                    personProfileItems = new Profiles();
+                    personProfileItems = new ProfileEntries();
 
                     _persons.Add(key, personProfileItems);
                 }
@@ -90,7 +94,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private static void CrossLinkProfiles(Profiles profileProfileItems)
+        private static void CrossLinkProfiles(ProfileEntries profileProfileItems)
         {
             foreach (var profileItem in profileProfileItems)
             {
