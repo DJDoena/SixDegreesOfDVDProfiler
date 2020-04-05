@@ -62,6 +62,7 @@
             this.MaxSearchDepthUpDown = new System.Windows.Forms.NumericUpDown();
             this.StartShortSearchButton = new System.Windows.Forms.Button();
             this.StartLongSearchButton = new System.Windows.Forms.Button();
+            this.OnlyIncludeOwnedProfilesCheckBox = new System.Windows.Forms.CheckBox();
             LoadXmlButton = new System.Windows.Forms.Button();
             WelcomeLabel = new System.Windows.Forms.Label();
             InfoLabel = new System.Windows.Forms.Label();
@@ -131,7 +132,7 @@
             LeftGroupBox.Location = new System.Drawing.Point(12, 200);
             LeftGroupBox.Name = "LeftGroupBox";
             LeftGroupBox.Size = new System.Drawing.Size(325, 160);
-            LeftGroupBox.TabIndex = 7;
+            LeftGroupBox.TabIndex = 8;
             LeftGroupBox.TabStop = false;
             LeftGroupBox.Text = "Left person";
             // 
@@ -233,7 +234,7 @@
             RightGroupBox.Location = new System.Drawing.Point(343, 200);
             RightGroupBox.Name = "RightGroupBox";
             RightGroupBox.Size = new System.Drawing.Size(325, 160);
-            RightGroupBox.TabIndex = 8;
+            RightGroupBox.TabIndex = 9;
             RightGroupBox.TabStop = false;
             RightGroupBox.Text = "Right person";
             // 
@@ -326,8 +327,30 @@
             MaxSearchDepthLabel.Location = new System.Drawing.Point(9, 382);
             MaxSearchDepthLabel.Name = "MaxSearchDepthLabel";
             MaxSearchDepthLabel.Size = new System.Drawing.Size(95, 13);
-            MaxSearchDepthLabel.TabIndex = 9;
+            MaxSearchDepthLabel.TabIndex = 10;
             MaxSearchDepthLabel.Text = "Max search depth:";
+            // 
+            // KevinBaconLinkLabel
+            // 
+            KevinBaconLinkLabel.AutoSize = true;
+            KevinBaconLinkLabel.Location = new System.Drawing.Point(9, 51);
+            KevinBaconLinkLabel.Name = "KevinBaconLinkLabel";
+            KevinBaconLinkLabel.Size = new System.Drawing.Size(193, 13);
+            KevinBaconLinkLabel.TabIndex = 2;
+            KevinBaconLinkLabel.TabStop = true;
+            KevinBaconLinkLabel.Text = "Wikipedia: Six Degrees of Kevin Bacon";
+            KevinBaconLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnKevinBaconLinkLabelLinkClicked);
+            // 
+            // SixDegreesLinkLabel
+            // 
+            SixDegreesLinkLabel.AutoSize = true;
+            SixDegreesLinkLabel.Location = new System.Drawing.Point(9, 72);
+            SixDegreesLinkLabel.Name = "SixDegreesLinkLabel";
+            SixDegreesLinkLabel.Size = new System.Drawing.Size(183, 13);
+            SixDegreesLinkLabel.TabIndex = 3;
+            SixDegreesLinkLabel.TabStop = true;
+            SixDegreesLinkLabel.Text = "Wikipedia: Six Degrees of Separation";
+            SixDegreesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnSixDegreesLinkLabelLinkClicked);
             // 
             // IncludeCastCheckBox
             // 
@@ -353,28 +376,6 @@
             this.IncludeCrewCheckBox.UseVisualStyleBackColor = true;
             this.IncludeCrewCheckBox.CheckedChanged += new System.EventHandler(this.OnIncludeCrewCheckBoxCheckedChanged);
             // 
-            // KevinBaconLinkLabel
-            // 
-            KevinBaconLinkLabel.AutoSize = true;
-            KevinBaconLinkLabel.Location = new System.Drawing.Point(9, 51);
-            KevinBaconLinkLabel.Name = "KevinBaconLinkLabel";
-            KevinBaconLinkLabel.Size = new System.Drawing.Size(193, 13);
-            KevinBaconLinkLabel.TabIndex = 2;
-            KevinBaconLinkLabel.TabStop = true;
-            KevinBaconLinkLabel.Text = "Wikipedia: Six Degrees of Kevin Bacon";
-            KevinBaconLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnKevinBaconLinkLabelLinkClicked);
-            // 
-            // SixDegreesLinkLabel
-            // 
-            SixDegreesLinkLabel.AutoSize = true;
-            SixDegreesLinkLabel.Location = new System.Drawing.Point(9, 72);
-            SixDegreesLinkLabel.Name = "SixDegreesLinkLabel";
-            SixDegreesLinkLabel.Size = new System.Drawing.Size(183, 13);
-            SixDegreesLinkLabel.TabIndex = 3;
-            SixDegreesLinkLabel.TabStop = true;
-            SixDegreesLinkLabel.Text = "Wikipedia: Six Degrees of Separation";
-            SixDegreesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnSixDegreesLinkLabelLinkClicked);
-            // 
             // MaxSearchDepthUpDown
             // 
             this.MaxSearchDepthUpDown.Location = new System.Drawing.Point(117, 380);
@@ -385,7 +386,7 @@
             0});
             this.MaxSearchDepthUpDown.Name = "MaxSearchDepthUpDown";
             this.MaxSearchDepthUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchDepthUpDown.TabIndex = 10;
+            this.MaxSearchDepthUpDown.TabIndex = 11;
             this.MaxSearchDepthUpDown.Value = new decimal(new int[] {
             10,
             0,
@@ -397,7 +398,7 @@
             this.StartShortSearchButton.Location = new System.Drawing.Point(12, 406);
             this.StartShortSearchButton.Name = "StartShortSearchButton";
             this.StartShortSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartShortSearchButton.TabIndex = 11;
+            this.StartShortSearchButton.TabIndex = 12;
             this.StartShortSearchButton.Text = "Search shortest link";
             this.StartShortSearchButton.UseVisualStyleBackColor = true;
             this.StartShortSearchButton.Click += new System.EventHandler(this.OnStartShortSearchButtonClick);
@@ -407,16 +408,30 @@
             this.StartLongSearchButton.Location = new System.Drawing.Point(12, 435);
             this.StartLongSearchButton.Name = "StartLongSearchButton";
             this.StartLongSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartLongSearchButton.TabIndex = 12;
+            this.StartLongSearchButton.TabIndex = 13;
             this.StartLongSearchButton.Text = "Search longest link";
             this.StartLongSearchButton.UseVisualStyleBackColor = true;
             this.StartLongSearchButton.Click += new System.EventHandler(this.OnStartLongSearchButtonClick);
+            // 
+            // OnlyIncludeOwnedProfilesCheckBox
+            // 
+            this.OnlyIncludeOwnedProfilesCheckBox.AutoSize = true;
+            this.OnlyIncludeOwnedProfilesCheckBox.Checked = true;
+            this.OnlyIncludeOwnedProfilesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.OnlyIncludeOwnedProfilesCheckBox.Location = new System.Drawing.Point(193, 159);
+            this.OnlyIncludeOwnedProfilesCheckBox.Name = "OnlyIncludeOwnedProfilesCheckBox";
+            this.OnlyIncludeOwnedProfilesCheckBox.Size = new System.Drawing.Size(161, 17);
+            this.OnlyIncludeOwnedProfilesCheckBox.TabIndex = 7;
+            this.OnlyIncludeOwnedProfilesCheckBox.Text = "Only included owned profiles";
+            this.OnlyIncludeOwnedProfilesCheckBox.UseVisualStyleBackColor = true;
+            this.OnlyIncludeOwnedProfilesCheckBox.CheckedChanged += new System.EventHandler(this.OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 486);
+            this.Controls.Add(this.OnlyIncludeOwnedProfilesCheckBox);
             this.Controls.Add(this.StartLongSearchButton);
             this.Controls.Add(this.StartShortSearchButton);
             this.Controls.Add(MaxSearchDepthLabel);
@@ -462,6 +477,7 @@
         private System.Windows.Forms.Button RightLookupNameButton;
         private System.Windows.Forms.Button StartShortSearchButton;
         private System.Windows.Forms.Button StartLongSearchButton;
+        private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
     }
 }
 

@@ -26,11 +26,33 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
+        private IEnumerable<DVD> Collection
+        {
+            get
+            {
+                if (_collection == null)
+                {
+                    return _collection;
+                }
+                else if (OnlyIncludeOwnedProfilesCheckBox.Checked)
+                {
+                    var result = _collection.Where(p => p.CollectionType?.IsPartOfOwnedCollection == true);
+
+                    return result;
+                }
+                else
+                {
+                    return _collection;
+                }
+            }
+            set => _collection = value;
+        }
+
         internal MainForm()
         {
             InitializeComponent();
 
-            _collection = null;
+            Collection = null;
 
             Persons = null;
 
@@ -60,7 +82,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    _collection = null;
+                    Collection = null;
 
                     Persons = null;
 
@@ -86,9 +108,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var collection = DVDProfilerSerializer<Collection>.Deserialize(fileName);
 
-            _collection = collection.DVDList;
+            Collection = collection.DVDList;
 
-            if (_collection != null)
+            if (Collection != null)
             {
                 BuildPersons();
             }
@@ -100,11 +122,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void BuildPersons()
         {
-            if (_collection != null)
+            if (Collection != null)
             {
                 Enabled = false;
 
-                Persons = (new PersonsBuilder()).Build(_collection, IncludeCastCheckBox.Checked, IncludeCrewCheckBox.Checked);
+                Persons = (new PersonsBuilder()).Build(Collection, IncludeCastCheckBox.Checked, IncludeCrewCheckBox.Checked);
 
                 Enabled = true;
             }
@@ -116,6 +138,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         }
 
         private void OnIncludeCrewCheckBoxCheckedChanged(object sender, EventArgs e)
+        {
+            BuildPersons();
+        }
+
+        private void OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged(object sender, EventArgs e)
         {
             BuildPersons();
         }
