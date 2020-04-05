@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesLibrary", "SixDeg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegrees", "SixDegrees\SixDegrees.csproj", "{2B197685-477A-4898-8D7E-558167E7B4BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesOfTesting", "SixDegreesOfTesting\SixDegreesOfTesting.csproj", "{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -35,6 +37,10 @@ Global
 		{2B197685-477A-4898-8D7E-558167E7B4BA}.Debug|x64.Build.0 = Debug|x64
 		{2B197685-477A-4898-8D7E-558167E7B4BA}.Release|x64.ActiveCfg = Release|x64
 		{2B197685-477A-4898-8D7E-558167E7B4BA}.Release|x64.Build.0 = Release|x64
+		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Debug|x64.ActiveCfg = Debug|x64
+		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Debug|x64.Build.0 = Debug|x64
+		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Release|x64.ActiveCfg = Debug|x64
+		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Release|x64.Build.0 = Debug|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

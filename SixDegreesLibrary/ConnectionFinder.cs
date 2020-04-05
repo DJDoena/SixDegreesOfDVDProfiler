@@ -175,12 +175,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         private IEnumerable<DeepProfiles> GetSubProfiles(ProfileEntry left, byte currentSubLevel, byte targetSubLevel, Steps steps)
         {
             if (_currentSearchRequest < _maxSearchRequests)
+            //if (true)
             {
                 var relevantCoProfiles = left.CoProfiles.Where(p => StepsDontContainPreviouslyUsed(steps, p)); //do not go back
 
                 foreach (var right in relevantCoProfiles)
                 {
                     if (_currentSearchRequest < _maxSearchRequests)
+                    //if (true)
                     {
                         if (currentSubLevel == targetSubLevel)
                         {
@@ -188,14 +190,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                             yield return new DeepProfiles(left, right, steps);
                         }
-                    }
-                    else
-                    {
-                        var deepProfiles = GetSubProfiles(left, right, currentSubLevel, targetSubLevel, steps);
-
-                        foreach (var deepProfile in deepProfiles)
+                        else
                         {
-                            yield return deepProfile;
+                            var deepProfiles = GetSubProfiles(left, right, currentSubLevel, targetSubLevel, steps);
+
+                            foreach (var deepProfile in deepProfiles)
+                            {
+                                yield return deepProfile;
+                            }
                         }
                     }
                 }

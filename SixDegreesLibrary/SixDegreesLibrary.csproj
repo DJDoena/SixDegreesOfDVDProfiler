@@ -44,6 +44,7 @@
     <Compile Include="ConnectionFinder.cs" />
     <Compile Include="PersonFormatter.cs" />
     <Compile Include="ProfileEntries.cs" />
+    <Compile Include="SearchPerson.cs" />
     <Compile Include="SixDegrees.cs" />
     <Compile Include="PersonNotInCollectionException.cs" />
     <Compile Include="PersonsBuilder.cs" />

@@ -67,7 +67,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SixDegrees.AssemblyInfo.cs" />
-    <Compile Include="SearchPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DVDProfilerXML\DVDProfilerHelper\DVDProfilerHelper\DVDProfilerHelper.csproj">

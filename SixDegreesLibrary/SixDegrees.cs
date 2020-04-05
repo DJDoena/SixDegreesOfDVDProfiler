@@ -10,6 +10,24 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         public static IEnumerable<Steps> FindForward(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests, bool considerCast = true, bool considerCrew = false)
         {
+            var connectionFinder = Init(collection, sourcePerson, targetPerson, considerCast, considerCrew);
+
+            var result = connectionFinder.FindForward(sourcePerson, targetPerson, maxSearchDepth, maxSearchRequests);
+
+            return result;
+        }
+
+        public static IEnumerable<Steps> FindReverse(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests, bool considerCast = true, bool considerCrew = false)
+        {
+            var connectionFinder = Init(collection, sourcePerson, targetPerson, considerCast, considerCrew);
+
+            var result = connectionFinder.FindReverse(sourcePerson, targetPerson, maxSearchDepth, maxSearchRequests);
+
+            return result;
+        }
+
+        private static ConnectionFinder Init(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, bool considerCast, bool considerCrew)
+        {
             if (collection == null)
             {
                 throw new ArgumentNullException(nameof(collection));
@@ -29,9 +47,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var persons = (new PersonsBuilder()).Build(collection, considerCast, considerCrew);
 
-            var result = (new ConnectionFinder(persons)).FindForward(sourcePerson, targetPerson, maxSearchDepth, maxSearchRequests);
+            var connectionFinder = new ConnectionFinder(persons);
 
-            return result;
+            return connectionFinder;
         }
     }
 }
