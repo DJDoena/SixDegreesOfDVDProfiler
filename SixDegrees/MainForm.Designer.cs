@@ -362,7 +362,7 @@
             label1.Location = new System.Drawing.Point(243, 382);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(108, 13);
-            label1.TabIndex = 14;
+            label1.TabIndex = 12;
             label1.Text = "Max search requests:";
             // 
             // IncludeCastCheckBox
@@ -411,7 +411,7 @@
             this.StartShortSearchButton.Location = new System.Drawing.Point(12, 406);
             this.StartShortSearchButton.Name = "StartShortSearchButton";
             this.StartShortSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartShortSearchButton.TabIndex = 12;
+            this.StartShortSearchButton.TabIndex = 14;
             this.StartShortSearchButton.Text = "Search shortest link";
             this.StartShortSearchButton.UseVisualStyleBackColor = true;
             this.StartShortSearchButton.Click += new System.EventHandler(this.OnStartShortSearchButtonClick);
@@ -421,7 +421,7 @@
             this.StartLongSearchButton.Location = new System.Drawing.Point(12, 435);
             this.StartLongSearchButton.Name = "StartLongSearchButton";
             this.StartLongSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartLongSearchButton.TabIndex = 13;
+            this.StartLongSearchButton.TabIndex = 15;
             this.StartLongSearchButton.Text = "Search longest link";
             this.StartLongSearchButton.UseVisualStyleBackColor = true;
             this.StartLongSearchButton.Click += new System.EventHandler(this.OnStartLongSearchButtonClick);
@@ -459,7 +459,7 @@
             0});
             this.MaxSearchRequestsUpDown.Name = "MaxSearchRequestsUpDown";
             this.MaxSearchRequestsUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchRequestsUpDown.TabIndex = 15;
+            this.MaxSearchRequestsUpDown.TabIndex = 13;
             this.MaxSearchRequestsUpDown.Value = new decimal(new int[] {
             1000000,
             0,

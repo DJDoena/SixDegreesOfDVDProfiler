@@ -43,9 +43,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                         yield return result;
                     }
 
+                    Debug.WriteLine($"Match(es) found. Number of search requests: {_currentSearchRequest} (max: {_maxSearchRequests})");
+
                     yield break;
                 }
             }
+
+            Debug.WriteLine($"No Match found. Number of search requests: {_currentSearchRequest} (max: {_maxSearchRequests})");
         }
 
         private IEnumerable<Steps> FindForward(ProfileEntry startingEntry, byte targetSubLevel)
@@ -81,9 +85,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     yield return result;
 
+                    Debug.WriteLine($"Match found. Number of search requests: {_currentSearchRequest} (max: {_maxSearchRequests})");
+
                     yield break;
                 }
             }
+
+            Debug.WriteLine($"No match found. Number of search requests: {_currentSearchRequest} (max: {_maxSearchRequests})");
         }
 
         private Steps FindReverse(ProfileEntries startingEntries, byte targetSubLevel)
