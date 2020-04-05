@@ -47,6 +47,7 @@
             System.Windows.Forms.LinkLabel KevinBaconLinkLabel;
             System.Windows.Forms.LinkLabel SixDegreesLinkLabel;
             System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftLookupNameButton = new System.Windows.Forms.Button();
             this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
@@ -84,6 +85,7 @@
             KevinBaconLinkLabel = new System.Windows.Forms.LinkLabel();
             SixDegreesLinkLabel = new System.Windows.Forms.LinkLabel();
             label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             LeftGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).BeginInit();
             RightGroupBox.SuspendLayout();
@@ -94,10 +96,10 @@
             // 
             // LoadXmlButton
             // 
-            LoadXmlButton.Location = new System.Drawing.Point(12, 155);
+            LoadXmlButton.Location = new System.Drawing.Point(12, 178);
             LoadXmlButton.Name = "LoadXmlButton";
             LoadXmlButton.Size = new System.Drawing.Size(175, 23);
-            LoadXmlButton.TabIndex = 6;
+            LoadXmlButton.TabIndex = 7;
             LoadXmlButton.Text = "Load DVD Profiler XML file";
             LoadXmlButton.UseVisualStyleBackColor = true;
             LoadXmlButton.Click += new System.EventHandler(this.OnLoadXmlButtonClick);
@@ -133,10 +135,10 @@
             LeftGroupBox.Controls.Add(this.LeftLastNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftMiddleNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftFirstNameTextBox);
-            LeftGroupBox.Location = new System.Drawing.Point(12, 200);
+            LeftGroupBox.Location = new System.Drawing.Point(12, 244);
             LeftGroupBox.Name = "LeftGroupBox";
             LeftGroupBox.Size = new System.Drawing.Size(325, 160);
-            LeftGroupBox.TabIndex = 8;
+            LeftGroupBox.TabIndex = 9;
             LeftGroupBox.TabStop = false;
             LeftGroupBox.Text = "Left person";
             // 
@@ -235,10 +237,10 @@
             RightGroupBox.Controls.Add(this.RightLastNameTextBox);
             RightGroupBox.Controls.Add(this.RightMiddleNameTextBox);
             RightGroupBox.Controls.Add(this.RightFirstNameTextBox);
-            RightGroupBox.Location = new System.Drawing.Point(343, 200);
+            RightGroupBox.Location = new System.Drawing.Point(343, 244);
             RightGroupBox.Name = "RightGroupBox";
             RightGroupBox.Size = new System.Drawing.Size(325, 160);
-            RightGroupBox.TabIndex = 9;
+            RightGroupBox.TabIndex = 10;
             RightGroupBox.TabStop = false;
             RightGroupBox.Text = "Right person";
             // 
@@ -328,10 +330,10 @@
             // MaxSearchDepthLabel
             // 
             MaxSearchDepthLabel.AutoSize = true;
-            MaxSearchDepthLabel.Location = new System.Drawing.Point(9, 382);
+            MaxSearchDepthLabel.Location = new System.Drawing.Point(9, 426);
             MaxSearchDepthLabel.Name = "MaxSearchDepthLabel";
             MaxSearchDepthLabel.Size = new System.Drawing.Size(95, 13);
-            MaxSearchDepthLabel.TabIndex = 10;
+            MaxSearchDepthLabel.TabIndex = 11;
             MaxSearchDepthLabel.Text = "Max search depth:";
             // 
             // KevinBaconLinkLabel
@@ -359,10 +361,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(243, 382);
+            label1.Location = new System.Drawing.Point(243, 426);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(108, 13);
-            label1.TabIndex = 12;
+            label1.TabIndex = 13;
             label1.Text = "Max search requests:";
             // 
             // IncludeCastCheckBox
@@ -391,7 +393,7 @@
             // 
             // MaxSearchDepthUpDown
             // 
-            this.MaxSearchDepthUpDown.Location = new System.Drawing.Point(117, 380);
+            this.MaxSearchDepthUpDown.Location = new System.Drawing.Point(117, 424);
             this.MaxSearchDepthUpDown.Minimum = new decimal(new int[] {
             1,
             0,
@@ -399,7 +401,7 @@
             0});
             this.MaxSearchDepthUpDown.Name = "MaxSearchDepthUpDown";
             this.MaxSearchDepthUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchDepthUpDown.TabIndex = 11;
+            this.MaxSearchDepthUpDown.TabIndex = 12;
             this.MaxSearchDepthUpDown.Value = new decimal(new int[] {
             10,
             0,
@@ -408,20 +410,20 @@
             // 
             // StartShortSearchButton
             // 
-            this.StartShortSearchButton.Location = new System.Drawing.Point(12, 406);
+            this.StartShortSearchButton.Location = new System.Drawing.Point(12, 450);
             this.StartShortSearchButton.Name = "StartShortSearchButton";
             this.StartShortSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartShortSearchButton.TabIndex = 14;
+            this.StartShortSearchButton.TabIndex = 15;
             this.StartShortSearchButton.Text = "Search shortest link";
             this.StartShortSearchButton.UseVisualStyleBackColor = true;
             this.StartShortSearchButton.Click += new System.EventHandler(this.OnStartShortSearchButtonClick);
             // 
             // StartLongSearchButton
             // 
-            this.StartLongSearchButton.Location = new System.Drawing.Point(12, 435);
+            this.StartLongSearchButton.Location = new System.Drawing.Point(12, 479);
             this.StartLongSearchButton.Name = "StartLongSearchButton";
             this.StartLongSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartLongSearchButton.TabIndex = 15;
+            this.StartLongSearchButton.TabIndex = 16;
             this.StartLongSearchButton.Text = "Search longest link";
             this.StartLongSearchButton.UseVisualStyleBackColor = true;
             this.StartLongSearchButton.Click += new System.EventHandler(this.OnStartLongSearchButtonClick);
@@ -431,10 +433,10 @@
             this.OnlyIncludeOwnedProfilesCheckBox.AutoSize = true;
             this.OnlyIncludeOwnedProfilesCheckBox.Checked = true;
             this.OnlyIncludeOwnedProfilesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OnlyIncludeOwnedProfilesCheckBox.Location = new System.Drawing.Point(193, 159);
+            this.OnlyIncludeOwnedProfilesCheckBox.Location = new System.Drawing.Point(12, 155);
             this.OnlyIncludeOwnedProfilesCheckBox.Name = "OnlyIncludeOwnedProfilesCheckBox";
             this.OnlyIncludeOwnedProfilesCheckBox.Size = new System.Drawing.Size(161, 17);
-            this.OnlyIncludeOwnedProfilesCheckBox.TabIndex = 7;
+            this.OnlyIncludeOwnedProfilesCheckBox.TabIndex = 6;
             this.OnlyIncludeOwnedProfilesCheckBox.Text = "Only included owned profiles";
             this.OnlyIncludeOwnedProfilesCheckBox.UseVisualStyleBackColor = true;
             this.OnlyIncludeOwnedProfilesCheckBox.CheckedChanged += new System.EventHandler(this.OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged);
@@ -446,7 +448,7 @@
             0,
             0,
             0});
-            this.MaxSearchRequestsUpDown.Location = new System.Drawing.Point(351, 380);
+            this.MaxSearchRequestsUpDown.Location = new System.Drawing.Point(351, 424);
             this.MaxSearchRequestsUpDown.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -459,18 +461,29 @@
             0});
             this.MaxSearchRequestsUpDown.Name = "MaxSearchRequestsUpDown";
             this.MaxSearchRequestsUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchRequestsUpDown.TabIndex = 13;
+            this.MaxSearchRequestsUpDown.TabIndex = 14;
             this.MaxSearchRequestsUpDown.Value = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(12, 220);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(578, 13);
+            label2.TabIndex = 8;
+            label2.Text = "For performance reasons try to put the less relevant person on the left side. It\'" +
+    "s easier to find the elephant than the mouse.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 486);
+            this.ClientSize = new System.Drawing.Size(684, 526);
+            this.Controls.Add(label2);
             this.Controls.Add(label1);
             this.Controls.Add(this.MaxSearchRequestsUpDown);
             this.Controls.Add(this.OnlyIncludeOwnedProfilesCheckBox);
@@ -488,7 +501,7 @@
             this.Controls.Add(this.IncludeCastCheckBox);
             this.Controls.Add(LoadXmlButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(700, 525);
+            this.MinimumSize = new System.Drawing.Size(700, 565);
             this.Name = "MainForm";
             this.Text = "Six Degrees of DVD Profiler";
             LeftGroupBox.ResumeLayout(false);

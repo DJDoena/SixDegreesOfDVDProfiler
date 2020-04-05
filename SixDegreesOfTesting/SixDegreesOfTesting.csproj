@@ -39,8 +39,10 @@
       <HintPath>..\packages\MSTest.TestFramework.2.1.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForwardUnitTestSample.cs" />
     <Compile Include="StepsChecker.cs" />
     <Compile Include="ForwardUnitTest2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

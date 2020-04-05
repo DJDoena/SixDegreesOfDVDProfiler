@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SixDegreesOfTesting
 {
     [TestClass]
-    public class UnitTest
+    public class ForwardUnitTest2
     {
         private static Collection _collection;
 
@@ -24,7 +24,7 @@ namespace SixDegreesOfTesting
 
             var targetPerson = new SearchPerson(firstName: "Max", lastName: "von Sydow");
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 2, 10000, true, false).ToList();
+            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
 
             Assert.AreEqual(1, results.Count);
 
@@ -46,7 +46,7 @@ namespace SixDegreesOfTesting
 
             var targetPerson = new SearchPerson(firstName: "John", lastName: "Wayne");
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 2, 10000, true, false).ToList();
+            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
 
             Assert.AreEqual(1, results.Count);
 
@@ -68,7 +68,7 @@ namespace SixDegreesOfTesting
 
             var targetPerson = new SearchPerson(firstName: "Hans", lastName: "Alfredson");
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 2, 10000, true, false).ToList();
+            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
 
             Assert.AreEqual(1, results.Count);
 
@@ -90,7 +90,7 @@ namespace SixDegreesOfTesting
 
             var targetPerson = new SearchPerson(firstName: "John", lastName: "Wayne");
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 2, 10000, true, false).ToList();
+            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
 
             Assert.AreEqual(1, results.Count);
 
