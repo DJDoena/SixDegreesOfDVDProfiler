@@ -59,6 +59,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             LeftBirthYearUpDown.Maximum = ushort.MaxValue;
             RightBirthYearUpDown.Maximum = ushort.MaxValue;
             MaxSearchDepthUpDown.Maximum = byte.MaxValue;
+            MaxSearchRequestsUpDown.Maximum = uint.MaxValue;
         }
 
         private void SwitchControls(bool enabled)
@@ -256,7 +257,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var rightPerson = new SearchPerson(RightFirstNameTextBox.Text, RightMiddleNameTextBox.Text, RightLastNameTextBox.Text, (ushort)RightBirthYearUpDown.Value);
 
-            var results = find(leftPerson, rightPerson, (byte)MaxSearchDepthUpDown.Value);
+            var results = find(leftPerson, rightPerson, (byte)MaxSearchDepthUpDown.Value, (uint)MaxSearchRequestsUpDown.Value);
 
             var firstResult = results.FirstOrDefault();
 
@@ -277,6 +278,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private delegate IEnumerable<Steps> FindDelegate(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth);
+        private delegate IEnumerable<Steps> FindDelegate(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests);
     }
 }

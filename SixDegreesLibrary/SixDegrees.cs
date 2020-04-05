@@ -8,7 +8,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     public static class SixDegrees
     {
-        public static IEnumerable<Steps> FindForward(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, bool considerCast = true, bool considerCrew = false)
+        public static IEnumerable<Steps> FindForward(IEnumerable<DVD> collection, IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests, bool considerCast = true, bool considerCrew = false)
         {
             if (collection == null)
             {
@@ -29,7 +29,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var persons = (new PersonsBuilder()).Build(collection, considerCast, considerCrew);
 
-            var result = (new ConnectionFinder(persons)).FindForward(sourcePerson, targetPerson, maxSearchDepth);
+            var result = (new ConnectionFinder(persons)).FindForward(sourcePerson, targetPerson, maxSearchDepth, maxSearchRequests);
 
             return result;
         }

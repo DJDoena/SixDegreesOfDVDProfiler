@@ -46,6 +46,7 @@
             System.Windows.Forms.Label MaxSearchDepthLabel;
             System.Windows.Forms.LinkLabel KevinBaconLinkLabel;
             System.Windows.Forms.LinkLabel SixDegreesLinkLabel;
+            System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftLookupNameButton = new System.Windows.Forms.Button();
             this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
@@ -63,6 +64,7 @@
             this.StartShortSearchButton = new System.Windows.Forms.Button();
             this.StartLongSearchButton = new System.Windows.Forms.Button();
             this.OnlyIncludeOwnedProfilesCheckBox = new System.Windows.Forms.CheckBox();
+            this.MaxSearchRequestsUpDown = new System.Windows.Forms.NumericUpDown();
             LoadXmlButton = new System.Windows.Forms.Button();
             WelcomeLabel = new System.Windows.Forms.Label();
             InfoLabel = new System.Windows.Forms.Label();
@@ -81,11 +83,13 @@
             MaxSearchDepthLabel = new System.Windows.Forms.Label();
             KevinBaconLinkLabel = new System.Windows.Forms.LinkLabel();
             SixDegreesLinkLabel = new System.Windows.Forms.LinkLabel();
+            label1 = new System.Windows.Forms.Label();
             LeftGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).BeginInit();
             RightGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // LoadXmlButton
@@ -352,6 +356,15 @@
             SixDegreesLinkLabel.Text = "Wikipedia: Six Degrees of Separation";
             SixDegreesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnSixDegreesLinkLabelLinkClicked);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(243, 382);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(108, 13);
+            label1.TabIndex = 14;
+            label1.Text = "Max search requests:";
+            // 
             // IncludeCastCheckBox
             // 
             this.IncludeCastCheckBox.AutoSize = true;
@@ -426,11 +439,40 @@
             this.OnlyIncludeOwnedProfilesCheckBox.UseVisualStyleBackColor = true;
             this.OnlyIncludeOwnedProfilesCheckBox.CheckedChanged += new System.EventHandler(this.OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged);
             // 
+            // MaxSearchRequestsUpDown
+            // 
+            this.MaxSearchRequestsUpDown.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.MaxSearchRequestsUpDown.Location = new System.Drawing.Point(351, 380);
+            this.MaxSearchRequestsUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.MaxSearchRequestsUpDown.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.MaxSearchRequestsUpDown.Name = "MaxSearchRequestsUpDown";
+            this.MaxSearchRequestsUpDown.Size = new System.Drawing.Size(120, 20);
+            this.MaxSearchRequestsUpDown.TabIndex = 15;
+            this.MaxSearchRequestsUpDown.Value = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 486);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.MaxSearchRequestsUpDown);
             this.Controls.Add(this.OnlyIncludeOwnedProfilesCheckBox);
             this.Controls.Add(this.StartLongSearchButton);
             this.Controls.Add(this.StartShortSearchButton);
@@ -456,6 +498,7 @@
             RightGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,6 +521,7 @@
         private System.Windows.Forms.Button StartShortSearchButton;
         private System.Windows.Forms.Button StartLongSearchButton;
         private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
+        private System.Windows.Forms.NumericUpDown MaxSearchRequestsUpDown;
     }
 }
 

@@ -14,14 +14,18 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private PersonKey _targetPersonKey;
 
+        private uint _maxSearchRequests;
+
+        private uint _currentSearchRequest;
+
         public ConnectionFinder(Persons persons)
         {
             _persons = persons ?? throw new ArgumentNullException(nameof(persons));
         }
 
-        public IEnumerable<Steps> FindForward(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth)
+        public IEnumerable<Steps> FindForward(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests)
         {
-            if (Init(sourcePerson, targetPerson, out var startingEntries, out var steps))
+            if (Init(sourcePerson, targetPerson, maxSearchRequests, out var startingEntries, out var steps))
             {
                 yield return steps;
 
@@ -55,9 +59,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return results;
         }
 
-        public IEnumerable<Steps> FindReverse(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth)
+        public IEnumerable<Steps> FindReverse(IPerson sourcePerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests)
         {
-            if (Init(sourcePerson, targetPerson, out var startingEntries, out var steps))
+            if (Init(sourcePerson, targetPerson, maxSearchRequests, out var startingEntries, out var steps))
             {
                 yield return steps;
 
@@ -103,7 +107,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return null;
         }
 
-        private bool Init(IPerson sourcePerson, IPerson targetPerson, out ProfileEntries startingEntries, out Steps steps)
+        private bool Init(IPerson sourcePerson, IPerson targetPerson, uint maxSearchRequests, out ProfileEntries startingEntries, out Steps steps)
         {
             if (sourcePerson == null)
             {
@@ -117,6 +121,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             _sourcePersonKey = new PersonKey(sourcePerson);
 
             _targetPersonKey = new PersonKey(targetPerson);
+
+            _maxSearchRequests = maxSearchRequests;
+
+            _currentSearchRequest = 0;
 
             if (!_persons.TryGetValue(_sourcePersonKey, out startingEntries))
             {
@@ -158,21 +166,29 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private IEnumerable<DeepProfiles> GetSubProfiles(ProfileEntry left, byte currentSubLevel, byte targetSubLevel, Steps steps)
         {
-            var relevantCoProfiles = left.CoProfiles.Where(p => StepsDontContainPreviouslyUsed(steps, p)); //do not go back
-
-            foreach (var right in relevantCoProfiles)
+            if (_currentSearchRequest < _maxSearchRequests)
             {
-                if (currentSubLevel == targetSubLevel)
-                {
-                    yield return new DeepProfiles(left, right, steps);
-                }
-                else
-                {
-                    var deepProfiles = GetSubProfiles(left, right, currentSubLevel, targetSubLevel, steps);
+                var relevantCoProfiles = left.CoProfiles.Where(p => StepsDontContainPreviouslyUsed(steps, p)); //do not go back
 
-                    foreach (var deepProfile in deepProfiles)
+                foreach (var right in relevantCoProfiles)
+                {
+                    if (_currentSearchRequest < _maxSearchRequests)
                     {
-                        yield return deepProfile;
+                        if (currentSubLevel == targetSubLevel)
+                        {
+                            _currentSearchRequest++;
+
+                            yield return new DeepProfiles(left, right, steps);
+                        }
+                    }
+                    else
+                    {
+                        var deepProfiles = GetSubProfiles(left, right, currentSubLevel, targetSubLevel, steps);
+
+                        foreach (var deepProfile in deepProfiles)
+                        {
+                            yield return deepProfile;
+                        }
                     }
                 }
             }
