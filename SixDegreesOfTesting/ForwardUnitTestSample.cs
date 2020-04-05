@@ -55,7 +55,7 @@ namespace SixDegreesOfTesting
         }
 
         [TestMethod]
-        public void TomHollandToshiroMifuneDegree4()
+        public void TomHollandToshiroMifuneNoMatch()
         {
             var sourcePerson = new SearchPerson(firstName: "Tom", lastName: "Holland", birthYear: 1996);
 
