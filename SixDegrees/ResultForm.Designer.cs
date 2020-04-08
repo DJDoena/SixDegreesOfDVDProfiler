@@ -103,6 +103,7 @@
             this.ResultListView.MultiSelect = false;
             this.ResultListView.Name = "ResultListView";
             this.ResultListView.Size = new System.Drawing.Size(825, 190);
+            this.ResultListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ResultListView.TabIndex = 0;
             this.ResultListView.UseCompatibleStateImageBehavior = false;
             this.ResultListView.View = System.Windows.Forms.View.Details;
@@ -140,10 +141,7 @@
             this.MinimumSize = new System.Drawing.Size(865, 525);
             this.Name = "ResultForm";
             this.Text = "Six Degrees of DVD Profiler: Result";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnResultFormFormClosing);
-            this.Load += new System.EventHandler(this.OnResultFormLoad);
             this.ResumeLayout(false);
-
         }
 
         #endregion

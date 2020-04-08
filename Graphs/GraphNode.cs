@@ -8,6 +8,8 @@ namespace mitoSoft.Math.Graphs
     [DebuggerDisplay("Node {Name} (Connections = {_connections.Count})")]
     public class GraphNode
     {
+        private static ulong _edgeCounter = 0;
+
         private readonly List<GraphEdge> _connections;
 
         public GraphNode(string name, GraphNodeKey key)
@@ -42,6 +44,8 @@ namespace mitoSoft.Math.Graphs
 
         public IEnumerable<GraphNode> Successors => this._connections.Where(c => ReferenceEquals(c.SourceNode, this)).Select(c => c.TargetNode);
 
+        internal ulong ObjectNumber { get; set; }
+
         internal void AddConnection(GraphNode targetNode, double distance, bool twoWay)
         {
             if (targetNode == null)
@@ -59,9 +63,13 @@ namespace mitoSoft.Math.Graphs
 
             var forward = new GraphEdge(this, targetNode, distance);
 
+            forward.ObjectNumber = ++_edgeCounter;
+
             this._connections.Add(forward);
 
             var backward = new GraphEdge(targetNode, this, distance);
+
+            backward.ObjectNumber = ++_edgeCounter;
 
             if (twoWay)
             {

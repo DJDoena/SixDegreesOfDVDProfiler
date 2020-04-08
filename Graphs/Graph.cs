@@ -7,6 +7,8 @@ namespace mitoSoft.Math.Graphs
     [DebuggerDisplay("Graph ({_nodes.Count} nodes)")]
     public class Graph
     {
+        private static ulong _nodeCounter = 0;
+
         private readonly Dictionary<GraphNodeKey, GraphNode> _nodes;
 
         public Graph()
@@ -47,7 +49,7 @@ namespace mitoSoft.Math.Graphs
             }
             else
             {
-                this._nodes.Add(node.Key, node);
+                this.DoAdd(node);
 
                 return true;
             }
@@ -60,7 +62,7 @@ namespace mitoSoft.Math.Graphs
                 throw new ArgumentNullException(nameof(node));
             }
 
-            this._nodes.Add(node.Key, node);
+            this.DoAdd(node);
         }
 
         public virtual void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance, bool twoWay)
@@ -83,6 +85,13 @@ namespace mitoSoft.Math.Graphs
             }
 
             sourceNode.AddConnection(targetNode, distance, twoWay);
+        }
+
+        private void DoAdd(GraphNode node)
+        {
+            this._nodes.Add(node.Key, node);
+
+            node.ObjectNumber = ++_nodeCounter;
         }
     }
 }

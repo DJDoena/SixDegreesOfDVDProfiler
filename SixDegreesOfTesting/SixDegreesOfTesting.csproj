@@ -43,6 +43,7 @@
     <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForwardUnitTest3.cs" />
     <Compile Include="StepsChecker.cs" />
     <Compile Include="ForwardUnitTestSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Test2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test3.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

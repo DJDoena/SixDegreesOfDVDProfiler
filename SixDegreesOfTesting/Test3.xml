@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Collection>
+  <DVD>
+    <ProfileTimestamp>2010-04-29T09:44:02Z</ProfileTimestamp>
+    <ID>4010232031129.5</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>5</ID_LocalityID>
+    <ID_Type>UPCEAN</ID_Type>
+    <UPC>4-010232-031129</UPC>
+    <CollectionNumber>154</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Star Wars I: Die dunkle Bedrohung</Title>
+    <DistTrait />
+    <OriginalTitle>Star Wars I: The Phantom Menace</OriginalTitle>
+    <ProductionYear>1999</ProductionYear>
+    <RunningTime>130</RunningTime>
+    <RatingAge>6</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Qui-Gon Jinn" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Liam" MiddleName="" LastName="Neeson" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Obi-Wan Kenobi" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ewan" MiddleName="" LastName="McGregor" BirthYear="1971" CreditedAs="" />
+      <Actor Role="Queen Padmé Amidala" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Natalie" MiddleName="" LastName="Portman" BirthYear="1981" CreditedAs="" />
+      <Actor Role="Anakin Skywalker" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jake" MiddleName="" LastName="Lloyd" BirthYear="1989" CreditedAs="" />
+      <Actor Role="Shmi Skywalker" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Pernilla" MiddleName="" LastName="August" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Yoda" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Frank" MiddleName="" LastName="Oz" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Senator Palpatine" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ian" MiddleName="" LastName="McDiarmid" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Gov. Sio Bibble" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Oliver" MiddleName="Ford" LastName="Davies" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Darth Maul" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ray" MiddleName="" LastName="Park" BirthYear="1974" CreditedAs="" />
+      <Actor Role="Capt. Panaka" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hugh" MiddleName="" LastName="Quarshie" BirthYear="1954" CreditedAs="" />
+      <Actor Role="Jar Jar Binks" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Ahmed" MiddleName="" LastName="Best" BirthYear="1973" CreditedAs="" />
+      <Actor Role="C-3PO" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anthony" MiddleName="" LastName="Daniels" BirthYear="1946" CreditedAs="" />
+      <Actor Role="R2-D2" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kenny" MiddleName="" LastName="Baker" BirthYear="1934" CreditedAs="" />
+      <Actor Role="Supreme Chancellor Valorum" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Terence" MiddleName="" LastName="Stamp" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Boss Nass" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Brian" MiddleName="" LastName="Blessed" BirthYear="1937" CreditedAs="" />
+      <Actor Role="Watto" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Andrew" MiddleName="" LastName="Secombe" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Sebulba" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Lewis" MiddleName="" LastName="Macleod" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Capt. Tarpals" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Speirs" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Viceroy Nute Gunray" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Silas" MiddleName="" LastName="Carson" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Ki-Adi-Mundi" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Silas" MiddleName="" LastName="Carson" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Lott Dodd" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Silas" MiddleName="" LastName="Carson" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Radiant VII Pilot" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Silas" MiddleName="" LastName="Carson" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Ric Olié" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ralph" MiddleName="" LastName="Brown" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Fighter Pilot Bravo 5" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Celia" MiddleName="" LastName="Imrie" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Fighter Pilot Bravo 2" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Benedict" MiddleName="" LastName="Taylor" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Rabé" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Karol" MiddleName="Cristina" LastName="da Silva" BirthYear="1975" CreditedAs="" />
+      <Actor Role="Fighter Pilot Bravo 3" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Clarence" MiddleName="" LastName="Smith" BirthYear="0" CreditedAs="" />
+      <Actor Role="Mace Windu" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Samuel" MiddleName="L." LastName="Jackson" BirthYear="1948" CreditedAs="" />
+      <Actor Role="Palace guard" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Dominic" MiddleName="" LastName="West" BirthYear="1969" CreditedAs="" />
+      <Actor Role="Eirtaé" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Liz" MiddleName="" LastName="Wilson" BirthYear="1979" CreditedAs="Friday 'Liz' Wilson" />
+      <Actor Role="Yané" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Candice" MiddleName="" LastName="Orwell" BirthYear="0" CreditedAs="" />
+      <Actor Role="Saché" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sofia" MiddleName="" LastName="Coppola" BirthYear="1971" CreditedAs="" />
+      <Actor Role="Sabé" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keira" MiddleName="" LastName="Knightley" BirthYear="1985" CreditedAs="" />
+      <Actor Role="Radiant VII captain" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bronagh" MiddleName="" LastName="Gallagher" BirthYear="1972" CreditedAs="" />
+      <Actor Role="TC-14" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Fensom" BirthYear="0" CreditedAs="" />
+      <Actor Role="Beed" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Greg" MiddleName="" LastName="Proops" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Fode" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Scott" MiddleName="" LastName="Capurro" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Jira" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Margaret" MiddleName="" LastName="Towner" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Kitster" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Dhruv" MiddleName="" LastName="Chanchani" BirthYear="1988" CreditedAs="" />
+      <Actor Role="Seek" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Oliver" MiddleName="" LastName="Walpole" BirthYear="1988" CreditedAs="" />
+      <Actor Role="Amee" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Katie" MiddleName="" LastName="Lucas" BirthYear="1988" CreditedAs="Jenna Green" />
+      <Actor Role="Melee" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Megan" MiddleName="" LastName="Udall" BirthYear="0" CreditedAs="" />
+      <Actor Role="Eeth Koth" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hassani" MiddleName="" LastName="Shapi" BirthYear="0" CreditedAs="" />
+      <Actor Role="Adi Gallia" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gin" MiddleName="" LastName="Clarke" BirthYear="0" CreditedAs="Gin" />
+      <Actor Role="Saesee Tiin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Khan" MiddleName="" LastName="Bonfils" BirthYear="4416" CreditedAs="" />
+      <Actor Role="Yarael Poof" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michelle" MiddleName="" LastName="Taylor" BirthYear="0" CreditedAs="" />
+      <Actor Role="Even Piell" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michaela" MiddleName="" LastName="Cottrell" BirthYear="0" CreditedAs="" />
+      <Actor Role="Depa Billaba" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Dipika" MiddleName="O'Neill" LastName="Joti" BirthYear="0" CreditedAs="" />
+      <Actor Role="Yaddle" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Phil" MiddleName="" LastName="Eason" BirthYear="0" CreditedAs="" />
+      <Actor Role="Aks Moe" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mark" MiddleName="" LastName="Coulier" BirthYear="0" CreditedAs="" />
+      <Actor Role="TC-14" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Lindsay" MiddleName="" LastName="Duncan" BirthYear="1950" CreditedAs="" />
+      <Actor Role="Darth Maul" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Peter" MiddleName="" LastName="Serafinowicz" BirthYear="1972" CreditedAs="" />
+      <Actor Role="Rune Haako" Voice="true" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Taylor" BirthYear="1948" CreditedAs="" />
+      <Actor Role="Daultay Dofine" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Chris" MiddleName="" LastName="Sanders" BirthYear="0" CreditedAs="" />
+      <Actor Role="Sen. Lott Dodd" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Longworth" BirthYear="0" CreditedAs="" />
+      <Actor Role="Gragra" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Longworth" BirthYear="0" CreditedAs="" />
+      <Actor Role="Aks Moe" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Marc" MiddleName="" LastName="Silk" BirthYear="0" CreditedAs="" />
+      <Actor Role="Tey How" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Amanda" MiddleName="" LastName="Lucas" BirthYear="1981" CreditedAs="Tyger" />
+      <Actor Role="Diva Funquita" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Amanda" MiddleName="" LastName="Lucas" BirthYear="1981" CreditedAs="Tyger" />
+      <Actor Role="Naboo Fighter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Richard" MiddleName="" LastName="Armitage" BirthYear="1971" CreditedAs="" />
+      <Actor Role="Pod race mechanic" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Don" MiddleName="" LastName="Bies" BirthYear="1961" CreditedAs="" />
+      <Actor Role="Orn Free Taa's aide" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Trisha" MiddleName="" LastName="Biggar" BirthYear="0" CreditedAs="" />
+      <Actor Role="Rune Haako" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jerome" MiddleName="" LastName="Blake" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Mas Amedda" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jerome" MiddleName="" LastName="Blake" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Oppo Rancisis" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jerome" MiddleName="" LastName="Blake" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Orn Free Taa" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jerome" MiddleName="" LastName="Blake" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Aurra Sing" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Michonne" MiddleName="" LastName="Bourriague" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Naboo Courier" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Ben" MiddleName="" LastName="Burtt" BirthYear="1948" CreditedAs="" />
+      <Actor Role="Flag bearer" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Doug" MiddleName="" LastName="Chiang" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Pod race spectator in Jabba's Private Bo" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Rob" MiddleName="" LastName="Coleman" BirthYear="1964" CreditedAs="" />
+      <Actor Role="Senate guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Roman" MiddleName="" LastName="Coppola" BirthYear="1965" CreditedAs="" />
+      <Actor Role="Naboo Foot Soldier" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Matt" MiddleName="" LastName="Daniel-Baker" BirthYear="0" CreditedAs="" />
+      <Actor Role="Naboo Royal Security Guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Russell" MiddleName="" LastName="Darling" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Wald" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Warwick" MiddleName="" LastName="Davis" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Pod race spectator" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Warwick" MiddleName="" LastName="Davis" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Mos Espa Citizen" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Warwick" MiddleName="" LastName="Davis" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Pod race spectator" Voice="false" Uncredited="true" Puppeteer="false" FirstName="C." MiddleName="Michael" LastName="Easton" BirthYear="1968" CreditedAs="" />
+      <Actor Role="Naboo Citizen" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Ned" MiddleName="" LastName="Gorman" BirthYear="0" CreditedAs="" />
+      <Actor Role="Naboo fighter pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Joss" MiddleName="" LastName="Gower" BirthYear="1968" CreditedAs="" />
+      <Actor Role="GONK Droid" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Raymond" MiddleName="" LastName="Griffiths" BirthYear="0" CreditedAs="" />
+      <Actor Role="Pod race spectator" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nathan" MiddleName="" LastName="Hamill" BirthYear="1979" CreditedAs="" />
+      <Actor Role="Naboo palace guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nathan" MiddleName="" LastName="Hamill" BirthYear="1979" CreditedAs="" />
+      <Actor Role="Naboo Security Guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tim" MiddleName="" LastName="Harrington" BirthYear="0" CreditedAs="" />
+      <Actor Role="Pod race spectator in Jabba's Private Bo" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jack" MiddleName="" LastName="Haye" BirthYear="0" CreditedAs="" />
+      <Actor Role="Ann Gella" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nifa" MiddleName="" LastName="Hindes" BirthYear="1979" CreditedAs="" />
+      <Actor Role="Tann Gella" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nishan" MiddleName="" LastName="Hindes" BirthYear="1979" CreditedAs="" />
+      <Actor Role="Naboo Guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Alexi" MiddleName="Kaye" LastName="Campbell" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lt. Rya Kirsch (Bravo 4)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Knoll" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Flag bearer" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Knoll" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Sei Taria - Senators Aide" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kamay" MiddleName="" LastName="Lau" BirthYear="0" CreditedAs="" />
+      <Actor Role="Kaadu handler" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Dan" MiddleName="" LastName="Madsen" BirthYear="0" CreditedAs="" />
+      <Actor Role="Orn Free Taa's aide" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Iain" MiddleName="" LastName="McCaig" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Naboo courier" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Rick" MiddleName="" LastName="McCallum" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Naboo Fighter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="João" MiddleName="Costa" LastName="Menezes" BirthYear="31296" CreditedAs="" />
+      <Actor Role="Battle Droid" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Taylor" MiddleName="" LastName="Murphy" BirthYear="24465" CreditedAs="" />
+      <Actor Role="Pod race spectator in Jabba's Private Bo" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="Olson" BirthYear="1945" CreditedAs="" />
+      <Actor Role="Mos Espa citizen" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Lorne" MiddleName="" LastName="Peterson" BirthYear="7285" CreditedAs="" />
+      <Actor Role="Plo Koon" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Alan" MiddleName="" LastName="Ruscoe" BirthYear="0" CreditedAs="" />
+      <Actor Role="Bib Foruna" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Alan" MiddleName="" LastName="Ruscoe" BirthYear="0" CreditedAs="" />
+      <Actor Role="Daultay Dofine" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Alan" MiddleName="" LastName="Ruscoe" BirthYear="0" CreditedAs="" />
+      <Actor Role="Naboo courier" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Sansweet" BirthYear="1945" CreditedAs="" />
+      <Actor Role="Naboo Royal Guard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Mike" MiddleName="" LastName="Savva" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lt. Gavyn Sykes - Bravo 6" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Christian" MiddleName="" LastName="Simpson" BirthYear="1973" CreditedAs="" />
+      <Actor Role="Naboo courier" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Paul" MiddleName="Martin" LastName="Smith" BirthYear="0" CreditedAs="" />
+      <Actor Role="Naboo speeder driver" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Scott" MiddleName="" LastName="Squires" BirthYear="0" CreditedAs="" />
+      <Actor Role="Battle Droid" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Sylla" BirthYear="43143" CreditedAs="" />
+      <Actor Role="Chokk, Jabba's Bodyguard" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Bill" MiddleName="" LastName="Tlusty" BirthYear="0" CreditedAs="" />
+      <Actor Role="Mawhonic" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Danny" MiddleName="" LastName="Wagner" BirthYear="0" CreditedAs="" />
+      <Actor Role="Bib Fortuna" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Matthew" MiddleName="" LastName="Wood" BirthYear="1972" CreditedAs="" />
+      <Actor Role="Ody Mandrell" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Matthew" MiddleName="" LastName="Wood" BirthYear="1972" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="George" MiddleName="" LastName="Lucas" BirthYear="1944" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="George" MiddleName="" LastName="Lucas" BirthYear="1944" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="John" MiddleName="" LastName="Williams" BirthYear="1932" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>1899-12-30T00:00:00</ProfileTimestamp>
+    <ID>I0043051FAD9B07F3.4</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>4</ID_LocalityID>
+    <ID_Type>DiscID</ID_Type>
+    <UPC>Disc ID: 0043-051F-AD9B-07F3</UPC>
+    <CollectionNumber>11969</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Smallville: Season 10: Disc 1</Title>
+    <DistTrait />
+    <OriginalTitle />
+    <ProductionYear>2010</ProductionYear>
+    <RunningTime>253</RunningTime>
+    <RatingAge>0</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Jor-El" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Terence" MiddleName="" LastName="Stamp" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Jonathan Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Alexander" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jakob" MiddleName="" LastName="Davies" BirthYear="2003" CreditedAs="" />
+      <Actor Role="Lex Luthor Clone" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mackenzie" MiddleName="" LastName="Gray" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Dr. Emil Hamilton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alessandro" MiddleName="" LastName="Juliani" BirthYear="1978" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen / Green Arrow" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Cat Grant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keri" MiddleName="Lynn" LastName="Pratt" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Deadshot" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bradley" MiddleName="" LastName="Stryker" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Bette Sans Souci / Plastique" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jessica" MiddleName="Parker" LastName="Kennedy" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Carter Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Shanks" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="Karl" LastName="Richards" BirthYear="1976" CreditedAs="" />
+      <Actor Role="Shayera Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sahar" MiddleName="" LastName="Biniaz" BirthYear="0" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Kara" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Vandervoort" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Darkseid" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Photographer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lance" MiddleName="" LastName="Bonza" BirthYear="0" CreditedAs="" />
+      <Actor Role="Marina Fox" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Devon" MiddleName="" LastName="Weigel" BirthYear="9597" CreditedAs="" />
+      <Actor Role="Businessman" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Berner" BirthYear="62117" CreditedAs="" />
+      <Actor Role="Man on Street" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Blake" MiddleName="" LastName="Stadel" BirthYear="6206" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Actor Role="Clark Kent (also archive footage)" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Brainiac 5" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Marsters" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Greg Arkin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chad" MiddleName="" LastName="Donella" BirthYear="1978" CreditedAs="" />
+      <Actor Role="TV Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anne" MiddleName="Marie" LastName="DeLuise" BirthYear="1969" CreditedAs="Anne Marie Deluise" />
+      <Actor Role="Guidance Counselor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chilton" MiddleName="" LastName="Crane" BirthYear="6322" CreditedAs="" />
+      <Actor Role="Carrie" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicole" MiddleName="" LastName="Fraissinet" BirthYear="9675" CreditedAs="" />
+      <Actor Role="Mark Verheiden" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Simon" BirthYear="0" CreditedAs="" />
+      <Actor Role="Suzanne Capra" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hilary" MiddleName="" LastName="Jardine" BirthYear="14878" CreditedAs="" />
+      <Actor Role="Zoe" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allie" MiddleName="" LastName="Bertram" BirthYear="1989" CreditedAs="" />
+      <Actor Role="Clayton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Stevens" BirthYear="35453" CreditedAs="" />
+      <Actor Role="Production Assistant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ash" MiddleName="" LastName="Lee" BirthYear="26273" CreditedAs="" />
+      <Actor Role="Maddie Haroldhaus" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jill" MiddleName="" LastName="Morrison" BirthYear="5724" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Sparling" BirthYear="0" CreditedAs="" />
+      <Actor Role="Female Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evans" MiddleName="" LastName="Johnson" BirthYear="45167" CreditedAs="" />
+      <Actor Role="Jeff Hage" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evan" MiddleName="C." LastName="Schulte" BirthYear="7117" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brian" MiddleName="" LastName="McBride" BirthYear="25637" CreditedAs="" />
+      <Actor Role="Lionel Luthor (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Glover" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Alumni" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Timothy" MiddleName="" LastName="Knight" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lana Lang (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kristin" MiddleName="" LastName="Kreuk" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Chloe Sullivan (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Alumni Drew Landis" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="MacNeill" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Martha Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Annette" MiddleName="" LastName="O'Toole" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Helicopter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="Sanca" BirthYear="1974" CreditedAs="" />
+      <Actor Role="Jonathan Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+      <Divider Caption="10.05 Isis" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Isis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen / Green Arrow" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Cat Grant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keri" MiddleName="Lynn" LastName="Pratt" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Adrianna Tomaz" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Cerra" BirthYear="1979" CreditedAs="" />
+      <Actor Role="Alexander" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jakob" MiddleName="" LastName="Davies" BirthYear="2003" CreditedAs="" />
+      <Actor Role="Dr. Alfonso" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="Emmet" LastName="Tracy" BirthYear="1969" CreditedAs="" />
+      <Divider Caption="10.06 Harvest" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Charlotte Cavanaugh" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bella" MiddleName="" LastName="King" BirthYear="49090" CreditedAs="" />
+      <Actor Role="Alexander Luthor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Connor" MiddleName="" LastName="Stanhope" BirthYear="1998" CreditedAs="" />
+      <Actor Role="Ellis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sandy" MiddleName="" LastName="Robson" BirthYear="1973" CreditedAs="" />
+      <Actor Role="Dr. Christina Lamell" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lexa" MiddleName="" LastName="Doig" BirthYear="1973" CreditedAs="" />
+      <Actor Role="Ruth Cavanaugh" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Merrilyn" MiddleName="" LastName="Gann" BirthYear="1963" CreditedAs="" />
+      <Actor Role="Joseph Cavanaugh" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ron" MiddleName="" LastName="Lea" BirthYear="4784" CreditedAs="" />
+      <Actor Role="Sandra" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bronwen" MiddleName="" LastName="Smith" BirthYear="27522" CreditedAs="" />
+      <Actor Role="Security Guard" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lucas" MiddleName="" LastName="Wolf" BirthYear="5173" CreditedAs="" />
+      <Actor Role="Ben" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Christian" MiddleName="" LastName="Sloan" BirthYear="15589" CreditedAs="" />
+      <Actor Role="Ben" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Gordon" MiddleName="Douglas" LastName="Myren" BirthYear="4268" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Kevin" MiddleName="" LastName="Fair" BirthYear="65422" CreditedAs="Kevin G. Fair" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Don" MiddleName="" LastName="Whitehead" BirthYear="53861" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Holly" MiddleName="" LastName="Henderson" BirthYear="7855" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Glen" MiddleName="" LastName="Winter" BirthYear="35732" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Jordan" MiddleName="" LastName="Hawley" BirthYear="325" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Mairzee" MiddleName="" LastName="Almas" BirthYear="21772" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Anne" MiddleName="Cofell" LastName="Saunders" BirthYear="3194" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Jeannot" MiddleName="" LastName="Szwarc" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Brian" MiddleName="Wayne" LastName="Peterson" BirthYear="7048" CreditedAs="Brian Peterson" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Kelly" MiddleName="" LastName="Souders" BirthYear="13038" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.05 Isis" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="James" MiddleName="" LastName="Marshall" BirthYear="50931" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Genevieve" MiddleName="" LastName="Sparling" BirthYear="3082" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.06 Harvest" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Turi" MiddleName="" LastName="Meyer" BirthYear="1964" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Al" MiddleName="" LastName="Septien" BirthYear="1966" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Turi" MiddleName="" LastName="Meyer" BirthYear="1964" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>1899-12-30T00:00:00</ProfileTimestamp>
+    <ID>I737CB7493CD9DD72.4</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>4</ID_LocalityID>
+    <ID_Type>DiscID</ID_Type>
+    <UPC>Disc ID: 737C-B749-3CD9-DD72</UPC>
+    <CollectionNumber>11958</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Smallville: Season 10: Disc 1</Title>
+    <DistTrait />
+    <OriginalTitle />
+    <ProductionYear>2010</ProductionYear>
+    <RunningTime>162</RunningTime>
+    <RatingAge>15</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Jor-El" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Terence" MiddleName="" LastName="Stamp" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Jonathan Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Alexander" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jakob" MiddleName="" LastName="Davies" BirthYear="2003" CreditedAs="" />
+      <Actor Role="Lex Luthor Clone" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mackenzie" MiddleName="" LastName="Gray" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Dr. Emil Hamilton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alessandro" MiddleName="" LastName="Juliani" BirthYear="1978" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen / Green Arrow" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Cat Grant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keri" MiddleName="Lynn" LastName="Pratt" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Deadshot" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bradley" MiddleName="" LastName="Stryker" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Bette Sans Souci / Plastique" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jessica" MiddleName="Parker" LastName="Kennedy" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Carter Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Shanks" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="Karl" LastName="Richards" BirthYear="1976" CreditedAs="" />
+      <Actor Role="Shayera Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sahar" MiddleName="" LastName="Biniaz" BirthYear="0" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Kara" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Vandervoort" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Darkseid" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Photographer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lance" MiddleName="" LastName="Bonza" BirthYear="0" CreditedAs="" />
+      <Actor Role="Marina Fox" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Devon" MiddleName="" LastName="Weigel" BirthYear="9597" CreditedAs="" />
+      <Actor Role="Businessman" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Berner" BirthYear="62117" CreditedAs="" />
+      <Actor Role="Man on Street" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Blake" MiddleName="" LastName="Stadel" BirthYear="6206" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Actor Role="Clark Kent (also archive footage)" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Brainiac 5" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Marsters" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Greg Arkin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chad" MiddleName="" LastName="Donella" BirthYear="1978" CreditedAs="" />
+      <Actor Role="TV Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anne" MiddleName="Marie" LastName="DeLuise" BirthYear="1969" CreditedAs="Anne Marie Deluise" />
+      <Actor Role="Guidance Counselor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chilton" MiddleName="" LastName="Crane" BirthYear="6322" CreditedAs="" />
+      <Actor Role="Carrie" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicole" MiddleName="" LastName="Fraissinet" BirthYear="9675" CreditedAs="" />
+      <Actor Role="Mark Verheiden" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Simon" BirthYear="0" CreditedAs="" />
+      <Actor Role="Suzanne Capra" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hilary" MiddleName="" LastName="Jardine" BirthYear="14878" CreditedAs="" />
+      <Actor Role="Zoe" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allie" MiddleName="" LastName="Bertram" BirthYear="1989" CreditedAs="" />
+      <Actor Role="Clayton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Stevens" BirthYear="35453" CreditedAs="" />
+      <Actor Role="Production Assistant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ash" MiddleName="" LastName="Lee" BirthYear="26273" CreditedAs="" />
+      <Actor Role="Maddie Haroldhaus" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jill" MiddleName="" LastName="Morrison" BirthYear="5724" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Sparling" BirthYear="0" CreditedAs="" />
+      <Actor Role="Female Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evans" MiddleName="" LastName="Johnson" BirthYear="45167" CreditedAs="" />
+      <Actor Role="Jeff Hage" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evan" MiddleName="C." LastName="Schulte" BirthYear="7117" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brian" MiddleName="" LastName="McBride" BirthYear="25637" CreditedAs="" />
+      <Actor Role="Lionel Luthor (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Glover" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Alumni" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Timothy" MiddleName="" LastName="Knight" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lana Lang (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kristin" MiddleName="" LastName="Kreuk" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Chloe Sullivan (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Alumni Drew Landis" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="MacNeill" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Martha Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Annette" MiddleName="" LastName="O'Toole" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Helicopter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="Sanca" BirthYear="1974" CreditedAs="" />
+      <Actor Role="Jonathan Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Kevin" MiddleName="" LastName="Fair" BirthYear="65422" CreditedAs="Kevin G. Fair" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Don" MiddleName="" LastName="Whitehead" BirthYear="53861" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Holly" MiddleName="" LastName="Henderson" BirthYear="7855" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Glen" MiddleName="" LastName="Winter" BirthYear="35732" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Jordan" MiddleName="" LastName="Hawley" BirthYear="325" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Mairzee" MiddleName="" LastName="Almas" BirthYear="21772" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Anne" MiddleName="Cofell" LastName="Saunders" BirthYear="3194" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Jeannot" MiddleName="" LastName="Szwarc" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Brian" MiddleName="Wayne" LastName="Peterson" BirthYear="7048" CreditedAs="Brian Peterson" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Kelly" MiddleName="" LastName="Souders" BirthYear="13038" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>1899-12-30T00:00:00</ProfileTimestamp>
+    <ID>I82DD32BCE889E780.3</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>3</ID_LocalityID>
+    <ID_Type>DiscID</ID_Type>
+    <UPC>Disc ID: 82DD-32BC-E889-E780</UPC>
+    <CollectionNumber>12215</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Smallville: Season 10: Disc 1</Title>
+    <DistTrait />
+    <OriginalTitle />
+    <ProductionYear>2010</ProductionYear>
+    <RunningTime>169</RunningTime>
+    <RatingAge>10</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Jor-El" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Terence" MiddleName="" LastName="Stamp" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Jonathan Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Alexander" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jakob" MiddleName="" LastName="Davies" BirthYear="2003" CreditedAs="" />
+      <Actor Role="Lex Luthor Clone" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mackenzie" MiddleName="" LastName="Gray" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Dr. Emil Hamilton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alessandro" MiddleName="" LastName="Juliani" BirthYear="1978" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen / Green Arrow" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Cat Grant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keri" MiddleName="Lynn" LastName="Pratt" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Deadshot" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bradley" MiddleName="" LastName="Stryker" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Bette Sans Souci / Plastique" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jessica" MiddleName="Parker" LastName="Kennedy" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Carter Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Shanks" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="Karl" LastName="Richards" BirthYear="1976" CreditedAs="" />
+      <Actor Role="Shayera Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sahar" MiddleName="" LastName="Biniaz" BirthYear="0" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Kara" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Vandervoort" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Darkseid" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Photographer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lance" MiddleName="" LastName="Bonza" BirthYear="0" CreditedAs="" />
+      <Actor Role="Marina Fox" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Devon" MiddleName="" LastName="Weigel" BirthYear="9597" CreditedAs="" />
+      <Actor Role="Businessman" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Berner" BirthYear="62117" CreditedAs="" />
+      <Actor Role="Man on Street" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Blake" MiddleName="" LastName="Stadel" BirthYear="6206" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Actor Role="Clark Kent (also archive footage)" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Brainiac 5" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Marsters" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Greg Arkin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chad" MiddleName="" LastName="Donella" BirthYear="1978" CreditedAs="" />
+      <Actor Role="TV Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anne" MiddleName="Marie" LastName="DeLuise" BirthYear="1969" CreditedAs="Anne Marie Deluise" />
+      <Actor Role="Guidance Counselor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chilton" MiddleName="" LastName="Crane" BirthYear="6322" CreditedAs="" />
+      <Actor Role="Carrie" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicole" MiddleName="" LastName="Fraissinet" BirthYear="9675" CreditedAs="" />
+      <Actor Role="Mark Verheiden" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Simon" BirthYear="0" CreditedAs="" />
+      <Actor Role="Suzanne Capra" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hilary" MiddleName="" LastName="Jardine" BirthYear="14878" CreditedAs="" />
+      <Actor Role="Zoe" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allie" MiddleName="" LastName="Bertram" BirthYear="1989" CreditedAs="" />
+      <Actor Role="Clayton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Stevens" BirthYear="35453" CreditedAs="" />
+      <Actor Role="Production Assistant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ash" MiddleName="" LastName="Lee" BirthYear="26273" CreditedAs="" />
+      <Actor Role="Maddie Haroldhaus" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jill" MiddleName="" LastName="Morrison" BirthYear="5724" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Sparling" BirthYear="0" CreditedAs="" />
+      <Actor Role="Female Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evans" MiddleName="" LastName="Johnson" BirthYear="45167" CreditedAs="" />
+      <Actor Role="Jeff Hage" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evan" MiddleName="C." LastName="Schulte" BirthYear="7117" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brian" MiddleName="" LastName="McBride" BirthYear="25637" CreditedAs="" />
+      <Actor Role="Lionel Luthor (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Glover" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Alumni" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Timothy" MiddleName="" LastName="Knight" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lana Lang (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kristin" MiddleName="" LastName="Kreuk" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Chloe Sullivan (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Alumni Drew Landis" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="MacNeill" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Martha Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Annette" MiddleName="" LastName="O'Toole" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Helicopter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="Sanca" BirthYear="1974" CreditedAs="" />
+      <Actor Role="Jonathan Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Kevin" MiddleName="" LastName="Fair" BirthYear="65422" CreditedAs="Kevin G. Fair" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Don" MiddleName="" LastName="Whitehead" BirthYear="53861" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Holly" MiddleName="" LastName="Henderson" BirthYear="7855" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Glen" MiddleName="" LastName="Winter" BirthYear="35732" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Jordan" MiddleName="" LastName="Hawley" BirthYear="325" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Mairzee" MiddleName="" LastName="Almas" BirthYear="21772" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Anne" MiddleName="Cofell" LastName="Saunders" BirthYear="3194" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Jeannot" MiddleName="" LastName="Szwarc" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Brian" MiddleName="Wayne" LastName="Peterson" BirthYear="7048" CreditedAs="Brian Peterson" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Kelly" MiddleName="" LastName="Souders" BirthYear="13038" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>2012-12-31T17:41:14Z</ProfileTimestamp>
+    <ID>M318.3</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>3</ID_LocalityID>
+    <ID_Type>ManualID</ID_Type>
+    <UPC>Manual DVD #318</UPC>
+    <CollectionNumber>12758</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Smallville: Season 10: Disc 1</Title>
+    <DistTrait />
+    <OriginalTitle />
+    <ProductionYear>2010</ProductionYear>
+    <RunningTime>169</RunningTime>
+    <RatingAge>0</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Jor-El" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Terence" MiddleName="" LastName="Stamp" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Jonathan Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Alexander" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jakob" MiddleName="" LastName="Davies" BirthYear="2003" CreditedAs="" />
+      <Actor Role="Lex Luthor Clone" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mackenzie" MiddleName="" LastName="Gray" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Dr. Emil Hamilton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alessandro" MiddleName="" LastName="Juliani" BirthYear="1978" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Tess Mercer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Cassidy" MiddleName="" LastName="Freeman" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Oliver Queen / Green Arrow" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Cat Grant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Keri" MiddleName="Lynn" LastName="Pratt" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Deadshot" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bradley" MiddleName="" LastName="Stryker" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Bette Sans Souci / Plastique" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jessica" MiddleName="Parker" LastName="Kennedy" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Rick Flag" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Whittall" BirthYear="26471" CreditedAs="" />
+      <Actor Role="Carter Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Shanks" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="Karl" LastName="Richards" BirthYear="1976" CreditedAs="" />
+      <Actor Role="Shayera Hall" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sahar" MiddleName="" LastName="Biniaz" BirthYear="0" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="true" Uncredited="true" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Actor Role="Clark Kent" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Kara" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Vandervoort" BirthYear="1984" CreditedAs="" />
+      <Actor Role="Gordon Godfrey" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Darkseid" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Daingerfield" BirthYear="1970" CreditedAs="" />
+      <Actor Role="Photographer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lance" MiddleName="" LastName="Bonza" BirthYear="0" CreditedAs="" />
+      <Actor Role="Marina Fox" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Devon" MiddleName="" LastName="Weigel" BirthYear="9597" CreditedAs="" />
+      <Actor Role="Businessman" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Toby" MiddleName="" LastName="Berner" BirthYear="62117" CreditedAs="" />
+      <Actor Role="Man on Street" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Blake" MiddleName="" LastName="Stadel" BirthYear="6206" CreditedAs="" />
+      <Actor Role="Chloe Sullivan" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Actor Role="Clark Kent (also archive footage)" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Welling" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Lois Lane" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erica" MiddleName="" LastName="Durance" BirthYear="1978" CreditedAs="" />
+      <Actor Role="Oliver Queen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Justin" MiddleName="" LastName="Hartley" BirthYear="1977" CreditedAs="" />
+      <Actor Role="Brainiac 5" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Marsters" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Greg Arkin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chad" MiddleName="" LastName="Donella" BirthYear="1978" CreditedAs="" />
+      <Actor Role="TV Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anne" MiddleName="Marie" LastName="DeLuise" BirthYear="1969" CreditedAs="Anne Marie Deluise" />
+      <Actor Role="Guidance Counselor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Chilton" MiddleName="" LastName="Crane" BirthYear="6322" CreditedAs="" />
+      <Actor Role="Carrie" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicole" MiddleName="" LastName="Fraissinet" BirthYear="9675" CreditedAs="" />
+      <Actor Role="Mark Verheiden" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Simon" BirthYear="0" CreditedAs="" />
+      <Actor Role="Suzanne Capra" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hilary" MiddleName="" LastName="Jardine" BirthYear="14878" CreditedAs="" />
+      <Actor Role="Zoe" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Allie" MiddleName="" LastName="Bertram" BirthYear="1989" CreditedAs="" />
+      <Actor Role="Clayton" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="Stevens" BirthYear="35453" CreditedAs="" />
+      <Actor Role="Production Assistant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ash" MiddleName="" LastName="Lee" BirthYear="26273" CreditedAs="" />
+      <Actor Role="Maddie Haroldhaus" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jill" MiddleName="" LastName="Morrison" BirthYear="5724" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Alex" MiddleName="" LastName="Sparling" BirthYear="0" CreditedAs="" />
+      <Actor Role="Female Reporter" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evans" MiddleName="" LastName="Johnson" BirthYear="45167" CreditedAs="" />
+      <Actor Role="Jeff Hage" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Evan" MiddleName="C." LastName="Schulte" BirthYear="7117" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brian" MiddleName="" LastName="McBride" BirthYear="25637" CreditedAs="" />
+      <Actor Role="Lionel Luthor (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Glover" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Alumni" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Timothy" MiddleName="" LastName="Knight" BirthYear="0" CreditedAs="" />
+      <Actor Role="Lana Lang (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kristin" MiddleName="" LastName="Kreuk" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Chloe Sullivan (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Allison" MiddleName="" LastName="Mack" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Alumni Drew Landis" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tom" MiddleName="" LastName="MacNeill" BirthYear="1982" CreditedAs="" />
+      <Actor Role="Martha Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Annette" MiddleName="" LastName="O'Toole" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Helicopter Pilot" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="Sanca" BirthYear="1974" CreditedAs="" />
+      <Actor Role="Jonathan Kent (archive footage)" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Schneider" BirthYear="1960" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Divider Caption="10.01 Lazarus" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Kevin" MiddleName="" LastName="Fair" BirthYear="65422" CreditedAs="Kevin G. Fair" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Don" MiddleName="" LastName="Whitehead" BirthYear="53861" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Holly" MiddleName="" LastName="Henderson" BirthYear="7855" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.02 Shield" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Glen" MiddleName="" LastName="Winter" BirthYear="35732" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Jordan" MiddleName="" LastName="Hawley" BirthYear="325" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.03 Supergirl" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Mairzee" MiddleName="" LastName="Almas" BirthYear="21772" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Anne" MiddleName="Cofell" LastName="Saunders" BirthYear="3194" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Characters Created By: Fourth World" FirstName="Jack" MiddleName="" LastName="Kirby" BirthYear="1917" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+      <Divider Caption="10.04 Homecoming" Type="Episode" />
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Jeannot" MiddleName="" LastName="Szwarc" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Jerry" MiddleName="" LastName="Siegel" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Character Created By: Superman" FirstName="Joe" MiddleName="" LastName="Shuster" BirthYear="1914" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Alfred" MiddleName="" LastName="Gough" BirthYear="1967" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Developed For Television By" FirstName="Miles" MiddleName="" LastName="Millar" BirthYear="1970" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Brian" MiddleName="Wayne" LastName="Peterson" BirthYear="7048" CreditedAs="Brian Peterson" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Kelly" MiddleName="" LastName="Souders" BirthYear="13038" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Louis" MiddleName="" LastName="Febre" BirthYear="6068" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+</Collection>

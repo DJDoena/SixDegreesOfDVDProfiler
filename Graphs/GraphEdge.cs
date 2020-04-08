@@ -24,5 +24,7 @@ namespace mitoSoft.Math.Graphs
         public GraphNode TargetNode { get; }
 
         public double Distance { get; }
+
+        internal ulong ObjectNumber { get; set; }
     }
 }

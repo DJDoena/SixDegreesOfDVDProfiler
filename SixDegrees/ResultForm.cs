@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using mitoSoft.Math.Graphs.Dijkstra;
@@ -11,48 +10,19 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private readonly IEnumerable<Steps> _results;
 
-        private readonly BackgroundWorker _worker;
-
         internal ResultForm(IEnumerable<Steps> results)
         {
             _results = results;
 
-            _worker = new BackgroundWorker()
-            {
-                WorkerSupportsCancellation = true,
-            };
-
             InitializeComponent();
 
-            _worker.DoWork += OnDoWork;
-        }
+            var rows = _results.Select(r => CreateRow(r)).ToArray();
 
-        private void OnResultFormLoad(object sender, EventArgs e)
-        {
-            _worker.RunWorkerAsync();
-        }
+            ResultListView.Items.AddRange(rows);
 
-        private void OnDoWork(object sender, DoWorkEventArgs e)
-        {
-            var isFirstRow = true;
-
-            foreach (var result in _results)
+            if (ResultListView.Items.Count > 0)
             {
-                if (_worker.CancellationPending)
-                {
-                    break;
-                }
-
-                var row = CreateRow(result);
-
-                ResultListView.Invoke(new Action(() => ResultListView.Items.Add(row)));
-
-                if (isFirstRow)
-                {
-                    ResultListView.Invoke(new Action(() => row.Selected = true));
-
-                    isFirstRow = false;
-                }
+                ResultListView.Items[0].Selected = true;
             }
         }
 
@@ -137,11 +107,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             var row = new ListViewItem(subItems);
 
             return row;
-        }
-
-        private void OnResultFormFormClosing(object sender, FormClosingEventArgs e)
-        {
-            _worker.CancelAsync();
         }
     }
 }

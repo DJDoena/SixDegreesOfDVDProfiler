@@ -202,6 +202,7 @@
             this.ResultListView.MultiSelect = false;
             this.ResultListView.Name = "ResultListView";
             this.ResultListView.Size = new System.Drawing.Size(550, 200);
+            this.ResultListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ResultListView.TabIndex = 10;
             this.ResultListView.UseCompatibleStateImageBehavior = false;
             this.ResultListView.View = System.Windows.Forms.View.Details;
