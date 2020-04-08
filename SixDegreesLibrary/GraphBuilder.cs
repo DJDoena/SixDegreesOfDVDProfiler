@@ -13,7 +13,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var graph = new DistanceGraph();
 
-            var duplicateChecker = new Dictionary<GraphNodeKey, HashSet<GraphNodeKey>>(); //for multiple movies with the same people we con't want to add multiple connections
+            var duplicateChecker = new Dictionary<GraphNodeKeyBase, HashSet<GraphNodeKeyBase>>(); //for multiple movies with the same people we con't want to add multiple connections
 
             foreach (var profile in collection)
             {
@@ -21,7 +21,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                 if (graph.TryAddNode(ref profileNode))
                 {
-                    duplicateChecker.Add(profileNode.Key, new HashSet<GraphNodeKey>());
+                    duplicateChecker.Add(profileNode.Key, new HashSet<GraphNodeKeyBase>());
                 }
 
                 if (considerCast)
@@ -42,7 +42,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return graph;
         }
 
-        private static void AddPersonNodes(DistanceGraph graph, DistanceNode profileNode, IEnumerable<IPerson> people, HashSet<GraphNodeKey> duplicateChecker)
+        private static void AddPersonNodes(DistanceGraph graph, DistanceNode profileNode, IEnumerable<IPerson> people, HashSet<GraphNodeKeyBase> duplicateChecker)
         {
             foreach (var person in people)
             {

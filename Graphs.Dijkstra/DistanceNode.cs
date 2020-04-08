@@ -8,7 +8,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
     [DebuggerDisplay("Node {Name} (Connections = {System.Linq.Enumerable.Count(Connections)}, Distance = {DistanceFromStart})")]
     public class DistanceNode : GraphNode
     {
-        public DistanceNode(string name, GraphNodeKey key) : base(name, key)
+        public DistanceNode(string name, GraphNodeKeyBase key) : base(name, key)
         {
             ResetDistanceFromStart();
         }

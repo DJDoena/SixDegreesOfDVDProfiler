@@ -20,7 +20,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             this._hasCalculated = false;
         }
 
-        public double CalculateDistancesByBreadthFirst(GraphNodeKey sourceNodeKey, GraphNodeKey targetNodeKey, bool equallyWeighted = false)
+        public double CalculateDistancesByBreadthFirst(GraphNodeKeyBase sourceNodeKey, GraphNodeKeyBase targetNodeKey, bool equallyWeighted = false)
         {
             Check(sourceNodeKey, targetNodeKey, out var sourceNode, out var targetNode);
 
@@ -42,7 +42,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             return distance;
         }
 
-        public double CalculateDistancesByDeepFirst(GraphNodeKey sourceNodeKey, GraphNodeKey targetNodeKey, int maxDistance = 20)
+        public double CalculateDistancesByDeepFirst(GraphNodeKeyBase sourceNodeKey, GraphNodeKeyBase targetNodeKey, int maxDistance = 20)
         {
             Check(sourceNodeKey, targetNodeKey, out var sourceNode, out var targetNode);
 
@@ -195,7 +195,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             sourceNode.SetDistanceFromStart(0);
         }
 
-        private void Check(GraphNodeKey sourceNodeKey, GraphNodeKey targetNodeKey, out DistanceNode startNode, out DistanceNode targetNode)
+        private void Check(GraphNodeKeyBase sourceNodeKey, GraphNodeKeyBase targetNodeKey, out DistanceNode startNode, out DistanceNode targetNode)
         {
             if (sourceNodeKey == null)
             {

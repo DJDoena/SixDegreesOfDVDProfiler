@@ -6,7 +6,7 @@ using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    [DebuggerDisplay("{Name}")]
+    [DebuggerDisplay("PersonNode {Key.GetKeyDisplayValue()}")]
     public sealed class PersonNode : DistanceNode
     {
         private Dictionary<string, Jobs> _profiles;
@@ -70,7 +70,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private sealed class PersonNodeKey : GraphNodeKey
+        private sealed class PersonNodeKey : GraphNodeKeyBase
         {
             private readonly IPerson _person;
 
@@ -86,16 +86,18 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             public override int GetKeyHashCode() => _key.GetHashCode();
 
-            public override bool KeysAreEqual(GraphNodeKey other)
+            public override bool KeysAreEqual(GraphNodeKeyBase other)
             {
                 if (!(other is PersonNodeKey pnk))
                 {
                     return false;
                 }
+                else
+                {
+                    var areEqual = _key.Equals(pnk._key);
 
-                var areEqual = _key.Equals(pnk._key);
-
-                return areEqual;
+                    return areEqual;
+                }
             }
         }
     }

@@ -4,7 +4,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 {
     public class DistanceGraph : Graph
     {
-        public bool TryGetNode(GraphNodeKey nodeKey, out DistanceNode node)
+        public bool TryGetNode(GraphNodeKeyBase nodeKey, out DistanceNode node)
         {
             if (base.TryGetNode(nodeKey, out GraphNode graphNode))
             {

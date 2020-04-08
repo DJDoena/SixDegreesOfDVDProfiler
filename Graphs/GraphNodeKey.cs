@@ -1,23 +1,36 @@
-﻿namespace mitoSoft.Math.Graphs
+﻿using System;
+using System.Diagnostics;
+
+namespace mitoSoft.Math.Graphs
 {
-    /// <summary>
-    /// Identifies a unique node in the graph.
-    /// </summary>
-    /// <remarks>
-    /// A key object must be immutable, its HashCode and all properties (that are used for equality comparison) never changing.
-    /// </remarks>
-    public abstract class GraphNodeKey
+    [DebuggerDisplay("GraphNodeKey {_name}")]
+    public sealed class GraphNodeKey : GraphNodeKeyBase
     {
-        public abstract int GetKeyHashCode();
+        private readonly string _name;
 
-        public abstract bool KeysAreEqual(GraphNodeKey other);
+        private readonly int _hashCode;
 
-        public abstract string GetKeyDisplayValue();
+        public GraphNodeKey(string name)
+        {
+            this._name = name ?? throw new ArgumentNullException(nameof(name));
 
-        public sealed override bool Equals(object obj) => this.KeysAreEqual(obj as GraphNodeKey);
+            _hashCode = name.GetHashCode();
+        }
 
-        public sealed override int GetHashCode() => this.GetKeyHashCode();
+        public override string GetKeyDisplayValue() => _name;
 
-        public override string ToString() => this.GetKeyDisplayValue();
+        public override int GetKeyHashCode() => _hashCode;
+
+        public override bool KeysAreEqual(GraphNodeKeyBase other)
+        {
+            if (!(other is GraphNodeKey gnk))
+            {
+                return false;
+            }
+
+            var areEqual = this._name.Equals(gnk._name);
+
+            return areEqual;
+        }
     }
 }

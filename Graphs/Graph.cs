@@ -9,11 +9,11 @@ namespace mitoSoft.Math.Graphs
     {
         private static ulong _nodeCounter = 0;
 
-        private readonly Dictionary<GraphNodeKey, GraphNode> _nodes;
+        private readonly Dictionary<GraphNodeKeyBase, GraphNode> _nodes;
 
         public Graph()
         {
-            this._nodes = new Dictionary<GraphNodeKey, GraphNode>();
+            this._nodes = new Dictionary<GraphNodeKeyBase, GraphNode>();
         }
 
         public IEnumerable<GraphNode> Nodes
@@ -27,7 +27,7 @@ namespace mitoSoft.Math.Graphs
             }
         }
 
-        public bool TryGetNode(GraphNodeKey nodeKey, out GraphNode node) => this._nodes.TryGetValue(nodeKey, out node);
+        public bool TryGetNode(GraphNodeKeyBase nodeKey, out GraphNode node) => this._nodes.TryGetValue(nodeKey, out node);
 
         /// <summary>
         /// Tries to add the given node to the system. If the node already exists, the existing node will be returned.
