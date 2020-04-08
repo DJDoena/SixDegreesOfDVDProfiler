@@ -2,16 +2,17 @@
 using System.Linq;
 using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
+using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     internal partial class LookUpNameForm : Form
     {
-        private readonly Persons _searchIn;
+        private readonly DistanceGraph _searchIn;
 
         internal IPerson Match { get; private set; }
 
-        internal LookUpNameForm(IPerson searchFor, Persons searchIn)
+        internal LookUpNameForm(IPerson searchFor, DistanceGraph searchIn)
         {
             _searchIn = searchIn;
 

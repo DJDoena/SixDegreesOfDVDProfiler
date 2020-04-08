@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
+using mitoSoft.Math.Graphs;
+using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
@@ -13,14 +15,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private IEnumerable<DVD> _collection;
 
-        private Persons _persons;
+        private DistanceGraph _graph;
 
-        private Persons Persons
+        private DistanceGraph Graph
         {
-            get => _persons;
+            get => _graph;
             set
             {
-                _persons = value;
+                _graph = value;
 
                 SwitchControls(value != null);
             }
@@ -54,7 +56,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             Collection = null;
 
-            Persons = null;
+            Graph = null;
 
             LeftBirthYearUpDown.Maximum = ushort.MaxValue;
             RightBirthYearUpDown.Maximum = ushort.MaxValue;
@@ -85,7 +87,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     Collection = null;
 
-                    Persons = null;
+                    Graph = null;
 
                     Enabled = false;
 
@@ -127,7 +129,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 Enabled = false;
 
-                Persons = (new PersonsBuilder()).Build(Collection, IncludeCastCheckBox.Checked, IncludeCrewCheckBox.Checked);
+                Graph = GraphBuilder.Build(Collection, IncludeCastCheckBox.Checked, IncludeCrewCheckBox.Checked);
 
                 Enabled = true;
             }
@@ -172,7 +174,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var searchFor = new SearchPerson(firstNameTextBox.Text, middleNameTextBox.Text, lastNameTextBox.Text, (ushort)birthYearUpDown.Value);
 
-            var matches = PersonFinder.Find(searchFor, Persons).ToList();
+            var matches = PersonFinder.Find(searchFor, Graph).ToList();
 
             if (matches.Count == 1)
             {
@@ -184,7 +186,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
             else
             {
-                using (var lookUpForm = new LookUpNameForm(searchFor, Persons))
+                using (var lookUpForm = new LookUpNameForm(searchFor, Graph))
                 {
                     if (lookUpForm.ShowDialog() == DialogResult.OK)
                     {
@@ -204,7 +206,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void OnStartShortSearchButtonClick(object sender, EventArgs e)
         {
-            Find((new ConnectionFinder(Persons)).FindForward);
+            Find();
         }
 
         private void OnStartLongSearchButtonClick(object sender, EventArgs e)
@@ -217,10 +219,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 }
             }
 
-            Find((new ConnectionFinder(Persons)).FindReverse);
+            //Find((new DistanceCalculator(Graph)).FindReverse);
         }
 
-        private void Find(FindDelegate find)
+        private void Find()
         {
             if (string.IsNullOrWhiteSpace(LeftFirstNameTextBox.Text))
             {
@@ -239,7 +241,24 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             try
             {
-                TryFind(find);
+                TryFind();
+            }
+            catch (NodeNotInGraphException ex)
+            {
+                if (ex.Node is PersonNode personNode)
+                {
+                    var name = PersonFormatter.GetName(personNode.Person);
+
+                    MessageBox.Show($"{name} is not in collection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (ex.Key != null)
+                {
+                    MessageBox.Show($"{ex.Key.GetKeyDisplayValue()} is not in collection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -251,33 +270,37 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private void TryFind(FindDelegate find)
+        private void TryFind()
         {
             var leftPerson = new SearchPerson(LeftFirstNameTextBox.Text, LeftMiddleNameTextBox.Text, LeftLastNameTextBox.Text, (ushort)LeftBirthYearUpDown.Value);
 
+            DistanceNode leftPersonNode = new PersonNode(leftPerson);
+
             var rightPerson = new SearchPerson(RightFirstNameTextBox.Text, RightMiddleNameTextBox.Text, RightLastNameTextBox.Text, (ushort)RightBirthYearUpDown.Value);
 
-            var results = find(leftPerson, rightPerson, (byte)MaxSearchDepthUpDown.Value, (uint)MaxSearchRequestsUpDown.Value);
+            DistanceNode rightPersonNode = new PersonNode(rightPerson);
 
-            var firstResult = results.FirstOrDefault();
+            var calculator = new DistanceCalculator(Graph);
 
-            if (firstResult == null)
+            var distance = calculator.CalculateDistancesByDeepFirst(ref leftPersonNode, ref rightPersonNode, (int)MaxSearchDepthUpDown.Value);
+
+            if (double.IsPositiveInfinity(distance))
             {
                 MessageBox.Show("No connection found.", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (firstResult.Degree == 0)
+            else if (distance == 0)
             {
                 MessageBox.Show("Left and right are the same person. Their degree of separation is: 0", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                using (var resultForm = new ResultForm(firstResult, results))
+                var results = calculator.GetShortestPath(rightPersonNode);
+
+                using (var resultForm = new ResultForm(results))
                 {
                     resultForm.ShowDialog();
                 }
             }
         }
-
-        private delegate IEnumerable<Steps> FindDelegate(IPerson startPerson, IPerson targetPerson, byte maxSearchDepth, uint maxSearchRequests);
     }
 }

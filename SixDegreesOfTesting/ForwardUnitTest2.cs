@@ -1,108 +1,120 @@
 ﻿using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using mitoSoft.Math.Graphs.Dijkstra;
 
-namespace SixDegreesOfTesting
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [TestClass]
     public class ForwardUnitTest2
     {
-        private static Collection _collection;
+        private static DistanceGraph _graph;
 
         [ClassInitialize]
-        public static void ClassInitialize(TestContext _)
+        public static void Initialize(TestContext _)
         {
-            _collection = DVDProfilerSerializer<Collection>.Deserialize("Test2.xml");
+            var fileName = "Test2.xml";
+
+            var collection = DVDProfilerSerializer<Collection>.Deserialize(fileName);
+
+            _graph = GraphBuilder.Build(collection.DVDList);
         }
 
         [TestMethod]
-        public void JohnWayneToMaxVonSydowDegree1()
+        public void Test1()
         {
-            var sourcePerson = new SearchPerson(firstName: "John", lastName: "Wayne");
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Max", lastName: "von Sydow"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
 
-            var targetPerson = new SearchPerson(firstName: "Max", lastName: "von Sydow");
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
+            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(1, results.Count);
+            Assert.AreEqual(nodeDistance1, nodeDistance2);
 
-            var result1 = results[0];
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
 
-            Assert.AreEqual(1, result1.Degree);
+            Assert.AreEqual(1, movieDistance);
 
-            var steps = result1.GetSteps().ToList();
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
 
-            Assert.AreEqual(1, steps.Count);
+            Assert.AreEqual(1, stepsList.Count);
 
-            StepsChecker.Check(sourcePerson, targetPerson, steps);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
         }
 
         [TestMethod]
-        public void MaxVonSydowToJohnWayneDegree1()
+        public void Test2()
         {
-            var sourcePerson = new SearchPerson(firstName: "Max", lastName: "von Sydow");
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Oscar", lastName: "Ljung"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
 
-            var targetPerson = new SearchPerson(firstName: "John", lastName: "Wayne");
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
+            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(1, results.Count);
+            Assert.AreEqual(nodeDistance1, nodeDistance2);
 
-            var result1 = results[0];
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
 
-            Assert.AreEqual(1, result1.Degree);
+            Assert.AreEqual(2, movieDistance);
 
-            var steps = result1.GetSteps().ToList();
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
 
-            Assert.AreEqual(1, steps.Count);
+            Assert.AreEqual(1, stepsList.Count);
 
-            StepsChecker.Check(sourcePerson, targetPerson, steps);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
         }
 
         [TestMethod]
-        public void JohnWayneToHansAlfredsonDegree2()
+        public void Test3()
         {
-            var sourcePerson = new SearchPerson(firstName: "John", lastName: "Wayne");
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
 
-            var targetPerson = new SearchPerson(firstName: "Hans", lastName: "Alfredson");
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
+            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(1, results.Count);
+            Assert.AreEqual(nodeDistance1, nodeDistance2);
 
-            var result1 = results[0];
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
 
-            Assert.AreEqual(2, result1.Degree);
+            Assert.AreEqual(2, movieDistance);
 
-            var steps = result1.GetSteps().ToList();
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
 
-            Assert.AreEqual(2, steps.Count);
+            Assert.AreEqual(1, stepsList.Count);
 
-            StepsChecker.Check(sourcePerson, targetPerson, steps);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
         }
 
         [TestMethod]
-        public void HansAlfredsonToJohnWayneDegree2()
+        public void Test4()
         {
-            var sourcePerson = new SearchPerson(firstName: "Hans", lastName: "Alfredson");
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
 
-            var targetPerson = new SearchPerson(firstName: "John", lastName: "Wayne");
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = SixDegrees.FindForward(_collection.DVDList, sourcePerson, targetPerson, 10, 10000, true, false).ToList();
+            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(1, results.Count);
+            Assert.AreEqual(nodeDistance1, nodeDistance2);
 
-            var result1 = results[0];
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
 
-            Assert.AreEqual(2, result1.Degree);
+            Assert.AreEqual(2, movieDistance);
 
-            var steps = result1.GetSteps().ToList();
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
 
-            Assert.AreEqual(2, steps.Count);
+            Assert.AreEqual(1, stepsList.Count);
 
-            StepsChecker.Check(sourcePerson, targetPerson, steps);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
         }
     }
 }

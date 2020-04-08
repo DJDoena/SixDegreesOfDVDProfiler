@@ -1,170 +1,217 @@
-﻿using System.Collections.Generic;
-using DoenaSoft.DVDProfiler.DVDProfilerXML;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     internal static class StepsChecker
     {
-        internal static void Check(IPerson sourcePerson, IPerson targetPerson, List<Step> steps)
+        internal static void Check(DistanceNode sourcePerson, DistanceNode targetPerson, Steps steps, double nodeDistance)
+        {            
+            Assert.AreEqual(nodeDistance, steps.Degree);
+
+            var stepList = steps.GetSteps().ToList();
+
+            Assert.AreEqual(nodeDistance, stepList.Count);
+
+            if (stepList.Count == 0)
+            {
+                return;
+            }
+
+            if (!stepList[0].Left.Name.Equals(targetPerson.Name))
+            {
+                Assert.Fail("Chain starts incorrectly.");
+            }
+
+            if (!stepList[stepList.Count - 1].Right.Name.Equals(sourcePerson.Name))
+            {
+                Assert.Fail("Chain ends incorrectly.");
+            }
+
+            CheckTitles(stepList);
+
+            CheckAllButLastElementForSourcePerson(sourcePerson, stepList);
+
+            CheckAllButFirstElementForTargetPerson(targetPerson, stepList);
+
+            CheckForDuplicateNodes(stepList);
+        }
+
+        internal static void Check(List<Steps> stepsList)
         {
-            var sourcePersonKey = new PersonKey(sourcePerson);
+            if (stepsList.Count == 0)
+            {
+                return;
+            }
 
-            var targetPersonKey = new PersonKey(targetPerson);
+            var stepLists = stepsList.Select(sl => sl.GetSteps().ToList()).ToList();
 
-            CheckRightElementForSourcePerson(sourcePersonKey, steps);
+            var degree = stepLists[0].Count;
 
-            CheckAllButFirstLeftElementForSourcePerson(sourcePersonKey, steps);
+            if (stepLists.Any(sl => sl.Count != degree))
+            {
+                Assert.Fail("Not all results have the same degree.");
+            }
 
-            CheckAllButFirstStepForSourcePersonCoProfiled(sourcePersonKey, steps);
+            var hashSet = new HashSet<StepsKey>();
 
-            CheckRightElementForTargetPerson(targetPersonKey, steps);
+            foreach (var steps in stepLists)
+            {
+                var key = new StepsKey(steps);
 
-            CheckAllButLastRightElementForSourcePerson(targetPersonKey, steps);
-
-            CheckAllButLastStepForTargetPersonCoProfiled(targetPersonKey, steps);
-
-            CheckTitles(steps);
+                if (!hashSet.Add(key))
+                {
+                    Assert.Fail("Not all results are different.");
+                }
+            }
         }
 
         private static void CheckTitles(List<Step> steps)
         {
-            var titles = new HashSet<string>();
+            var profiles = new HashSet<string>();
 
-            foreach (var step in steps)
+            for (int stepIndex = 1; stepIndex < steps.Count - 1; stepIndex += 2)
             {
-                if (!titles.Add(step.Left.Title))
+                var profileNode = steps[stepIndex].Left;
+
+                if (!(profileNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.ProfileNode))
+                {
+                    Assert.Fail("Node is not a profile node.");
+                }
+
+                if (!profiles.Add(profileNode.Name))
                 {
                     Assert.Fail("Duplicate title can be found in steps.");
                 }
             }
         }
 
-        /// <remarks>
-        /// in the last element that person is always a co-profile or else it wouldn't be a step
-        /// </remarks>
-        private static void CheckAllButLastStepForTargetPersonCoProfiled(PersonKey targetPersonKey, List<Step> steps)
+        private static void CheckAllButLastElementForSourcePerson(DistanceNode sourcePerson, List<Step> steps)
         {
-            for (int stepIndex = 0; stepIndex < steps.Count - 1; stepIndex++)
+            for (int stepIndex = 0; stepIndex < steps.Count - 1; stepIndex += 2)
             {
-                var step = steps[stepIndex];
+                var personNode = steps[stepIndex].Left;
 
-                foreach (var coProfile in step.Left.CoProfiles)
+                if (!(personNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.PersonNode))
                 {
-                    if (IsPersonMatch(targetPersonKey, coProfile.PersonKey))
+                    Assert.Fail("Node is not a person node.");
+                }
+
+                if (personNode.Name.Equals(sourcePerson.Name))
+                {
+                    Assert.Fail("Source person can be found before end.");
+                }
+            }
+        }
+
+        private static void CheckAllButFirstElementForTargetPerson(DistanceNode targetPerson, List<Step> steps)
+        {
+            for (int stepIndex = 2; stepIndex < steps.Count - 1; stepIndex += 2)
+            {
+                var personNode = steps[stepIndex].Left;
+
+                if (!(personNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.PersonNode))
+                {
+                    Assert.Fail("Node is not a person node.");
+                }
+
+                if (personNode.Name.Equals(targetPerson.Name))
+                {
+                    Assert.Fail("Target person can be found after start.");
+                }
+            }
+        }
+
+        private static void CheckForDuplicateNodes(List<Step> steps)
+        {
+            if (steps.Count == 0)
+            {
+                return;
+            }
+
+            var ids = new HashSet<Guid>()
+            {
+                steps[0].Left.Id,
+            };
+
+            foreach (var step in steps)
+            {
+                if (!ids.Add(step.Right.Id))
+                {
+                    Assert.Fail("Duplicate node Id.");
+                }
+            }
+        }
+
+        private sealed class StepsKey
+        {
+            private readonly List<Step> _steps;
+
+            private readonly int _hashCode;
+
+            public StepsKey(List<Step> steps)
+            {
+                _steps = steps;
+
+                if (steps.Count == 0)
+                {
+                    _hashCode = 0;
+                }
+                else
+                {
+                    var firstStep = steps[0];
+
+                    _hashCode = firstStep.Left.Name.GetHashCode() ^ firstStep.Right.Name.GetHashCode();
+
+                    for (var stepIndex = 1; stepIndex < steps.Count; stepIndex++)
                     {
-                        Assert.Fail("Target person can be found in left co-profiles.");
+                        var step = steps[stepIndex];
+
+                        _hashCode ^= step.Left.Name.GetHashCode() ^ step.Right.Name.GetHashCode();
+                    }
+                }
+            }
+
+            public override int GetHashCode() => _hashCode;
+
+            public override bool Equals(object obj)
+            {
+                if (!(obj is StepsKey other))
+                {
+                    return false;
+                }
+
+                if (_steps.Count != other._steps.Count)
+                {
+                    return false;
+                }
+
+                var areEqual = true;
+
+                for (var stepIndex = 1; stepIndex < _steps.Count; stepIndex++)
+                {
+                    var thisStep = _steps[stepIndex];
+
+                    var otherStep = other._steps[stepIndex];
+
+                    if (!thisStep.Left.Name.Equals(otherStep.Left.Name))
+                    {
+                        areEqual = false;
+
+                        break;
+                    }
+                    else if (!thisStep.Right.Name.Equals(otherStep.Right.Name))
+                    {
+                        areEqual = false;
+
+                        break;
                     }
                 }
 
-                foreach (var coProfile in step.Right.CoProfiles)
-                {
-                    if (IsPersonMatch(targetPersonKey, coProfile.PersonKey))
-                    {
-                        Assert.Fail("Target person can be found in right co-profiles.");
-                    }
-                }
-            }
-        }
-
-        private static void CheckAllButLastRightElementForSourcePerson(PersonKey targetPersonKey, List<Step> steps)
-        {
-            for (int stepIndex = 0; stepIndex < steps.Count - 1; stepIndex++)
-            {
-                var step = steps[stepIndex];
-
-                var leftPersonKey = step.Right.PersonKey;
-
-                if (IsPersonMatch(targetPersonKey, leftPersonKey))
-                {
-                    Assert.Fail("Target person can be found in left list.");
-                }
-            }
-        }
-
-        private static void CheckRightElementForTargetPerson(PersonKey targetPersonKey, List<Step> steps)
-        {
-            for (int stepIndex = 0; stepIndex < steps.Count; stepIndex++)
-            {
-                var step = steps[stepIndex];
-
-                var rightPersonKey = step.Left.PersonKey;
-
-                if (IsPersonMatch(targetPersonKey, rightPersonKey))
-                {
-                    Assert.Fail("Target person can be found in right list.");
-                }
-            }
-        }
-
-        /// <remarks>
-        /// in the first element that person is always a co-profile or else it wouldn't be a step
-        /// </remarks>
-        private static void CheckAllButFirstStepForSourcePersonCoProfiled(PersonKey sourcePersonKey, List<Step> steps)
-        {
-            for (int stepIndex = 1; stepIndex < steps.Count; stepIndex++)
-            {
-                var step = steps[stepIndex];
-
-                foreach (var coProfile in step.Left.CoProfiles)
-                {
-                    if (IsPersonMatch(sourcePersonKey, coProfile.PersonKey))
-                    {
-                        Assert.Fail("Source person can be found in left co-profiles.");
-                    }
-                }
-
-                foreach (var coProfile in step.Right.CoProfiles)
-                {
-                    if (IsPersonMatch(sourcePersonKey, coProfile.PersonKey))
-                    {
-                        Assert.Fail("Source person can be found in right co-profiles.");
-                    }
-                }
-            }
-        }
-
-        private static void CheckAllButFirstLeftElementForSourcePerson(PersonKey sourcePersonKey, List<Step> steps)
-        {
-            for (int stepIndex = 1; stepIndex < steps.Count; stepIndex++)
-            {
-                var step = steps[stepIndex];
-
-                var leftPersonKey = step.Left.PersonKey;
-
-                if (IsPersonMatch(sourcePersonKey, leftPersonKey))
-                {
-                    Assert.Fail("Source person can be found in left list.");
-                }
-            }
-        }
-
-        private static void CheckRightElementForSourcePerson(PersonKey sourcePersonKey, List<Step> steps)
-        {
-            for (int stepIndex = 0; stepIndex < steps.Count; stepIndex++)
-            {
-                var step = steps[stepIndex];
-
-                var rightPersonKey = step.Right.PersonKey;
-
-                if (IsPersonMatch(sourcePersonKey, rightPersonKey))
-                {
-                    Assert.Fail("Source person can be found in right list.");
-                }
-            }
-        }
-
-        private static bool IsPersonMatch(PersonKey left, PersonKey right)
-        {
-            if (left.GetHashCode() != right.GetHashCode())
-            {
-                return false;
-            }
-            else
-            {
-                var equals = left.Equals(right);
-
-                return equals;
+                return areEqual;
             }
         }
     }

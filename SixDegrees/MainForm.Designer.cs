@@ -361,11 +361,22 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Enabled = false;
             label1.Location = new System.Drawing.Point(243, 426);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(108, 13);
             label1.TabIndex = 13;
             label1.Text = "Max search requests:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(12, 220);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(578, 13);
+            label2.TabIndex = 8;
+            label2.Text = "For performance reasons try to put the less relevant person on the left side. It\'" +
+    "s easier to find the elephant than the mouse.";
             // 
             // IncludeCastCheckBox
             // 
@@ -420,6 +431,7 @@
             // 
             // StartLongSearchButton
             // 
+            this.StartLongSearchButton.Enabled = false;
             this.StartLongSearchButton.Location = new System.Drawing.Point(12, 479);
             this.StartLongSearchButton.Name = "StartLongSearchButton";
             this.StartLongSearchButton.Size = new System.Drawing.Size(225, 23);
@@ -443,6 +455,7 @@
             // 
             // MaxSearchRequestsUpDown
             // 
+            this.MaxSearchRequestsUpDown.Enabled = false;
             this.MaxSearchRequestsUpDown.Increment = new decimal(new int[] {
             100,
             0,
@@ -467,16 +480,6 @@
             0,
             0,
             0});
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 220);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(578, 13);
-            label2.TabIndex = 8;
-            label2.Text = "For performance reasons try to put the less relevant person on the left side. It\'" +
-    "s easier to find the elephant than the mouse.";
             // 
             // MainForm
             // 

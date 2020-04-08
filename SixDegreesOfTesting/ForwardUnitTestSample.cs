@@ -1,22 +1,21 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using mitoSoft.Math.Graphs.Dijkstra;
 
-namespace SixDegreesOfTesting
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [TestClass]
     public class ForwardUnitTestSample
     {
-        private static Collection _collection;
-
-        private static Persons _persons;
+        private static DistanceGraph _graph;
 
         [ClassInitialize]
-        public static void ClassInitialize(TestContext _)
+        public static void Initialize(TestContext _)
         {
             const string SampleXml = "sample.xml";
 
@@ -27,43 +26,88 @@ namespace SixDegreesOfTesting
 
             ZipFile.ExtractToDirectory(@"..\..\..\..\sample_xml.zip", ".");
 
-            _collection = DVDProfilerSerializer<Collection>.Deserialize(SampleXml);
+            var collection = DVDProfilerSerializer<Collection>.Deserialize(SampleXml);
 
-            _persons = (new PersonsBuilder()).Build(_collection.DVDList, true, false);
+            _graph = GraphBuilder.Build(collection.DVDList);
         }
 
         [TestMethod]
         public void ToshiroMifuneToTomHollandDegree4()
         {
-            var sourcePerson = new SearchPerson(firstName: "Toshirô", lastName: "Mifune", birthYear: 1920);
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Toshirô", lastName: "Mifune", birthYear: 1920));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Holland", birthYear: 1996));
 
-            var targetPerson = new SearchPerson(firstName: "Tom", lastName: "Holland", birthYear: 1996);
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = (new ConnectionFinder(_persons)).FindForward(sourcePerson, targetPerson, 10, 1500000).ToList();
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(18, results.Count);
+            var movieDistance = GetRealMovieDistance(nodeDistance);
 
-            var result1 = results[0];
+            Assert.AreEqual(4, movieDistance);
 
-            Assert.AreEqual(4, result1.Degree);
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
 
-            var steps = result1.GetSteps().ToList();
+            Assert.AreEqual(18, stepsList.Count);
 
-            Assert.AreEqual(4, steps.Count);
-
-            StepsChecker.Check(sourcePerson, targetPerson, steps);
+            CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
         }
 
         [TestMethod]
-        public void TomHollandToshiroMifuneNoMatch()
+        public void ToshiroMifuneToTakashiShimuraDegree1()
         {
-            var sourcePerson = new SearchPerson(firstName: "Tom", lastName: "Holland", birthYear: 1996);
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Toshirô", lastName: "Mifune", birthYear: 1920));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Takashi", lastName: "Shimura", birthYear: 1905));
 
-            var targetPerson = new SearchPerson(firstName: "Toshirô", lastName: "Mifune", birthYear: 1920);
+            var calculator = new DistanceCalculator(_graph);
 
-            var results = (new ConnectionFinder(_persons)).FindForward(sourcePerson, targetPerson, 10, 10000000).ToList();
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(0, results.Count);
+            var movieDistance = GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(1, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(2, stepsList.Count);
+
+            CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void TomHollandToToshiroMifuneDegree4()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Holland", birthYear: 1996));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Toshirô", lastName: "Mifune", birthYear: 1920));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+
+            var movieDistance = GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(4, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(18, stepsList.Count);
+
+            CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        //Hier werden die Filme rausgefiltert
+        internal static double GetRealMovieDistance(double nodeDistance)
+        {
+            return nodeDistance / 2;
+        }
+
+        internal static void CheckSteps(DistanceNode sourceNode, DistanceNode targetNode, List<Steps> stepsList, double nodeDistance)
+        {
+            StepsChecker.Check(stepsList);
+
+            foreach (var steps in stepsList)
+            {
+                StepsChecker.Check(sourceNode, targetNode, steps, nodeDistance);
+            }
         }
     }
 }

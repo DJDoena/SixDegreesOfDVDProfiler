@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
+using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
@@ -14,7 +13,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private readonly BackgroundWorker _worker;
 
-        internal ResultForm(Steps firstResult, IEnumerable<Steps> results)
+        internal ResultForm(IEnumerable<Steps> results)
         {
             _results = results;
 
@@ -24,12 +23,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             };
 
             InitializeComponent();
-
-            var firstRow = CreateRow(firstResult);
-
-            ResultListView.Items.Add(firstRow);
-
-            firstRow.Selected = true;
 
             _worker.DoWork += OnDoWork;
         }
@@ -45,13 +38,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             foreach (var result in _results)
             {
-                if (isFirstRow)
-                {
-                    isFirstRow = false;
-
-                    continue;
-                }
-
                 if (_worker.CancellationPending)
                 {
                     break;
@@ -60,16 +46,33 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 var row = CreateRow(result);
 
                 ResultListView.Invoke(new Action(() => ResultListView.Items.Add(row)));
+
+                if (isFirstRow)
+                {
+                    ResultListView.Invoke(new Action(() => row.Selected = true));
+
+                    isFirstRow = false;
+                }
             }
         }
 
         private static ListViewItem CreateRow(Steps result)
         {
-            var first = result.GetSteps().First();
+            var degree = (result.Degree / 2).ToString();
 
-            var last = result.GetSteps().Last();
+            var firstStep = result.GetSteps().Last();
 
-            var subItems = new[] { result.Degree.ToString(), first.Left.Profile.Title, last.Right.Profile.Title };
+            var lastStep = result.GetSteps().First();
+
+            var firstProfile = (ProfileNode)firstStep.Left;
+
+            var firstTitle = firstProfile.Profile.Title;
+
+            var lastProfile = (ProfileNode)lastStep.Right;
+
+            var lastTitle = lastProfile.Profile.Title;
+
+            var subItems = new[] { degree, firstTitle, lastTitle };
 
             var row = new ListViewItem(subItems)
             {
@@ -87,90 +90,53 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var steps = (Steps)ResultListView.SelectedItems[0].Tag;
 
-                var rows = steps.GetSteps().Select(GetStepRow).ToArray();
+                var rows = GetStepRows(steps).ToArray();
 
                 StepsListView.Items.AddRange(rows);
             }
         }
 
-        private static ListViewItem GetStepRow(Step step)
+        private static IEnumerable<ListViewItem> GetStepRows(Steps steps)
         {
-            var subItems = new[] { step.Left.Profile.Title, PersonFormatter.GetName(step.Left.Person), GetJob(step.Left), PersonFormatter.GetName(step.Right.Person), GetJob(step.Right) };
+            var stepList = steps.GetSteps().ToList();
+
+            //the list is in reverse point of view of the target
+
+            for (var stepIndex = stepList.Count - 1; stepIndex > 0; stepIndex -= 2)
+            {
+                var row = CreateRow(stepList[stepIndex], stepList[stepIndex - 1]);
+
+                yield return row;
+            }
+        }
+
+        private static ListViewItem CreateRow(Step firstStep, Step secondStep)
+        {
+            var profile = (ProfileNode)firstStep.Left;
+
+            var title = profile.Profile.Title;
+
+            var leftPerson = (PersonNode)firstStep.Right;
+
+            var leftName = PersonFormatter.GetName(leftPerson.Person);
+
+            var leftJob = leftPerson.GetJobs(profile).First();
+
+            var leftJobDescription = PersonFormatter.GetJob(leftJob);
+
+            var rightPerson = (PersonNode)secondStep.Left;
+
+            var rightName = PersonFormatter.GetName(rightPerson.Person);
+
+            var rightJob = rightPerson.GetJobs(profile).First();
+
+            var rightJobDescription = PersonFormatter.GetJob(rightJob);
+
+            var subItems = new[] { title, leftName, leftJobDescription, rightName, rightJobDescription };
 
             var row = new ListViewItem(subItems);
 
             return row;
-        }
-
-        private static string GetJob(ProfileEntry entry)
-        {
-            if (entry.CastMember != null)
-            {
-                var result = GetCastJob(entry.CastMember);
-
-                return result;
-            }
-            else if (entry.CrewMember != null)
-            {
-                var result = GetCrewJob(entry.CrewMember);
-
-                return result;
-            }
-            else
-            {
-                return string.Empty;
-            }
-        }
-
-        private static string GetCastJob(CastMember castMember)
-        {
-            var jobBuilder = new StringBuilder("Cast: ");
-
-            jobBuilder.Append(castMember.Role.Trim());
-
-            if (castMember.Voice)
-            {
-                jobBuilder.Append(" (voice)");
-            }
-
-            if (castMember.Uncredited)
-            {
-                jobBuilder.Append(" (uncredited)");
-            }
-
-            if (!string.IsNullOrWhiteSpace(castMember.CreditedAs))
-            {
-                jobBuilder.Append(" (as ");
-                jobBuilder.Append(castMember.CreditedAs.Trim());
-                jobBuilder.Append(")");
-            }
-
-            return jobBuilder.ToString();
-        }
-
-        private static string GetCrewJob(CrewMember crewMember)
-        {
-            var jobBuilder = new StringBuilder("Crew: ");
-
-            jobBuilder.Append(crewMember.CreditType?.Trim());
-            jobBuilder.Append(" / ");
-            jobBuilder.Append(crewMember.CreditSubtype?.Trim());
-
-            if (!string.IsNullOrWhiteSpace(crewMember.CustomRole))
-            {
-                jobBuilder.Append(" (");
-                jobBuilder.Append(crewMember.CustomRole.Trim());
-                jobBuilder.Append(")");
-            }
-
-            if (!string.IsNullOrWhiteSpace(crewMember.CreditedAs))
-            {
-                jobBuilder.Append(" (as ");
-                jobBuilder.Append(crewMember.CreditedAs.Trim());
-                jobBuilder.Append(")");
-            }
-
-            return jobBuilder.ToString();
         }
 
         private void OnResultFormFormClosing(object sender, FormClosingEventArgs e)

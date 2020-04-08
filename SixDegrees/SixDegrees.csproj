@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler</RootNamespace>
     <AssemblyName>SixDegrees</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -77,6 +78,14 @@
       <Project>{2e90cc6f-892e-45b3-8812-ee52ffa3b222}</Project>
       <Name>DVDProfilerXML</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Graphs.Dijkstra\Graphs.Dijkstra.csproj">
+      <Project>{14363941-83c1-485e-9ef9-f20a29ba354d}</Project>
+      <Name>Graphs.Dijkstra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Graphs\Graphs.csproj">
+      <Project>{b91d512c-8e60-4e8e-a6a2-626311e58840}</Project>
+      <Name>Graphs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SixDegreesLibrary\SixDegreesLibrary.csproj">
       <Project>{5666eee9-dbb3-4aa2-b4c5-93165c5b14f0}</Project>
       <Name>SixDegreesLibrary</Name>
@@ -95,6 +104,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

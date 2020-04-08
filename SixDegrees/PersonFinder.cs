@@ -2,37 +2,40 @@
 using System.Collections.Generic;
 using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
+using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     internal static class PersonFinder
     {
-        internal static IEnumerable<PersonKey> Find(IPerson searchFor, Persons searchIn)
+        internal static IEnumerable<PersonKey> Find(IPerson searchFor, DistanceGraph searchIn)
         {
             var searchKey = new PersonKey(searchFor);
 
-            var matches = searchIn.Where(p => IsMatch(searchKey, p));
+            var matches = searchIn.Nodes.OfType<PersonNode>().Where(node => IsMatch(searchKey, node)).Select(node => new PersonKey(node.Person));
 
             return matches;
         }
 
-        private static bool IsMatch(PersonKey searchFor, PersonKey searchIn)
+        private static bool IsMatch(PersonKey searchFor, PersonNode searchIn)
         {
-            if (!IsMatch(searchFor.FirstName, searchIn.FirstName))
+            var searchInPerson = searchIn.Person;
+
+            if (!IsMatch(searchFor.FirstName, searchInPerson.FirstName))
             {
                 return false;
             }
-            else if (!IsMatch(searchFor.MiddleName, searchIn.MiddleName))
+            else if (!IsMatch(searchFor.MiddleName, searchInPerson.MiddleName))
             {
                 return false;
             }
-            else if (!IsMatch(searchFor.LastName, searchIn.LastName))
+            else if (!IsMatch(searchFor.LastName, searchInPerson.LastName))
             {
                 return false;
             }
             else
             {
-                var isMatch = IsMatch(searchFor.BirthYear, searchIn.BirthYear);
+                var isMatch = IsMatch(searchFor.BirthYear, searchInPerson.BirthYear);
 
                 return isMatch;
             }
