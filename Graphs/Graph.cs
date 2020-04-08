@@ -11,21 +11,21 @@ namespace mitoSoft.Math.Graphs
 
         public Graph()
         {
-            _nodes = new Dictionary<GraphNodeKey, GraphNode>();
+            this._nodes = new Dictionary<GraphNodeKey, GraphNode>();
         }
 
         public IEnumerable<GraphNode> Nodes
         {
             get
             {
-                foreach (var node in _nodes.Values)
+                foreach (var node in this._nodes.Values)
                 {
                     yield return node;
                 }
             }
         }
 
-        public bool TryGetNode(GraphNodeKey nodeKey, out GraphNode node) => _nodes.TryGetValue(nodeKey, out node);
+        public bool TryGetNode(GraphNodeKey nodeKey, out GraphNode node) => this._nodes.TryGetValue(nodeKey, out node);
 
         /// <summary>
         /// Tries to add the given node to the system. If the node already exists, the existing node will be returned.
@@ -39,7 +39,7 @@ namespace mitoSoft.Math.Graphs
                 throw new ArgumentNullException(nameof(node));
             }
 
-            if (_nodes.TryGetValue(node.Key, out var existing))
+            if (this._nodes.TryGetValue(node.Key, out var existing))
             {
                 node = existing;
 
@@ -47,7 +47,7 @@ namespace mitoSoft.Math.Graphs
             }
             else
             {
-                _nodes.Add(node.Key, node);
+                this._nodes.Add(node.Key, node);
 
                 return true;
             }
@@ -60,7 +60,7 @@ namespace mitoSoft.Math.Graphs
                 throw new ArgumentNullException(nameof(node));
             }
 
-            _nodes.Add(node.Key, node);
+            this._nodes.Add(node.Key, node);
         }
 
         public virtual void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance, bool twoWay)

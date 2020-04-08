@@ -11,8 +11,9 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
         internal Step(DistanceNode left, DistanceNode right)
         {
-            Left = left;
-            Right = right;
+            this.Left = left;
+
+            this.Right = right;
         }
     }
 }

@@ -22,12 +22,12 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 throw new ArgumentException("Distance must be 0 or positive.");
             }
 
-            DistanceFromStart = distance;
+            this.DistanceFromStart = distance;
         }
 
         public void ResetDistanceFromStart()
         {
-            DistanceFromStart = double.PositiveInfinity;
+            this.DistanceFromStart = double.PositiveInfinity;
         }
 
         public IEnumerable<DistanceNode> GetShortestPathPredecessors()

@@ -12,13 +12,13 @@ namespace mitoSoft.Math.Graphs
 
         public GraphNode(string name, GraphNodeKey key)
         {
-            _connections = new List<GraphEdge>();
+            this._connections = new List<GraphEdge>();
 
-            Id = Guid.NewGuid();
+            this.Id = Guid.NewGuid();
 
-            Name = name ?? throw new ArgumentNullException(nameof(name));
+            this.Name = name ?? throw new ArgumentNullException(nameof(name));
 
-            Key = key;
+            this.Key = key;
         }
 
         public Guid Id { get; }
@@ -31,16 +31,16 @@ namespace mitoSoft.Math.Graphs
         {
             get
             {
-                foreach (var connection in _connections)
+                foreach (var connection in this._connections)
                 {
                     yield return connection;
                 }
             }
         }
 
-        public IEnumerable<GraphNode> Predecessors => _connections.Where(c => ReferenceEquals(c.TargetNode, this)).Select(c => c.SourceNode);
+        public IEnumerable<GraphNode> Predecessors => this._connections.Where(c => ReferenceEquals(c.TargetNode, this)).Select(c => c.SourceNode);
 
-        public IEnumerable<GraphNode> Successors => _connections.Where(c => ReferenceEquals(c.SourceNode, this)).Select(c => c.TargetNode);
+        public IEnumerable<GraphNode> Successors => this._connections.Where(c => ReferenceEquals(c.SourceNode, this)).Select(c => c.TargetNode);
 
         internal void AddConnection(GraphNode targetNode, double distance, bool twoWay)
         {
@@ -59,13 +59,13 @@ namespace mitoSoft.Math.Graphs
 
             var forward = new GraphEdge(this, targetNode, distance);
 
-            _connections.Add(forward);
+            this._connections.Add(forward);
 
             var backward = new GraphEdge(targetNode, this, distance);
 
             if (twoWay)
             {
-                _connections.Add(backward);
+                this._connections.Add(backward);
             }
 
             targetNode.AddConnection(forward, backward, twoWay);
@@ -73,11 +73,11 @@ namespace mitoSoft.Math.Graphs
 
         private void AddConnection(GraphEdge forward, GraphEdge backward, bool twoWay)
         {
-            _connections.Add(backward);
+            this._connections.Add(backward);
 
             if (twoWay)
             {
-                _connections.Add(forward);
+                this._connections.Add(forward);
             }
         }
     }

@@ -8,12 +8,13 @@ namespace mitoSoft.Math.Graphs
     {
         public GraphEdge(GraphNode sourceNode, GraphNode targetNode, double distance)
         {
-            Id = Guid.NewGuid();
+            this.Id = Guid.NewGuid();
 
-            SourceNode = sourceNode ?? throw new ArgumentNullException(nameof(sourceNode));
-            TargetNode = targetNode ?? throw new ArgumentNullException(nameof(targetNode));
+            this.SourceNode = sourceNode ?? throw new ArgumentNullException(nameof(sourceNode));
 
-            Distance = distance;
+            this.TargetNode = targetNode ?? throw new ArgumentNullException(nameof(targetNode));
+
+            this.Distance = distance;
         }
 
         public Guid Id { get; }

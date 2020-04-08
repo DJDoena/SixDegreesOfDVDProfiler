@@ -10,12 +10,12 @@ namespace mitoSoft.Math.Graphs
 
         public NodeNotInGraphException(GraphNode node) : base($"Node '{node.Name}' is not in graph.")
         {
-            Node = node;
+            this.Node = node;
         }
 
         public NodeNotInGraphException(GraphNodeKey key) : base($"Node '{key.GetKeyDisplayValue()}' is not in graph.")
         {
-            Key = key;
+            this.Key = key;
         }
     }
 }

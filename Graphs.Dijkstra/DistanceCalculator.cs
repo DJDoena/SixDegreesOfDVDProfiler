@@ -15,9 +15,9 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
         public DistanceCalculator(DistanceGraph graph)
         {
-            _graph = graph ?? throw new ArgumentNullException(nameof(graph));
+            this._graph = graph ?? throw new ArgumentNullException(nameof(graph));
 
-            _hasCalculated = false;
+            this._hasCalculated = false;
         }
 
         public double CalculateDistancesByBreadthFirst(GraphNodeKey sourceNodeKey, GraphNodeKey targetNodeKey, bool equallyWeighted = false)
@@ -26,7 +26,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             var distance = CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode, equallyWeighted);
 
-            _hasCalculated = true;
+            this._hasCalculated = true;
 
             return distance;
         }
@@ -37,7 +37,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             var distance = DoCalculateDistancesByBreadthFirst(sourceNode, targetNode, equallyWeighted);
 
-            _hasCalculated = true;
+            this._hasCalculated = true;
 
             return distance;
         }
@@ -48,7 +48,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             var distance = DoCalculateDistancesByDeepFirst(sourceNode, targetNode, maxDistance);
 
-            _hasCalculated = true;
+            this._hasCalculated = true;
 
             return distance;
         }
@@ -59,14 +59,14 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             var distance = DoCalculateDistancesByDeepFirst(sourceNode, targetNode, maxDistance);
 
-            _hasCalculated = true;
+            this._hasCalculated = true;
 
             return distance;
         }
 
         public IEnumerable<Steps> GetShortestPath(DistanceNode targetNode)
         {
-            if (!_hasCalculated)
+            if (!this._hasCalculated)
             {
                 throw new InvalidOperationException("No calulation has taken place.");
             }
@@ -122,7 +122,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
         {
             var finished = false;
 
-            var queue = _graph.Nodes.Cast<DistanceNode>().ToList();
+            var queue = this._graph.Nodes.Cast<DistanceNode>().ToList();
 
             while (!finished)
             {
@@ -187,7 +187,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
         private void InitializeGraph(DistanceNode sourceNode)
         {
-            foreach (DistanceNode node in _graph.Nodes)
+            foreach (DistanceNode node in this._graph.Nodes)
             {
                 node.ResetDistanceFromStart();
             }
@@ -202,7 +202,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 throw new ArgumentNullException(nameof(sourceNodeKey));
             }
 
-            if (!_graph.TryGetNode(sourceNodeKey, out startNode))
+            if (!this._graph.TryGetNode(sourceNodeKey, out startNode))
             {
                 throw new NodeNotInGraphException(sourceNodeKey);
             }
@@ -212,7 +212,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 throw new ArgumentNullException(nameof(targetNodeKey));
             }
 
-            if (!_graph.TryGetNode(targetNodeKey, out targetNode))
+            if (!this._graph.TryGetNode(targetNodeKey, out targetNode))
             {
                 throw new NodeNotInGraphException(targetNodeKey);
             }
@@ -229,7 +229,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 throw new ArgumentNullException(nameof(targetNode));
             }
 
-            if (!_graph.TryGetNode(sourceNode.Key, out var existingSourceNode))
+            if (!this._graph.TryGetNode(sourceNode.Key, out var existingSourceNode))
             {
                 throw new NodeNotInGraphException(sourceNode);
             }
@@ -238,7 +238,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 sourceNode = existingSourceNode;
             }
 
-            if (!_graph.TryGetNode(targetNode.Key, out var existingTargetNode))
+            if (!this._graph.TryGetNode(targetNode.Key, out var existingTargetNode))
             {
                 throw new NodeNotInGraphException(targetNode);
             }
