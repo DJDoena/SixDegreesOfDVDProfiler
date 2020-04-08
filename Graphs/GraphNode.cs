@@ -8,7 +8,7 @@ namespace mitoSoft.Math.Graphs
     [DebuggerDisplay("Node {Name} (Connections = {_connections.Count})")]
     public class GraphNode
     {
-        private readonly IList<GraphEdge> _connections;
+        private readonly List<GraphEdge> _connections;
 
         public GraphNode(string name, GraphNodeKey key)
         {

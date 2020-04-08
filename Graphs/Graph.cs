@@ -7,7 +7,7 @@ namespace mitoSoft.Math.Graphs
     [DebuggerDisplay("Graph ({_nodes.Count} nodes)")]
     public class Graph
     {
-        private readonly IDictionary<GraphNodeKey, GraphNode> _nodes;
+        private readonly Dictionary<GraphNodeKey, GraphNode> _nodes;
 
         public Graph()
         {
