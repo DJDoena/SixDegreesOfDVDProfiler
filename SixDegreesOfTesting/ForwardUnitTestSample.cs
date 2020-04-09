@@ -5,7 +5,7 @@ using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using mitoSoft.Math.Graphs.Dijkstra;
+using mitoSoft.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

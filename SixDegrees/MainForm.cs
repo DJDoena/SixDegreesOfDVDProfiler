@@ -6,8 +6,8 @@ using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using mitoSoft.Math.Graphs;
-using mitoSoft.Math.Graphs.Dijkstra;
+using mitoSoft.Graphs;
+using mitoSoft.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

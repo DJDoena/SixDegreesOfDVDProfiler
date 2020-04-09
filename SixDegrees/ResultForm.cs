@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using mitoSoft.Math.Graphs.Dijkstra;
+using mitoSoft.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
