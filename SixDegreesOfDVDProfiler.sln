@@ -15,13 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegrees", "SixDegrees\Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesOfTesting", "SixDegreesOfTesting\SixDegreesOfTesting.csproj", "{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.Dijkstra", "Graphs.Dijkstra\Graphs.Dijkstra.csproj", "{14363941-83C1-485E-9EF9-F20A29BA354D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.Dijkstra", "Graphs\Graphs.Dijkstra\Graphs.Dijkstra.csproj", "{14363941-83C1-485E-9EF9-F20A29BA354D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs", "Graphs\Graphs.csproj", "{B91D512C-8E60-4E8E-A6A2-626311E58840}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs", "Graphs\Graphs\Graphs.csproj", "{B91D512C-8E60-4E8E-A6A2-626311E58840}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphs", "Graphs", "{0015E7E0-F94B-457B-A876-AB9B9F9D7025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.UnitTest", "Graphs.UnitTest\Graphs.UnitTest.csproj", "{9010D6BE-D7EC-4541-87FB-F1E043E94291}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.UnitTest", "Graphs\Graphs.UnitTest\Graphs.UnitTest.csproj", "{9010D6BE-D7EC-4541-87FB-F1E043E94291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
