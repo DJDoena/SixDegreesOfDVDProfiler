@@ -8,7 +8,7 @@ namespace mitoSoft.Math.Graphs
     /// <remarks>
     /// A key object must be immutable, its HashCode and all properties (that are used for equality comparison) never changing.
     /// </remarks>
-    [DebuggerDisplay("GraphNodeKeyBase {GetKeyDisplayValue()}")]
+    [DebuggerDisplay(nameof(GraphNodeKeyBase) + " ({ToString()})")]
     public abstract class GraphNodeKeyBase
     {
         public abstract int GetKeyHashCode();

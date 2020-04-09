@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace mitoSoft.Math.Graphs
 {
-    [DebuggerDisplay("GraphNode {Name} (Connections = {_connections.Count})")]
+    [DebuggerDisplay(nameof(GraphNode) + " ({ToString()})")]
     public class GraphNode
     {
         private static ulong _edgeCounter = 0;
@@ -45,6 +45,8 @@ namespace mitoSoft.Math.Graphs
         public IEnumerable<GraphNode> Successors => this._connections.Values.Where(c => ReferenceEquals(c.SourceNode, this)).Select(c => c.TargetNode);
 
         internal ulong ObjectNumber { get; set; }
+
+        public override string ToString() => $"{this.Name} (Connections: {this._connections.Count})";
 
         internal void AddConnection(GraphNode targetNode, double distance, bool twoWay)
         {

@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs.Dijkstra
 {
+    [DebuggerDisplay(nameof(DistanceGraph) + " ({ToString()})")]
     public class DistanceGraph : Graph
     {
+        public DistanceGraph(bool twoWay) : base(twoWay)
+        {
+        }
+
         public bool TryGetNode(GraphNodeKeyBase nodeKey, out DistanceNode node)
         {
             if (base.TryGetNode(nodeKey, out GraphNode graphNode))
@@ -76,8 +82,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             base.AddNode(node);
         }
 
-
-        public override void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance, bool twoWay)
+        public override void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance)
         {
             if (sourceNode == null)
             {
@@ -96,7 +101,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 throw new ArgumentException($"{nameof(targetNode)} is not a {nameof(DistanceNode)}.");
             }
 
-            base.AddConnection(sourceNode, targetNode, distance, twoWay);
+            base.AddConnection(sourceNode, targetNode, distance);
         }
     }
 }

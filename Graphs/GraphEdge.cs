@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs
 {
-    [DebuggerDisplay("GraphEdge {SourceNode.Name} -> {TargetNode.Name} ({Distance})")]
+    [DebuggerDisplay(nameof(GraphEdge) + " ({ToString()})")]
     public class GraphEdge
     {
         public GraphEdge(GraphNode sourceNode, GraphNode targetNode, double distance)
@@ -28,5 +28,7 @@ namespace mitoSoft.Math.Graphs
         public GraphEdgeKey Key => new GraphEdgeKey(SourceNode.Key, TargetNode.Key);
 
         internal ulong ObjectNumber { get; set; }
+
+        public override string ToString() => $"{this.SourceNode.Name} -> {this.TargetNode.Name} (Distance: {this.Distance})";
     }
 }

@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs.Dijkstra
 {
-    [DebuggerDisplay("Degree: {Degree}")]
+    [DebuggerDisplay(nameof(Steps) + " ({ToString()})")]
     public sealed class Steps
     {
         private readonly List<Step> _steps;
@@ -30,6 +30,8 @@ namespace mitoSoft.Math.Graphs.Dijkstra
                 yield return step;
             }
         }
+
+        public override string ToString() => $"Degree: {this.Degree}";
 
         internal Steps Add(DistanceNode left, DistanceNode right) => new Steps(this._steps, new Step(left, right));
     }

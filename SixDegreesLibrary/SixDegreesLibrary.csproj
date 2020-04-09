@@ -42,13 +42,11 @@
       <Link>Properties\SixDegrees.AssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="GraphBuilder.cs" />
+    <Compile Include="Jobs.cs" />
     <Compile Include="PersonFormatter.cs" />
     <Compile Include="PersonNode.cs" />
-    <Compile Include="ProfileEntries.cs" />
     <Compile Include="ProfileNode.cs" />
     <Compile Include="SearchPerson.cs" />
-    <Compile Include="PersonNotInCollectionException.cs" />
-    <Compile Include="ProfileEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

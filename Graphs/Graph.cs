@@ -4,16 +4,19 @@ using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs
 {
-    [DebuggerDisplay("Graph ({_nodes.Count} nodes)")]
+    [DebuggerDisplay(nameof(Graph) + " ({ToString()})")]
     public class Graph
     {
         private static ulong _nodeCounter = 0;
 
         private readonly Dictionary<GraphNodeKeyBase, GraphNode> _nodes;
 
-        public Graph()
+        private readonly bool _twoWay;
+
+        public Graph(bool twoWay)
         {
             this._nodes = new Dictionary<GraphNodeKeyBase, GraphNode>();
+            this._twoWay = twoWay;
         }
 
         public IEnumerable<GraphNode> Nodes
@@ -65,7 +68,7 @@ namespace mitoSoft.Math.Graphs
             this.DoAdd(node);
         }
 
-        public virtual void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance, bool twoWay)
+        public virtual void AddConnection(GraphNode sourceNode, GraphNode targetNode, double distance)
         {
             if (sourceNode == null)
             {
@@ -84,8 +87,10 @@ namespace mitoSoft.Math.Graphs
                 throw new NodeNotInGraphException(targetNode);
             }
 
-            sourceNode.AddConnection(targetNode, distance, twoWay);
+            sourceNode.AddConnection(targetNode, distance, this._twoWay);
         }
+
+        public override string ToString() => $"Nodes: {this._nodes.Count}";
 
         private void DoAdd(GraphNode node)
         {

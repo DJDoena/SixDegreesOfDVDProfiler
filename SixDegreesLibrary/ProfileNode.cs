@@ -5,7 +5,7 @@ using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    [DebuggerDisplay("ProfileNode {Key.GetKeyDisplayValue()}")]
+    [DebuggerDisplay(nameof(ProfileNode) + " ({ToString()})")]
     public sealed class ProfileNode : DistanceNode
     {
         public ProfileNode(DVD profile) : base(BuildTitle(profile), new ProfileNodeKey(profile))
@@ -32,6 +32,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return title;
         }
 
+        #region class ProfileNodeKey
+
+        [DebuggerDisplay(nameof(ProfileNodeKey) + " ({ToString()})")]
         private sealed class ProfileNodeKey : GraphNodeKeyBase
         {
             private readonly string _title;
@@ -59,5 +62,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 }
             }
         }
+
+        #endregion
     }
 }

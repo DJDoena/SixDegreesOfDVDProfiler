@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs
 {
-    [DebuggerDisplay("GraphNodeKey {_name}")]
+    [DebuggerDisplay(nameof(GraphNodeKey) + " ({ToString()})")]
     public sealed class GraphNodeKey : GraphNodeKeyBase
     {
         private readonly string _name;
@@ -32,5 +32,7 @@ namespace mitoSoft.Math.Graphs
 
             return areEqual;
         }
+
+        public override string ToString() => this.GetKeyDisplayValue();
     }
 }

@@ -22,19 +22,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         }
 
         [TestMethod]
-        public void Test1()
+        public void Test1Deep()
         {
             DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Max", lastName: "von Sydow"));
             DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
 
             var calculator = new DistanceCalculator(_graph);
 
-            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
-            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(nodeDistance1, nodeDistance2);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
 
             Assert.AreEqual(1, movieDistance);
 
@@ -42,21 +39,102 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
         }
 
         [TestMethod]
-        public void Test2()
+        public void Test1Breadth()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Max", lastName: "von Sydow"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(1, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(1, stepsList.Count);
+
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void Test2Deep()
         {
             DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Oscar", lastName: "Ljung"));
             DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
 
             var calculator = new DistanceCalculator(_graph);
 
-            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
-            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(nodeDistance1, nodeDistance2);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(2, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(1, stepsList.Count);
+
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void Test2Breadth()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Oscar", lastName: "Ljung"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(2, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(1, stepsList.Count);
+
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void Test3Deep()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(2, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(1, stepsList.Count);
+
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void Test3Breadth()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance1 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
 
             var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
 
@@ -70,10 +148,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         }
 
         [TestMethod]
-        public void Test3()
+        public void Test4Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
 
             var calculator = new DistanceCalculator(_graph);
 
@@ -94,7 +172,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         }
 
         [TestMethod]
-        public void Test4()
+        public void Test4Breadth()
         {
             DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
             DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));

@@ -10,8 +10,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private readonly DistanceGraph _searchIn;
 
-        internal IPerson Match { get; private set; }
-
         internal LookUpNameForm(IPerson searchFor, DistanceGraph searchIn)
         {
             _searchIn = searchIn;
@@ -30,6 +28,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 LookUpName();
             }
         }
+
+        internal IPerson Match { get; private set; }
 
         private void OnLookupNameButtonClick(object sender, EventArgs e)
         {
@@ -98,6 +98,19 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         private void OnResultListViewDoubleClick(object sender, EventArgs e)
         {
             OnChooseButtonClick(this, EventArgs.Empty);
+        }
+
+        private void OnResetBirthYearCheckBoxCheckedChanged(object sender, EventArgs e)
+        {
+            if (ResetBirthYearCheckBox.Checked)
+            {
+                BirthYearUpDown.Value = 0;
+            }
+        }
+
+        private void OnBirthYearUpDownValueChanged(object sender, EventArgs e)
+        {
+            ResetBirthYearCheckBox.Checked = (BirthYearUpDown.Value == 0);
         }
     }
 }

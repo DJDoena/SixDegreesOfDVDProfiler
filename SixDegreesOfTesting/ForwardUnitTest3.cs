@@ -22,19 +22,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         }
 
         [TestMethod]
-        public void TomWellingToGeorgeLucasDegree2()
+        public void TomWellingToGeorgeLucasDegree2Deep()
         {
             DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Welling", birthYear: 1977));
             DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "George", lastName: "Lucas", birthYear: 1944));
 
             var calculator = new DistanceCalculator(_graph);
 
-            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
-            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
 
-            Assert.AreEqual(nodeDistance1, nodeDistance2);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
 
             Assert.AreEqual(2, movieDistance);
 
@@ -42,7 +39,28 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+        }
+
+        [TestMethod]
+        public void TomWellingToGeorgeLucasDegree2Breadth()
+        {
+            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Welling", birthYear: 1977));
+            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "George", lastName: "Lucas", birthYear: 1944));
+
+            var calculator = new DistanceCalculator(_graph);
+
+            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+
+            Assert.AreEqual(2, movieDistance);
+
+            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+
+            Assert.AreEqual(1, stepsList.Count);
+
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
         }
     }
 }

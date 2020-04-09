@@ -2,7 +2,7 @@
 
 namespace mitoSoft.Math.Graphs.Dijkstra
 {
-    [DebuggerDisplay("{Left} - {Right}")]
+    [DebuggerDisplay(nameof(Step) + " ({ToString()})")]
     public sealed class Step
     {
         public DistanceNode Left { get; }
@@ -15,5 +15,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             this.Right = right;
         }
+
+        public override string ToString() => $"{this.Left} -> {this.Right}";
     }
 }

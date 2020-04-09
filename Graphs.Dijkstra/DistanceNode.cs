@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace mitoSoft.Math.Graphs.Dijkstra
 {
-    [DebuggerDisplay("Node {Name} (Connections = {System.Linq.Enumerable.Count(Connections)}, Distance = {DistanceFromStart})")]
+    [DebuggerDisplay(nameof(DistanceGraph) + " ({ToString()})")]
     public class DistanceNode : GraphNode
     {
         public DistanceNode(string name, GraphNodeKeyBase key) : base(name, key)
@@ -30,15 +30,21 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             this.DistanceFromStart = double.PositiveInfinity;
         }
 
+        /// <summary>
+        /// The shortest path predecessors are all nodes which have the smallest sum of predecessorNode.DistanceFromStart + connectionToThisNode.Distance.
+        /// </summary>
+        /// <remarks>
+        /// This method can only be properly used when the graph was initialized as "two way".
+        /// </remarks>
         public IEnumerable<DistanceNode> GetShortestPathPredecessors()
         {
             var predecessors = Predecessors.Cast<DistanceNode>().ToList();
 
             if (predecessors.Count > 0)
             {
-                var min = predecessors.Min(p => p.DistanceFromStart);
+                var min = predecessors.Min(GetStartDistanceToMe);
 
-                var result = predecessors.Where(p => p.DistanceFromStart == min);
+                var result = predecessors.Where(p => GetStartDistanceToMe(p) == min);
 
                 return result;
             }
@@ -46,6 +52,21 @@ namespace mitoSoft.Math.Graphs.Dijkstra
             {
                 return Enumerable.Empty<DistanceNode>();
             }
+        }
+
+#pragma warning disable IDE0071 // Simplify interpolation
+        public override string ToString() => $"{base.ToString()} (Distance from start: {this.DistanceFromStart})";
+#pragma warning restore IDE0071 // Simplify interpolation
+
+        private double GetStartDistanceToMe(DistanceNode predecessor)
+        {
+            var predecessorDistanceFromStart = predecessor.DistanceFromStart;
+
+            var predecessorDistanceToMe = predecessor.Connections.First(c => ReferenceEquals(c.TargetNode, this)).Distance;
+
+            var startDistanceToMe = predecessorDistanceFromStart + predecessorDistanceToMe;
+
+            return startDistanceToMe;
         }
     }
 }

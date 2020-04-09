@@ -6,10 +6,10 @@ using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    [DebuggerDisplay("PersonNode {Key.GetKeyDisplayValue()}")]
+    [DebuggerDisplay(nameof(PersonNode) + " ({ToString()})")]
     public sealed class PersonNode : DistanceNode
     {
-        private Dictionary<string, Jobs> _profiles;
+        private readonly Dictionary<string, Jobs> _profiles;
 
         public PersonNode(IPerson person) : base(PersonFormatter.GetName(person), new PersonNodeKey(person))
         {
@@ -42,34 +42,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        public sealed class Jobs
-        {
-            private Dictionary<string, IPerson> _jobs;
+        #region class PersonNodeKey
 
-            public Jobs()
-            {
-                _jobs = new Dictionary<string, IPerson>();
-            }
-
-            public IEnumerable<IPerson> JobList
-            {
-                get
-                {
-                    foreach (var job in _jobs.Values)
-                    {
-                        yield return job;
-                    }
-                }
-            }
-
-            internal void AddJob(IPerson person)
-            {
-                var job = PersonFormatter.GetJob(person);
-
-                _jobs[job] = person;
-            }
-        }
-
+        [DebuggerDisplay(nameof(PersonNodeKey) + " ({ToString()})")]
         private sealed class PersonNodeKey : GraphNodeKeyBase
         {
             private readonly IPerson _person;
@@ -100,5 +75,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 }
             }
         }
+
+        #endregion
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace mitoSoft.Math.Graphs.Dijkstra
@@ -7,6 +8,7 @@ namespace mitoSoft.Math.Graphs.Dijkstra
     /// <summary>
     /// https://de.wikipedia.org/wiki/Dijkstra-Algorithmus
     /// </summary>
+    [DebuggerDisplay(nameof(DistanceCalculator) + " ({ToString()})")]
     public class DistanceCalculator
     {
         private readonly DistanceGraph _graph;
@@ -75,6 +77,8 @@ namespace mitoSoft.Math.Graphs.Dijkstra
 
             return result;
         }
+
+        public override string ToString() => $"{this._graph} (Has calculated: {this._hasCalculated})";
 
         private IEnumerable<Steps> GetSteps(DistanceNode targetNode, Steps steps)
         {

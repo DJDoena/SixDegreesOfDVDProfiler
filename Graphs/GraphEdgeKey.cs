@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace mitoSoft.Math.Graphs
 {
-    [DebuggerDisplay("GraphEdgeKey {SourceNodeKey} -> {TargetNodeKey}")]
+    [DebuggerDisplay(nameof(GraphEdgeKey) + " ({ToString()})")]
     public sealed class GraphEdgeKey
     {
         private readonly int _hashCode;
@@ -36,5 +36,7 @@ namespace mitoSoft.Math.Graphs
                 return areEqual;
             }
         }
+
+        public override string ToString() => $"{this.SourceNodeKey.GetKeyDisplayValue()} -> {this.TargetNodeKey.GetKeyDisplayValue()}";
     }
 }

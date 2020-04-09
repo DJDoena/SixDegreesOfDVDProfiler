@@ -11,7 +11,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         public static DistanceGraph Build(IEnumerable<DVD> collection, bool considerCast = true, bool considerCrew = false)
         {
-            var graph = new DistanceGraph();
+            var graph = new DistanceGraph(true);
 
             var duplicateChecker = new Dictionary<GraphNodeKeyBase, HashSet<GraphNodeKeyBase>>(); //for multiple movies with the same people we con't want to add multiple connections
 
@@ -52,7 +52,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                 if (duplicateChecker.Add(personNode.Key)) //a person can have multiple jobs in the same profiles
                 {
-                    graph.AddConnection(profileNode, personNode, 1, true);
+                    graph.AddConnection(profileNode, personNode, 1);
                 }
 
                 ((PersonNode)personNode).AddJob((ProfileNode)profileNode, person);

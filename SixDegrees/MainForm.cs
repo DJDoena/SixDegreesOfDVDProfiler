@@ -17,6 +17,20 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private DistanceGraph _graph;
 
+        internal MainForm()
+        {
+            InitializeComponent();
+
+            Collection = null;
+
+            Graph = null;
+
+            LeftBirthYearUpDown.Maximum = ushort.MaxValue;
+            RightBirthYearUpDown.Maximum = ushort.MaxValue;
+            MaxSearchDepthUpDown.Maximum = byte.MaxValue;
+            MaxSearchRequestsUpDown.Maximum = uint.MaxValue;
+        }
+
         private DistanceGraph Graph
         {
             get => _graph;
@@ -48,20 +62,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 }
             }
             set => _collection = value;
-        }
-
-        internal MainForm()
-        {
-            InitializeComponent();
-
-            Collection = null;
-
-            Graph = null;
-
-            LeftBirthYearUpDown.Maximum = ushort.MaxValue;
-            RightBirthYearUpDown.Maximum = ushort.MaxValue;
-            MaxSearchDepthUpDown.Maximum = byte.MaxValue;
-            MaxSearchRequestsUpDown.Maximum = uint.MaxValue;
         }
 
         private void SwitchControls(bool enabled)
@@ -272,6 +272,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void TryFind()
         {
+            OnLeftLookupNameButtonClick(this, EventArgs.Empty);
+            OnRightLookupNameButtonClick(this, EventArgs.Empty);
+
             var leftPerson = new SearchPerson(LeftFirstNameTextBox.Text, LeftMiddleNameTextBox.Text, LeftLastNameTextBox.Text, (ushort)LeftBirthYearUpDown.Value);
 
             DistanceNode leftPersonNode = new PersonNode(leftPerson);
@@ -301,6 +304,32 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                     resultForm.ShowDialog();
                 }
             }
+        }
+
+        private void OnLeftResetBirthYearCheckBoxCheckedChanged(object sender, EventArgs e)
+        {
+            if (LeftResetBirthYearCheckBox.Checked)
+            {
+                LeftBirthYearUpDown.Value = 0;
+            }
+        }
+
+        private void OnRightResetBirthYearCheckBoxCheckedChanged(object sender, EventArgs e)
+        {
+            if (RightResetBirthYearCheckBox.Checked)
+            {
+                RightBirthYearUpDown.Value = 0;
+            }
+        }
+
+        private void OnLeftBirthYearUpDownValueChanged(object sender, EventArgs e)
+        {
+            LeftResetBirthYearCheckBox.Checked = (LeftBirthYearUpDown.Value == 0);
+        }
+
+        private void OnRightBirthYearUpDownValueChanged(object sender, EventArgs e)
+        {
+            RightResetBirthYearCheckBox.Checked = (RightBirthYearUpDown.Value == 0);
         }
     }
 }

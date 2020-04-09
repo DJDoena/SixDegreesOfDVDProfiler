@@ -36,13 +36,11 @@
             System.Windows.Forms.Label LeftLastNameLabel;
             System.Windows.Forms.Label LeftMiddleNameLabel;
             System.Windows.Forms.Label LeftFirstNameLabel;
-            System.Windows.Forms.Label LeftBirthYearInfoLabel;
             System.Windows.Forms.GroupBox RightGroupBox;
             System.Windows.Forms.Label RightBirthYearLabel;
             System.Windows.Forms.Label RightLastNameLabel;
             System.Windows.Forms.Label RightMiddleNameLabel;
             System.Windows.Forms.Label RightFirstNameLabel;
-            System.Windows.Forms.Label RightBirthYearInfoLabel;
             System.Windows.Forms.Label MaxSearchDepthLabel;
             System.Windows.Forms.LinkLabel KevinBaconLinkLabel;
             System.Windows.Forms.LinkLabel SixDegreesLinkLabel;
@@ -50,12 +48,10 @@
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftLookupNameButton = new System.Windows.Forms.Button();
-            this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             this.LeftLastNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.RightLookupNameButton = new System.Windows.Forms.Button();
-            this.RightBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             this.RightLastNameTextBox = new System.Windows.Forms.TextBox();
             this.RightMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.RightFirstNameTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +62,10 @@
             this.StartLongSearchButton = new System.Windows.Forms.Button();
             this.OnlyIncludeOwnedProfilesCheckBox = new System.Windows.Forms.CheckBox();
             this.MaxSearchRequestsUpDown = new System.Windows.Forms.NumericUpDown();
+            this.LeftResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
+            this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
+            this.RightResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
+            this.RightBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             LoadXmlButton = new System.Windows.Forms.Button();
             WelcomeLabel = new System.Windows.Forms.Label();
             InfoLabel = new System.Windows.Forms.Label();
@@ -74,24 +74,22 @@
             LeftLastNameLabel = new System.Windows.Forms.Label();
             LeftMiddleNameLabel = new System.Windows.Forms.Label();
             LeftFirstNameLabel = new System.Windows.Forms.Label();
-            LeftBirthYearInfoLabel = new System.Windows.Forms.Label();
             RightGroupBox = new System.Windows.Forms.GroupBox();
             RightBirthYearLabel = new System.Windows.Forms.Label();
             RightLastNameLabel = new System.Windows.Forms.Label();
             RightMiddleNameLabel = new System.Windows.Forms.Label();
             RightFirstNameLabel = new System.Windows.Forms.Label();
-            RightBirthYearInfoLabel = new System.Windows.Forms.Label();
             MaxSearchDepthLabel = new System.Windows.Forms.Label();
             KevinBaconLinkLabel = new System.Windows.Forms.LinkLabel();
             SixDegreesLinkLabel = new System.Windows.Forms.LinkLabel();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             LeftGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).BeginInit();
             RightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // LoadXmlButton
@@ -125,13 +123,13 @@
             // 
             // LeftGroupBox
             // 
+            LeftGroupBox.Controls.Add(this.LeftResetBirthYearCheckBox);
+            LeftGroupBox.Controls.Add(this.LeftBirthYearUpDown);
             LeftGroupBox.Controls.Add(this.LeftLookupNameButton);
             LeftGroupBox.Controls.Add(LeftBirthYearLabel);
             LeftGroupBox.Controls.Add(LeftLastNameLabel);
             LeftGroupBox.Controls.Add(LeftMiddleNameLabel);
             LeftGroupBox.Controls.Add(LeftFirstNameLabel);
-            LeftGroupBox.Controls.Add(LeftBirthYearInfoLabel);
-            LeftGroupBox.Controls.Add(this.LeftBirthYearUpDown);
             LeftGroupBox.Controls.Add(this.LeftLastNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftMiddleNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftFirstNameTextBox);
@@ -188,22 +186,6 @@
             LeftFirstNameLabel.TabIndex = 0;
             LeftFirstNameLabel.Text = "First (given) name:";
             // 
-            // LeftBirthYearInfoLabel
-            // 
-            LeftBirthYearInfoLabel.AutoSize = true;
-            LeftBirthYearInfoLabel.Location = new System.Drawing.Point(242, 99);
-            LeftBirthYearInfoLabel.Name = "LeftBirthYearInfoLabel";
-            LeftBirthYearInfoLabel.Size = new System.Drawing.Size(63, 13);
-            LeftBirthYearInfoLabel.TabIndex = 8;
-            LeftBirthYearInfoLabel.Text = "(0 = not set)";
-            // 
-            // LeftBirthYearUpDown
-            // 
-            this.LeftBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
-            this.LeftBirthYearUpDown.Name = "LeftBirthYearUpDown";
-            this.LeftBirthYearUpDown.Size = new System.Drawing.Size(131, 20);
-            this.LeftBirthYearUpDown.TabIndex = 7;
-            // 
             // LeftLastNameTextBox
             // 
             this.LeftLastNameTextBox.Location = new System.Drawing.Point(105, 71);
@@ -227,13 +209,13 @@
             // 
             // RightGroupBox
             // 
+            RightGroupBox.Controls.Add(this.RightResetBirthYearCheckBox);
+            RightGroupBox.Controls.Add(this.RightBirthYearUpDown);
             RightGroupBox.Controls.Add(this.RightLookupNameButton);
             RightGroupBox.Controls.Add(RightBirthYearLabel);
             RightGroupBox.Controls.Add(RightLastNameLabel);
             RightGroupBox.Controls.Add(RightMiddleNameLabel);
             RightGroupBox.Controls.Add(RightFirstNameLabel);
-            RightGroupBox.Controls.Add(RightBirthYearInfoLabel);
-            RightGroupBox.Controls.Add(this.RightBirthYearUpDown);
             RightGroupBox.Controls.Add(this.RightLastNameTextBox);
             RightGroupBox.Controls.Add(this.RightMiddleNameTextBox);
             RightGroupBox.Controls.Add(this.RightFirstNameTextBox);
@@ -289,22 +271,6 @@
             RightFirstNameLabel.Size = new System.Drawing.Size(93, 13);
             RightFirstNameLabel.TabIndex = 0;
             RightFirstNameLabel.Text = "First (given) name:";
-            // 
-            // RightBirthYearInfoLabel
-            // 
-            RightBirthYearInfoLabel.AutoSize = true;
-            RightBirthYearInfoLabel.Location = new System.Drawing.Point(242, 99);
-            RightBirthYearInfoLabel.Name = "RightBirthYearInfoLabel";
-            RightBirthYearInfoLabel.Size = new System.Drawing.Size(63, 13);
-            RightBirthYearInfoLabel.TabIndex = 8;
-            RightBirthYearInfoLabel.Text = "(0 = not set)";
-            // 
-            // RightBirthYearUpDown
-            // 
-            this.RightBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
-            this.RightBirthYearUpDown.Name = "RightBirthYearUpDown";
-            this.RightBirthYearUpDown.Size = new System.Drawing.Size(131, 20);
-            this.RightBirthYearUpDown.TabIndex = 7;
             // 
             // RightLastNameTextBox
             // 
@@ -481,6 +447,48 @@
             0,
             0});
             // 
+            // LeftResetBirthYearCheckBox
+            // 
+            this.LeftResetBirthYearCheckBox.AutoSize = true;
+            this.LeftResetBirthYearCheckBox.Checked = true;
+            this.LeftResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.LeftResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
+            this.LeftResetBirthYearCheckBox.Name = "LeftResetBirthYearCheckBox";
+            this.LeftResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.LeftResetBirthYearCheckBox.TabIndex = 8;
+            this.LeftResetBirthYearCheckBox.Text = "(0 = not set)";
+            this.LeftResetBirthYearCheckBox.UseVisualStyleBackColor = true;
+            this.LeftResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnLeftResetBirthYearCheckBoxCheckedChanged);
+            // 
+            // LeftBirthYearUpDown
+            // 
+            this.LeftBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
+            this.LeftBirthYearUpDown.Name = "LeftBirthYearUpDown";
+            this.LeftBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
+            this.LeftBirthYearUpDown.TabIndex = 7;
+            this.LeftBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnLeftBirthYearUpDownValueChanged);
+            // 
+            // RightResetBirthYearCheckBox
+            // 
+            this.RightResetBirthYearCheckBox.AutoSize = true;
+            this.RightResetBirthYearCheckBox.Checked = true;
+            this.RightResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.RightResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
+            this.RightResetBirthYearCheckBox.Name = "RightResetBirthYearCheckBox";
+            this.RightResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.RightResetBirthYearCheckBox.TabIndex = 8;
+            this.RightResetBirthYearCheckBox.Text = "(0 = not set)";
+            this.RightResetBirthYearCheckBox.UseVisualStyleBackColor = true;
+            this.RightResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnRightResetBirthYearCheckBoxCheckedChanged);
+            // 
+            // RightBirthYearUpDown
+            // 
+            this.RightBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
+            this.RightBirthYearUpDown.Name = "RightBirthYearUpDown";
+            this.RightBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
+            this.RightBirthYearUpDown.TabIndex = 7;
+            this.RightBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnRightBirthYearUpDownValueChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,12 +517,12 @@
             this.Text = "Six Degrees of DVD Profiler";
             LeftGroupBox.ResumeLayout(false);
             LeftGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).EndInit();
             RightGroupBox.ResumeLayout(false);
             RightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,10 +532,8 @@
         private System.Windows.Forms.CheckBox IncludeCastCheckBox;
         private System.Windows.Forms.CheckBox IncludeCrewCheckBox;
         private System.Windows.Forms.TextBox LeftFirstNameTextBox;
-        private System.Windows.Forms.NumericUpDown LeftBirthYearUpDown;
         private System.Windows.Forms.TextBox LeftLastNameTextBox;
         private System.Windows.Forms.TextBox LeftMiddleNameTextBox;
-        private System.Windows.Forms.NumericUpDown RightBirthYearUpDown;
         private System.Windows.Forms.TextBox RightLastNameTextBox;
         private System.Windows.Forms.TextBox RightMiddleNameTextBox;
         private System.Windows.Forms.TextBox RightFirstNameTextBox;
@@ -538,6 +544,10 @@
         private System.Windows.Forms.Button StartLongSearchButton;
         private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
         private System.Windows.Forms.NumericUpDown MaxSearchRequestsUpDown;
+        private System.Windows.Forms.CheckBox LeftResetBirthYearCheckBox;
+        private System.Windows.Forms.NumericUpDown LeftBirthYearUpDown;
+        private System.Windows.Forms.CheckBox RightResetBirthYearCheckBox;
+        private System.Windows.Forms.NumericUpDown RightBirthYearUpDown;
     }
 }
 
