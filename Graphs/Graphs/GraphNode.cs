@@ -16,14 +16,10 @@ namespace mitoSoft.Math.Graphs
         {
             this._connections = new Dictionary<GraphEdgeKey, GraphEdge>();
 
-            this.Id = Guid.NewGuid();
-
             this.Name = name ?? throw new ArgumentNullException(nameof(name));
 
             this.Key = key;
         }
-
-        public Guid Id { get; }
 
         public string Name { get; }
 

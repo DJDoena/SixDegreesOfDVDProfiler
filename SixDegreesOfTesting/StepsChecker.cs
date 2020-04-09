@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using mitoSoft.Math.Graphs;
 using mitoSoft.Math.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
@@ -9,7 +9,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     internal static class StepsChecker
     {
         internal static void Check(DistanceNode sourcePerson, DistanceNode targetPerson, Steps steps, double nodeDistance)
-        {            
+        {
             Assert.AreEqual(nodeDistance, steps.Degree);
 
             var stepList = steps.GetSteps().ToList();
@@ -77,7 +77,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var profileNode = steps[stepIndex].Left;
 
-                if (!(profileNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.ProfileNode))
+                if (!(profileNode is ProfileNode))
                 {
                     Assert.Fail("Node is not a profile node.");
                 }
@@ -95,7 +95,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var personNode = steps[stepIndex].Left;
 
-                if (!(personNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.PersonNode))
+                if (!(personNode is PersonNode))
                 {
                     Assert.Fail("Node is not a person node.");
                 }
@@ -113,7 +113,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var personNode = steps[stepIndex].Left;
 
-                if (!(personNode is DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.PersonNode))
+                if (!(personNode is PersonNode))
                 {
                     Assert.Fail("Node is not a person node.");
                 }
@@ -132,16 +132,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 return;
             }
 
-            var ids = new HashSet<Guid>()
+            var ids = new HashSet<GraphNodeKeyBase>()
             {
-                steps[0].Left.Id,
+                steps[0].Left.Key,
             };
 
             foreach (var step in steps)
             {
-                if (!ids.Add(step.Right.Id))
+                if (!ids.Add(step.Right.Key))
                 {
-                    Assert.Fail("Duplicate node Id.");
+                    Assert.Fail("Duplicate node key.");
                 }
             }
         }
@@ -164,14 +164,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     var firstStep = steps[0];
 
-                    _hashCode = firstStep.Left.Name.GetHashCode() ^ firstStep.Right.Name.GetHashCode();
+                    _hashCode = firstStep.Left.Key.GetHashCode() ^ firstStep.Right.Key.GetHashCode();
+                }
 
-                    for (var stepIndex = 1; stepIndex < steps.Count; stepIndex++)
-                    {
-                        var step = steps[stepIndex];
+                if (steps.Count > 1)
+                {
+                    var lastStep = steps[steps.Count - 1];
 
-                        _hashCode ^= step.Left.Name.GetHashCode() ^ step.Right.Name.GetHashCode();
-                    }
+                    var lastHashCode = lastStep.Left.Key.GetHashCode() ^ lastStep.Right.Key.GetHashCode();
+
+                    _hashCode ^= lastHashCode;
                 }
             }
 
@@ -197,13 +199,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                     var otherStep = other._steps[stepIndex];
 
-                    if (!thisStep.Left.Name.Equals(otherStep.Left.Name))
+                    if (!thisStep.Left.Key.KeysAreEqual(otherStep.Left.Key))
                     {
                         areEqual = false;
 
                         break;
                     }
-                    else if (!thisStep.Right.Name.Equals(otherStep.Right.Name))
+                    else if (!thisStep.Right.Key.KeysAreEqual(otherStep.Right.Key))
                     {
                         areEqual = false;
 

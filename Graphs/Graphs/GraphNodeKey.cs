@@ -14,12 +14,12 @@ namespace mitoSoft.Math.Graphs
         {
             this._name = name ?? throw new ArgumentNullException(nameof(name));
 
-            _hashCode = name.GetHashCode();
+            this._hashCode = name.GetHashCode();
         }
 
-        public override string GetKeyDisplayValue() => _name;
+        public override string GetKeyDisplayValue() => this._name;
 
-        public override int GetKeyHashCode() => _hashCode;
+        public override int GetKeyHashCode() => this._hashCode;
 
         public override bool KeysAreEqual(GraphNodeKeyBase other)
         {

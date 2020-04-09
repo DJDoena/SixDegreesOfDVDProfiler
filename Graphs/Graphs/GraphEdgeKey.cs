@@ -13,14 +13,14 @@ namespace mitoSoft.Math.Graphs
             this.SourceNodeKey = sourceNodeKey ?? throw new ArgumentNullException(nameof(sourceNodeKey));
             this.TargetNodeKey = targetNodeKey ?? throw new ArgumentNullException(nameof(targetNodeKey));
 
-            _hashCode = sourceNodeKey.GetHashCode() ^ targetNodeKey.GetHashCode();
+            this._hashCode = sourceNodeKey.GetHashCode() ^ targetNodeKey.GetHashCode();
         }
 
         public GraphNodeKeyBase SourceNodeKey { get; }
 
         public GraphNodeKeyBase TargetNodeKey { get; }
 
-        public override int GetHashCode() => _hashCode;
+        public override int GetHashCode() => this._hashCode;
 
         public override bool Equals(object obj)
         {
@@ -30,8 +30,8 @@ namespace mitoSoft.Math.Graphs
             }
             else
             {
-                var areEqual = this.SourceNodeKey.Equals(other.SourceNodeKey)
-                    && this.TargetNodeKey.Equals(other.TargetNodeKey);
+                var areEqual = this.SourceNodeKey.KeysAreEqual(other.SourceNodeKey)
+                    && this.TargetNodeKey.KeysAreEqual(other.TargetNodeKey);
 
                 return areEqual;
             }
