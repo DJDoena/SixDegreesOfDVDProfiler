@@ -45,7 +45,9 @@
     <Compile Include="Jobs.cs" />
     <Compile Include="PersonFormatter.cs" />
     <Compile Include="PersonNode.cs" />
+    <Compile Include="PersonNodeKey.cs" />
     <Compile Include="ProfileNode.cs" />
+    <Compile Include="ProfileNodeKey.cs" />
     <Compile Include="SearchPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
