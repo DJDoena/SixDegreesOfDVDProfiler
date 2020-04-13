@@ -31,6 +31,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         public static string GetJob(IPerson person)
         {
+            if (person == null)
+            {
+                throw new ArgumentNullException(nameof(person));
+            }
+
             if (person is CastMember castMember)
             {
                 var result = GetCastJob(castMember);

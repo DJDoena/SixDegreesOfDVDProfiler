@@ -1,32 +1,33 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
-using mitoSoft.Graphs;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [DebuggerDisplay(nameof(PersonNode) + " ({ToString()})")]
     public sealed partial class PersonNode : DistanceNode
     {
-        private readonly Dictionary<GraphNodeKeyBase, Jobs> _profiles;
+        private readonly Dictionary<string, Jobs> _profiles;
 
-        public PersonNode(IPerson person) : base(PersonFormatter.GetName(person), new PersonNodeKey(person))
+        public PersonNode(IPerson person) : base(BuildNodeName(person))
         {
-            _profiles = new Dictionary<GraphNodeKeyBase, Jobs>();
+            _profiles = new Dictionary<string, Jobs>();
 
             Person = new SearchPerson(person.FirstName, person.MiddleName, person.LastName, person.BirthYear);
+
+            Tag = this;
         }
 
         public IPerson Person { get; }
 
         public void AddJob(ProfileNode profile, IPerson person)
         {
-            if (!_profiles.TryGetValue(profile.Key, out var jobs))
+            if (!_profiles.TryGetValue(profile.Name, out var jobs))
             {
                 jobs = new Jobs();
 
-                _profiles.Add(profile.Key, jobs);
+                _profiles.Add(profile.Name, jobs);
             }
 
             jobs.AddJob(person);
@@ -34,7 +35,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         public IEnumerable<IPerson> GetJobs(ProfileNode profile)
         {
-            if (_profiles.TryGetValue(profile.Key, out var jobs))
+            if (_profiles.TryGetValue(profile.Name, out var jobs))
             {
                 foreach (var job in jobs.JobList)
                 {
@@ -42,5 +43,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 }
             }
         }
+
+        public static string BuildNodeName(IPerson person) => "Person: " + PersonFormatter.GetName(person);
     }
 }

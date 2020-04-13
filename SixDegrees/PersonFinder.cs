@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     internal static class PersonFinder
     {
-        internal static IEnumerable<PersonKey> Find(IPerson searchFor, DistanceGraph searchIn)
+        internal static IEnumerable<PersonKey> Find(IPerson searchFor, Graph searchIn)
         {
             var searchKey = new PersonKey(searchFor);
 

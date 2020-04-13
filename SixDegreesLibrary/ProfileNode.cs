@@ -1,20 +1,22 @@
 ﻿using System.Diagnostics;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [DebuggerDisplay(nameof(ProfileNode) + " ({ToString()})")]
     public sealed partial class ProfileNode : DistanceNode
     {
-        public ProfileNode(DVD profile) : base(BuildTitle(profile), new ProfileNodeKey(profile))
+        public ProfileNode(DVD profile) : base(BuildNodeName(profile))
         {
             Profile = profile;
+
+            Tag = this;
         }
 
         public DVD Profile { get; }
 
-        private static string BuildTitle(DVD profile)
+        public static string BuildNodeName(DVD profile)
         {
             var title = profile.Title?.Trim() ?? string.Empty;
 
@@ -28,7 +30,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 title = $"{title} ({profile.ProductionYear})";
             }
 
-            return title;
+            return $"Profile: {title}";
         }
     }
 }

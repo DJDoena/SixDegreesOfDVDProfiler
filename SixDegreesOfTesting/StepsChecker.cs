@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using mitoSoft.Graphs;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
@@ -77,7 +76,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var profileNode = steps[stepIndex].Left;
 
-                if (!(profileNode is ProfileNode))
+                if (!(profileNode.Tag is ProfileNode))
                 {
                     Assert.Fail("Node is not a profile node.");
                 }
@@ -95,7 +94,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var personNode = steps[stepIndex].Left;
 
-                if (!(personNode is PersonNode))
+                if (!(personNode.Tag is PersonNode))
                 {
                     Assert.Fail("Node is not a person node.");
                 }
@@ -113,7 +112,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var personNode = steps[stepIndex].Left;
 
-                if (!(personNode is PersonNode))
+                if (!(personNode.Tag is PersonNode))
                 {
                     Assert.Fail("Node is not a person node.");
                 }
@@ -132,14 +131,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 return;
             }
 
-            var ids = new HashSet<GraphNodeKeyBase>()
+            var ids = new HashSet<string>()
             {
-                steps[0].Left.Key,
+                steps[0].Left.Name,
             };
 
             foreach (var step in steps)
             {
-                if (!ids.Add(step.Right.Key))
+                if (!ids.Add(step.Right.Name))
                 {
                     Assert.Fail("Duplicate node key.");
                 }
@@ -164,14 +163,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     var firstStep = steps[0];
 
-                    _hashCode = firstStep.Left.Key.GetHashCode() ^ firstStep.Right.Key.GetHashCode();
+                    _hashCode = firstStep.Left.Name.GetHashCode() ^ firstStep.Right.Name.GetHashCode();
                 }
 
                 if (steps.Count > 1)
                 {
                     var lastStep = steps[steps.Count - 1];
 
-                    var lastHashCode = lastStep.Left.Key.GetHashCode() ^ lastStep.Right.Key.GetHashCode();
+                    var lastHashCode = lastStep.Left.Name.GetHashCode() ^ lastStep.Right.Name.GetHashCode();
 
                     _hashCode ^= lastHashCode;
                 }
@@ -199,13 +198,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                     var otherStep = other._steps[stepIndex];
 
-                    if (!thisStep.Left.Key.KeysAreEqual(otherStep.Left.Key))
+                    if (!thisStep.Left.Name.Equals(otherStep.Left.Name))
                     {
                         areEqual = false;
 
                         break;
                     }
-                    else if (!thisStep.Right.Key.KeysAreEqual(otherStep.Right.Key))
+                    else if (!thisStep.Right.Name.Equals(otherStep.Right.Name))
                     {
                         areEqual = false;
 

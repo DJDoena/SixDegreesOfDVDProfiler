@@ -7,7 +7,9 @@ using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using mitoSoft.Graphs;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs.Exceptions;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
+using mitoSoft.Graphs.ShortestPathAlgorithms.Exceptions;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
@@ -15,7 +17,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private IEnumerable<DVD> _collection;
 
-        private DistanceGraph _graph;
+        private Graph _graph;
 
         internal MainForm()
         {
@@ -31,7 +33,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             MaxSearchRequestsUpDown.Maximum = uint.MaxValue;
         }
 
-        private DistanceGraph Graph
+        private Graph Graph
         {
             get => _graph;
             set
@@ -243,22 +245,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 TryFind();
             }
-            catch (NodeNotInGraphException ex)
+            catch (NodeNotFoundException ex)
             {
-                if (ex.Node is PersonNode personNode)
-                {
-                    var name = PersonFormatter.GetName(personNode.Person);
-
-                    MessageBox.Show($"{name} is not in collection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (ex.Key != null)
-                {
-                    MessageBox.Show($"{ex.Key.GetKeyDisplayValue()} is not in collection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -277,27 +266,33 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var leftPerson = new SearchPerson(LeftFirstNameTextBox.Text, LeftMiddleNameTextBox.Text, LeftLastNameTextBox.Text, (ushort)LeftBirthYearUpDown.Value);
 
-            DistanceNode leftPersonNode = new PersonNode(leftPerson);
-
             var rightPerson = new SearchPerson(RightFirstNameTextBox.Text, RightMiddleNameTextBox.Text, RightLastNameTextBox.Text, (ushort)RightBirthYearUpDown.Value);
 
-            DistanceNode rightPersonNode = new PersonNode(rightPerson);
+            var leftPersonNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(leftPerson));
 
-            var calculator = new DistanceCalculator(Graph);
+            var rightPersonNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(rightPerson));
 
-            var distance = calculator.CalculateDistancesByDeepFirst(ref leftPersonNode, ref rightPersonNode, (int)MaxSearchDepthUpDown.Value);
-
-            if (double.IsPositiveInfinity(distance))
+            Graph resultGraph;
+            try
+            {
+                resultGraph = (new DeepFirstAlgorithm(Graph, (int)MaxSearchDepthUpDown.Value)).GetShortestGraph(leftPersonNode, rightPersonNode);
+            }
+            catch (PathNotFoundException)
             {
                 MessageBox.Show("No connection found.", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return;
             }
-            else if (distance == 0)
+
+            if (resultGraph.Nodes.Count() == 1)
             {
                 MessageBox.Show("Left and right are the same person. Their degree of separation is: 0", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                var results = calculator.GetShortestPath(rightPersonNode);
+                var resultGraphTargetNode = resultGraph.GetDistanceNode(rightPersonNode.Name);
+
+                var results = GraphHelper.GetPaths(resultGraphTargetNode);
 
                 using (var resultForm = new ResultForm(results))
                 {

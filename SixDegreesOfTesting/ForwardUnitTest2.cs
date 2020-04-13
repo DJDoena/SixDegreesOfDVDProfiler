@@ -2,14 +2,15 @@
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [TestClass]
     public class ForwardUnitTest2
     {
-        private static DistanceGraph _graph;
+        private static Graph _graph;
 
         [ClassInitialize]
         public static void Initialize(TestContext _)
@@ -24,175 +25,105 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         [TestMethod]
         public void Test1Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Max", lastName: "von Sydow"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
+            var sourcePerson = new SearchPerson(firstName: "Max", lastName: "von Sydow");
+            var targetPerson = new SearchPerson(firstName: "Pat", lastName: "Boone");
 
-            var calculator = new DistanceCalculator(_graph);
+            var sourceNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(sourcePerson));
+            var targetNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var calculator = new DeepFirstAlgorithm(_graph);
 
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var shortestGraph = calculator.GetShortestGraph(sourceNode.Name, targetNode.Name);
 
-            Assert.AreEqual(1, movieDistance);
+            var shortestGraphTargetNode = shortestGraph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
-
-            Assert.AreEqual(1, stepsList.Count);
-
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
-        }
-
-        [TestMethod]
-        public void Test1Breadth()
-        {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Max", lastName: "von Sydow"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
-
-            var calculator = new DistanceCalculator(_graph);
-
-            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(shortestGraphTargetNode);
 
             Assert.AreEqual(1, movieDistance);
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+            var stepsList = GraphHelper.GetPaths(shortestGraphTargetNode).ToList();
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, movieDistance * 2);
         }
 
         [TestMethod]
         public void Test2Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Oscar", lastName: "Ljung"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
+            var sourcePerson = new SearchPerson(firstName: "Oscar", lastName: "Ljung");
+            var targetPerson = new SearchPerson(firstName: "Pat", lastName: "Boone");
 
-            var calculator = new DistanceCalculator(_graph);
+            var sourceNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(sourcePerson));
+            var targetNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var calculator = new DeepFirstAlgorithm(_graph);
 
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var shortestGraph = calculator.GetShortestGraph(sourceNode.Name, targetNode.Name);
 
-            Assert.AreEqual(2, movieDistance);
+            var shortestGraphTargetNode = shortestGraph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
-
-            Assert.AreEqual(1, stepsList.Count);
-
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
-        }
-
-        [TestMethod]
-        public void Test2Breadth()
-        {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Oscar", lastName: "Ljung"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Pat", lastName: "Boone"));
-
-            var calculator = new DistanceCalculator(_graph);
-
-            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(shortestGraphTargetNode);
 
             Assert.AreEqual(2, movieDistance);
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+            var stepsList = GraphHelper.GetPaths(shortestGraphTargetNode).ToList();
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, movieDistance * 2);
         }
-
+            
         [TestMethod]
         public void Test3Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
+            var sourcePerson = new SearchPerson(firstName: "Hans", lastName: "Alfredson");
+            var targetPerson = new SearchPerson(firstName: "John", lastName: "Wayne");
 
-            var calculator = new DistanceCalculator(_graph);
+            var sourceNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(sourcePerson));
+            var targetNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var calculator = new DeepFirstAlgorithm(_graph);
 
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var shortestGraph = calculator.GetShortestGraph(sourceNode.Name, targetNode.Name);
 
-            Assert.AreEqual(2, movieDistance);
+            var shortestGraphTargetNode = shortestGraph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
-
-            Assert.AreEqual(1, stepsList.Count);
-
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
-        }
-
-        [TestMethod]
-        public void Test3Breadth()
-        {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
-
-            var calculator = new DistanceCalculator(_graph);
-
-            var nodeDistance1 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(shortestGraphTargetNode);
 
             Assert.AreEqual(2, movieDistance);
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+            var stepsList = GraphHelper.GetPaths(shortestGraphTargetNode).ToList();
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, movieDistance * 2);
         }
 
         [TestMethod]
         public void Test4Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
+            var sourcePerson = new SearchPerson(firstName: "John", lastName: "Wayne");
+            var targetPerson = new SearchPerson(firstName: "Hans", lastName: "Alfredson");
 
-            var calculator = new DistanceCalculator(_graph);
+            var sourceNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(sourcePerson));
+            var targetNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
-            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
+            var calculator = new DeepFirstAlgorithm(_graph);
 
-            Assert.AreEqual(nodeDistance1, nodeDistance2);
+            var shortestGraph = calculator.GetShortestGraph(sourceNode.Name, targetNode.Name);
 
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
+            var shortestGraphTargetNode = shortestGraph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            Assert.AreEqual(2, movieDistance);
-
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
-
-            Assert.AreEqual(1, stepsList.Count);
-
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
-        }
-
-        [TestMethod]
-        public void Test4Breadth()
-        {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "John", lastName: "Wayne"));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "Hans", lastName: "Alfredson"));
-
-            var calculator = new DistanceCalculator(_graph);
-
-            var nodeDistance1 = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
-            var nodeDistance2 = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
-
-            Assert.AreEqual(nodeDistance1, nodeDistance2);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance1);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(shortestGraphTargetNode);
 
             Assert.AreEqual(2, movieDistance);
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+            var stepsList = GraphHelper.GetPaths(shortestGraphTargetNode).ToList();
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance1);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, movieDistance * 2);
         }
     }
 }

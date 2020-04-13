@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using mitoSoft.Graphs.Dijkstra;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
@@ -34,11 +33,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var lastStep = result.GetSteps().First();
 
-            var firstProfile = (ProfileNode)firstStep.Left;
+            var firstProfile = (ProfileNode)firstStep.Left.Tag;
 
             var firstTitle = firstProfile.Profile.Title;
 
-            var lastProfile = (ProfileNode)lastStep.Right;
+            var lastProfile = (ProfileNode)lastStep.Right.Tag;
 
             var lastTitle = lastProfile.Profile.Title;
 
@@ -82,11 +81,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private static ListViewItem CreateRow(Step firstStep, Step secondStep)
         {
-            var profile = (ProfileNode)firstStep.Left;
+            var profile = (ProfileNode)firstStep.Left.Tag;
 
             var title = profile.Profile.Title;
 
-            var leftPerson = (PersonNode)firstStep.Right;
+            var leftPerson = (PersonNode)firstStep.Right.Tag;
 
             var leftName = PersonFormatter.GetName(leftPerson.Person);
 
@@ -94,7 +93,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var leftJobDescription = PersonFormatter.GetJob(leftJob);
 
-            var rightPerson = (PersonNode)secondStep.Left;
+            var rightPerson = (PersonNode)secondStep.Left.Tag;
 
             var rightName = PersonFormatter.GetName(rightPerson.Person);
 

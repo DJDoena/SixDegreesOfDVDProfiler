@@ -2,14 +2,15 @@
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using mitoSoft.Graphs.Dijkstra;
+using mitoSoft.Graphs;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     [TestClass]
     public class ForwardUnitTest3
     {
-        private static DistanceGraph _graph;
+        private static Graph _graph;
 
         [ClassInitialize]
         public static void Initialize(TestContext _)
@@ -24,43 +25,27 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         [TestMethod]
         public void TomWellingToGeorgeLucasDegree2Deep()
         {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Welling", birthYear: 1977));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "George", lastName: "Lucas", birthYear: 1944));
+            var sourcePerson = new SearchPerson(firstName: "Tom", lastName: "Welling", birthYear: 1977);
+            var targetPerson = new SearchPerson(firstName: "George", lastName: "Lucas", birthYear: 1944);
 
-            var calculator = new DistanceCalculator(_graph);
+            var sourceNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(sourcePerson));
+            var targetNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var nodeDistance = calculator.CalculateDistancesByDeepFirst(ref sourceNode, ref targetNode);
+            var calculator = new DeepFirstAlgorithm(_graph);
 
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var shortestGraph = calculator.GetShortestGraph(sourceNode.Name, targetNode.Name);
 
-            Assert.AreEqual(2, movieDistance);
+            var shortestGraphTargetNode = shortestGraph.GetDistanceNode(PersonNode.BuildNodeName(targetPerson));
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
-
-            Assert.AreEqual(1, stepsList.Count);
-
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
-        }
-
-        [TestMethod]
-        public void TomWellingToGeorgeLucasDegree2Breadth()
-        {
-            DistanceNode sourceNode = new PersonNode(new SearchPerson(firstName: "Tom", lastName: "Welling", birthYear: 1977));
-            DistanceNode targetNode = new PersonNode(new SearchPerson(firstName: "George", lastName: "Lucas", birthYear: 1944));
-
-            var calculator = new DistanceCalculator(_graph);
-
-            var nodeDistance = calculator.CalculateDistancesByBreadthFirst(ref sourceNode, ref targetNode);
-
-            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(nodeDistance);
+            var movieDistance = ForwardUnitTestSample.GetRealMovieDistance(shortestGraphTargetNode);
 
             Assert.AreEqual(2, movieDistance);
 
-            var stepsList = calculator.GetShortestPath(targetNode).ToList();
+            var stepsList = GraphHelper.GetPaths(shortestGraphTargetNode).ToList();
 
             Assert.AreEqual(1, stepsList.Count);
 
-            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, nodeDistance);
+            ForwardUnitTestSample.CheckSteps(sourceNode, targetNode, stepsList, movieDistance * 2);
         }
     }
 }
