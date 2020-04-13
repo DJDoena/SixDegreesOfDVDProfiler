@@ -275,7 +275,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             Graph resultGraph;
             try
             {
-                resultGraph = (new DeepFirstAlgorithm(Graph, (int)MaxSearchDepthUpDown.Value)).GetShortestGraph(leftPersonNode, rightPersonNode);
+                resultGraph = (new DeepFirstAlgorithm(Graph, (int)(MaxSearchDepthUpDown.Value * 2))).GetShortestGraph(leftPersonNode, rightPersonNode);
             }
             catch (PathNotFoundException)
             {
@@ -292,9 +292,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var resultGraphTargetNode = resultGraph.GetDistanceNode(rightPersonNode.Name);
 
-                var results = GraphHelper.GetPaths(resultGraphTargetNode);
-
-                using (var resultForm = new ResultForm(results))
+                using (var resultForm = new ResultForm(resultGraph, resultGraphTargetNode))
                 {
                     resultForm.ShowDialog();
                 }

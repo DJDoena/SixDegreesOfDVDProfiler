@@ -8,6 +8,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         [STAThread]
         public static void Main()
         {
+            Properties.Settings.Default.Upgrade();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

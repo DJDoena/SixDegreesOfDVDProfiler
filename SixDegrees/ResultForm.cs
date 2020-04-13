@@ -1,17 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using mitoSoft.Graphs;
+using mitoSoft.Graphs.GraphVizInterop;
+using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
     internal partial class ResultForm : Form
     {
+        private readonly Graph _resultGraph;
+
         private readonly IEnumerable<Steps> _results;
 
-        internal ResultForm(IEnumerable<Steps> results)
+        internal ResultForm(Graph resultGraph, DistanceNode resultGraphTargetNode)
         {
-            _results = results;
+            _resultGraph = resultGraph;
+
+            _results = GraphHelper.GetPaths(resultGraphTargetNode); ;
 
             InitializeComponent();
 
@@ -106,6 +115,162 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             var row = new ListViewItem(subItems);
 
             return row;
+        }
+
+        private void OnWhatIsGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Process.Start("https://en.wikipedia.org/wiki/Graphviz");
+        }
+
+        private void OnDownloadGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Process.Start("https://graphviz.gitlab.io/_pages/Download/Download_windows.html");
+        }
+
+        private void OnConfigureGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog()
+            {
+                CheckFileExists = true,
+                Filter = "dot.exe|dot.exe",
+                Multiselect = false,
+                Title = "Please select the 'dot.exe' in the 'bin' folder of the GraphWiz package.",
+            })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    Properties.Settings.Default.GraphWizDotExe = ofd.FileName;
+                    Properties.Settings.Default.Save();
+                }
+            }
+        }
+
+        private void OnRunGraphWizWithResultToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            var graphWizDotExe = Properties.Settings.Default.GraphWizDotExe;
+
+            if (string.IsNullOrEmpty(graphWizDotExe))
+            {
+                MessageBox.Show("The path to the GraphWiz package is not configured!", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else if (!File.Exists(graphWizDotExe))
+            {
+                MessageBox.Show("The GraphWiz package cannot be found at the configured path!", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else
+            {
+                try
+                {
+                    var fileInfo = new FileInfo(graphWizDotExe);
+
+                    TrySaveImage(new ImageRenderer(fileInfo.DirectoryName));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Unexpected error: {ex.Message}", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void TrySaveImage(ImageRenderer renderer)
+        {
+            using (var sfd = new SaveFileDialog()
+            {
+                CheckPathExists = true,
+                Filter = "Portable Network Graphic (PNG)|*.png|Scalable Vector Graphics (SVG)|*.svg|Bitmap (BMP)|*.bmp|Tagged Image File Format (TIFF)|*.tiff|JPEG|*.jpg|Graphics Interchange Format (GIF)|*.gif",
+                OverwritePrompt = true,
+                RestoreDirectory = true,
+                ValidateNames = true,
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    SaveImage(renderer, new FileInfo(sfd.FileName));
+                }
+            }
+        }
+
+        private void SaveImage(ImageRenderer renderer, FileInfo fileInfo)
+        {
+            foreach (var node in _resultGraph.Nodes)
+            {
+                if (node.Tag is PersonNode personNode)
+                {
+                    node.Description = PersonFormatter.GetName(personNode.Person);
+                }
+                else if (node.Tag is ProfileNode profileNode)
+                {
+                    node.Description = profileNode.Profile.Title;
+                }
+            }
+
+            foreach (var edge in _resultGraph.Edges)
+            {
+                edge.Description = string.Empty;
+            }
+
+            var dotText = _resultGraph.ToDotText();
+
+            switch (fileInfo.Extension.ToLower())
+            {
+                case ".png":
+                    {
+                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+
+                        break;
+                    }
+                case ".svg":
+                    {
+                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.svg);
+
+                        break;
+                    }
+
+                case ".bmp":
+                    {
+                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+
+                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Bmp);
+
+                        break;
+                    }
+                case ".tif":
+                case ".tiff":
+                    {
+                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+
+                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Tiff);
+
+                        break;
+                    }
+                case ".jpg":
+                case ".jpeg":
+                    {
+                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.jpg);
+
+                        break;
+                    }
+                case ".gif":
+                    {
+                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+
+                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Gif);
+
+                        break;
+                    }
+                default:
+                    {
+                        MessageBox.Show($"Unknown file format: {fileInfo.Extension}", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        return;
+                    }
+            }
+
+            Process.Start(fileInfo.FullName);
         }
     }
 }
