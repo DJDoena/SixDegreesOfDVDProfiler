@@ -41,10 +41,10 @@
             this.StepsListView = new System.Windows.Forms.ListView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.GraphWizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WhatIsGraphWizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DownloadGraphWizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConfigureGraphWizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunGraphWizWithResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WhatIsGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DownloadGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConfigureGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunGraphvizWithResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             DegreeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             StartingTitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             EndingTitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -150,41 +150,41 @@
             // GraphWizToolStripMenuItem
             // 
             this.GraphWizToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.WhatIsGraphWizToolStripMenuItem,
-            this.DownloadGraphWizToolStripMenuItem,
-            this.ConfigureGraphWizToolStripMenuItem,
-            this.RunGraphWizWithResultToolStripMenuItem});
+            this.WhatIsGraphvizToolStripMenuItem,
+            this.DownloadGraphvizToolStripMenuItem,
+            this.ConfigureGraphvizToolStripMenuItem,
+            this.RunGraphvizWithResultToolStripMenuItem});
             this.GraphWizToolStripMenuItem.Name = "GraphWizToolStripMenuItem";
-            this.GraphWizToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.GraphWizToolStripMenuItem.Text = "GraphWiz";
+            this.GraphWizToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.GraphWizToolStripMenuItem.Text = "Graphviz";
             // 
-            // WhatIsGraphWizToolStripMenuItem
+            // WhatIsGraphvizToolStripMenuItem
             // 
-            this.WhatIsGraphWizToolStripMenuItem.Name = "WhatIsGraphWizToolStripMenuItem";
-            this.WhatIsGraphWizToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.WhatIsGraphWizToolStripMenuItem.Text = "What is GraphWiz?";
-            this.WhatIsGraphWizToolStripMenuItem.Click += new System.EventHandler(this.OnWhatIsGraphWizToolStripMenuItemClick);
+            this.WhatIsGraphvizToolStripMenuItem.Name = "WhatIsGraphvizToolStripMenuItem";
+            this.WhatIsGraphvizToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.WhatIsGraphvizToolStripMenuItem.Text = "What is Graphviz?";
+            this.WhatIsGraphvizToolStripMenuItem.Click += new System.EventHandler(this.OnWhatIsGraphvizToolStripMenuItemClick);
             // 
-            // DownloadGraphWizToolStripMenuItem
+            // DownloadGraphvizToolStripMenuItem
             // 
-            this.DownloadGraphWizToolStripMenuItem.Name = "DownloadGraphWizToolStripMenuItem";
-            this.DownloadGraphWizToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.DownloadGraphWizToolStripMenuItem.Text = "Download GraphWiz";
-            this.DownloadGraphWizToolStripMenuItem.Click += new System.EventHandler(this.OnDownloadGraphWizToolStripMenuItemClick);
+            this.DownloadGraphvizToolStripMenuItem.Name = "DownloadGraphvizToolStripMenuItem";
+            this.DownloadGraphvizToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.DownloadGraphvizToolStripMenuItem.Text = "Download Graphviz";
+            this.DownloadGraphvizToolStripMenuItem.Click += new System.EventHandler(this.OnDownloadGraphvizToolStripMenuItemClick);
             // 
-            // ConfigureGraphWizToolStripMenuItem
+            // ConfigureGraphvizToolStripMenuItem
             // 
-            this.ConfigureGraphWizToolStripMenuItem.Name = "ConfigureGraphWizToolStripMenuItem";
-            this.ConfigureGraphWizToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.ConfigureGraphWizToolStripMenuItem.Text = "Configure GraphWiz";
-            this.ConfigureGraphWizToolStripMenuItem.Click += new System.EventHandler(this.OnConfigureGraphWizToolStripMenuItemClick);
+            this.ConfigureGraphvizToolStripMenuItem.Name = "ConfigureGraphvizToolStripMenuItem";
+            this.ConfigureGraphvizToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.ConfigureGraphvizToolStripMenuItem.Text = "Configure Graphviz";
+            this.ConfigureGraphvizToolStripMenuItem.Click += new System.EventHandler(this.OnConfigureGraphvizToolStripMenuItemClick);
             // 
-            // RunGraphWizWithResultToolStripMenuItem
+            // RunGraphvizWithResultToolStripMenuItem
             // 
-            this.RunGraphWizWithResultToolStripMenuItem.Name = "RunGraphWizWithResultToolStripMenuItem";
-            this.RunGraphWizWithResultToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
-            this.RunGraphWizWithResultToolStripMenuItem.Text = "Export Result as an image with GraphWiz";
-            this.RunGraphWizWithResultToolStripMenuItem.Click += new System.EventHandler(this.OnRunGraphWizWithResultToolStripMenuItemClick);
+            this.RunGraphvizWithResultToolStripMenuItem.Name = "RunGraphvizWithResultToolStripMenuItem";
+            this.RunGraphvizWithResultToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.RunGraphvizWithResultToolStripMenuItem.Text = "Export Result as an image with Graphviz";
+            this.RunGraphvizWithResultToolStripMenuItem.Click += new System.EventHandler(this.OnRunGraphvizWithResultToolStripMenuItemClick);
             // 
             // ResultForm
             // 
@@ -212,10 +212,10 @@
         private System.Windows.Forms.ListView StepsListView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem GraphWizToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem WhatIsGraphWizToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ConfigureGraphWizToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem RunGraphWizWithResultToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem DownloadGraphWizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem WhatIsGraphvizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConfigureGraphvizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunGraphvizWithResultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DownloadGraphvizToolStripMenuItem;
     }
 }
 

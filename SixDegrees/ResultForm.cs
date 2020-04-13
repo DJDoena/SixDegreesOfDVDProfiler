@@ -117,17 +117,17 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             return row;
         }
 
-        private void OnWhatIsGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        private void OnWhatIsGraphvizToolStripMenuItemClick(object sender, EventArgs e)
         {
             Process.Start("https://en.wikipedia.org/wiki/Graphviz");
         }
 
-        private void OnDownloadGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        private void OnDownloadGraphvizToolStripMenuItemClick(object sender, EventArgs e)
         {
             Process.Start("https://graphviz.gitlab.io/_pages/Download/Download_windows.html");
         }
 
-        private void OnConfigureGraphWizToolStripMenuItemClick(object sender, EventArgs e)
+        private void OnConfigureGraphvizToolStripMenuItemClick(object sender, EventArgs e)
         {
             using (var ofd = new OpenFileDialog()
             {
@@ -145,7 +145,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private void OnRunGraphWizWithResultToolStripMenuItemClick(object sender, EventArgs e)
+        private void OnRunGraphvizWithResultToolStripMenuItemClick(object sender, EventArgs e)
         {
             var graphWizDotExe = Properties.Settings.Default.GraphWizDotExe;
 
