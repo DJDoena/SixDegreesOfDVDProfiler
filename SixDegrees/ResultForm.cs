@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using mitoSoft.Graphs;
-using mitoSoft.Graphs.GraphVizInterop;
 using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
@@ -23,6 +22,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             _results = GraphHelper.GetPaths(resultGraphTargetNode); ;
 
             InitializeComponent();
+
+            ShowPeoplesJobInImageToolStripMenuItem.Checked = Properties.Settings.Default.ShowJobs;
 
             var rows = _results.Select(r => CreateRow(r)).ToArray();
 
@@ -163,114 +164,12 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
             else
             {
-                try
-                {
-                    var fileInfo = new FileInfo(graphWizDotExe);
+                var graphvizPath = (new FileInfo(graphWizDotExe)).DirectoryName;
 
-                    TrySaveImage(new ImageRenderer(fileInfo.DirectoryName));
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Unexpected error: {ex.Message}", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                var withJobs = ShowPeoplesJobInImageToolStripMenuItem.Checked;
+
+                (new GraphvizExporter(graphvizPath)).SaveImage(_resultGraph, withJobs);
             }
-        }
-
-        private void TrySaveImage(ImageRenderer renderer)
-        {
-            using (var sfd = new SaveFileDialog()
-            {
-                CheckPathExists = true,
-                Filter = "Portable Network Graphic (PNG)|*.png|Scalable Vector Graphics (SVG)|*.svg|Bitmap (BMP)|*.bmp|Tagged Image File Format (TIFF)|*.tiff|JPEG|*.jpg|Graphics Interchange Format (GIF)|*.gif",
-                OverwritePrompt = true,
-                RestoreDirectory = true,
-                ValidateNames = true,
-            })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    SaveImage(renderer, new FileInfo(sfd.FileName));
-                }
-            }
-        }
-
-        private void SaveImage(ImageRenderer renderer, FileInfo fileInfo)
-        {
-            foreach (var node in _resultGraph.Nodes)
-            {
-                if (node.Tag is PersonNode personNode)
-                {
-                    node.Description = PersonFormatter.GetName(personNode.Person);
-                }
-                else if (node.Tag is ProfileNode profileNode)
-                {
-                    node.Description = profileNode.Profile.Title;
-                }
-            }
-
-            foreach (var edge in _resultGraph.Edges)
-            {
-                edge.Description = string.Empty;
-            }
-
-            var dotText = _resultGraph.ToDotText();
-
-            switch (fileInfo.Extension.ToLower())
-            {
-                case ".png":
-                    {
-                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
-
-                        break;
-                    }
-                case ".svg":
-                    {
-                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.svg);
-
-                        break;
-                    }
-
-                case ".bmp":
-                    {
-                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
-
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Bmp);
-
-                        break;
-                    }
-                case ".tif":
-                case ".tiff":
-                    {
-                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
-
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Tiff);
-
-                        break;
-                    }
-                case ".jpg":
-                case ".jpeg":
-                    {
-                        renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.jpg);
-
-                        break;
-                    }
-                case ".gif":
-                    {
-                        var image = renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
-
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Gif);
-
-                        break;
-                    }
-                default:
-                    {
-                        MessageBox.Show($"Unknown file format: {fileInfo.Extension}", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                        return;
-                    }
-            }
-
-            Process.Start(fileInfo.FullName);
         }
 
         private void OnShowPeoplesJobInImageToolStripMenuItemClick(object sender, EventArgs e)

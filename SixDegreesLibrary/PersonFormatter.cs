@@ -84,15 +84,23 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var jobBuilder = new StringBuilder("Crew: ");
 
-            jobBuilder.Append(crewMember.CreditType?.Trim());
-            jobBuilder.Append(" / ");
-            jobBuilder.Append(crewMember.CreditSubtype?.Trim());
-
             if (!string.IsNullOrWhiteSpace(crewMember.CustomRole))
             {
-                jobBuilder.Append(" (");
                 jobBuilder.Append(crewMember.CustomRole.Trim());
-                jobBuilder.Append(")");
+            }
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(crewMember.CreditSubtype)
+                    && crewMember.CreditSubtype != "Other")
+                {
+                    jobBuilder.Append(crewMember.CreditSubtype.Trim());
+                }
+                else
+                {
+                    jobBuilder.Append(crewMember.CreditType?.Trim());
+                    jobBuilder.Append(" / ");
+                    jobBuilder.Append(crewMember.CreditSubtype?.Trim());
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(crewMember.CreditedAs))
