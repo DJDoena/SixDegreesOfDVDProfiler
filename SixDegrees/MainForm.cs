@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
@@ -85,6 +86,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 Title = "Please select your DVD Profiler collection XML file",
             })
             {
+                var lastUsedFile = Properties.Settings.Default.LastUsedCollectionFile;
+
+                if (!string.IsNullOrEmpty(lastUsedFile) && File.Exists(lastUsedFile))
+                {
+                    var fi = new FileInfo(lastUsedFile);
+
+                    ofd.InitialDirectory = fi.DirectoryName;
+                    ofd.FileName = fi.Name;
+                }
+
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     Collection = null;
@@ -96,6 +107,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                     try
                     {
                         TryLoad(ofd.FileName);
+
+                        Properties.Settings.Default.LastUsedCollectionFile = ofd.FileName;
+                        Properties.Settings.Default.Save();
                     }
                     catch (Exception ex)
                     {

@@ -57,7 +57,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                 if (duplicateChecker.Add(personNode.Name)) //a person can have multiple jobs in the same profiles
                 {
-                    graph.TryAddEdge(profileNode, personNode, 1, true);
+                    graph.AddEdge(profileNode, personNode, 1, true);
                 }
 
                 ((PersonNode)personNode).AddJob((ProfileNode)profileNode, person);

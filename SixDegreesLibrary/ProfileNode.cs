@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Threading;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using mitoSoft.Graphs.ShortestPathAlgorithms;
 
@@ -30,7 +31,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 title = $"{title} ({profile.ProductionYear})";
             }
 
-            return $"Profile: {title}";
+            return $"Profile: {title.ToLower(Thread.CurrentThread.CurrentUICulture)}";
         }
     }
 }

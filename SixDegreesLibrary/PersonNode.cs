@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using mitoSoft.Graphs.ShortestPathAlgorithms;
 
@@ -44,6 +45,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        public static string BuildNodeName(IPerson person) => "Person: " + PersonFormatter.GetName(person);
+        public static string BuildNodeName(IPerson person) => "Person: " + PersonFormatter.GetName(person).ToLower(Thread.CurrentThread.CurrentUICulture);
     }
 }
