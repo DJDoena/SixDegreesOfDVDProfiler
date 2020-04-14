@@ -58,5 +58,17 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Properties {
                 this["UpgradeRequired"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShowJobs {
+            get {
+                return ((bool)(this["ShowJobs"]));
+            }
+            set {
+                this["ShowJobs"] = value;
+            }
+        }
     }
 }

@@ -31,7 +31,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             LeftBirthYearUpDown.Maximum = ushort.MaxValue;
             RightBirthYearUpDown.Maximum = ushort.MaxValue;
             MaxSearchDepthUpDown.Maximum = byte.MaxValue;
-            MaxSearchRequestsUpDown.Maximum = uint.MaxValue;
         }
 
         private Graph Graph
@@ -72,7 +71,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             LeftLookupNameButton.Enabled = enabled;
             RightLookupNameButton.Enabled = enabled;
             StartShortSearchButton.Enabled = enabled;
-            StartLongSearchButton.Enabled = enabled;
         }
 
         private void OnLoadXmlButtonClick(object sender, EventArgs e)
@@ -131,10 +129,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             if (Collection != null)
             {
+                ProfilesLoadedLabel.Text = $"{collection.DVDList.Length:#,0} profiles loaded.";
+
                 BuildPersons();
             }
             else
             {
+                ProfilesLoadedLabel.Text = string.Empty;
+
                 MessageBox.Show("Collection does not contain any profiles.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -337,6 +339,24 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         private void OnRightBirthYearUpDownValueChanged(object sender, EventArgs e)
         {
             RightResetBirthYearCheckBox.Checked = (RightBirthYearUpDown.Value == 0);
+        }
+
+        private void OnExitToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void OnCheckForUpdatesToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            OnlineAccess.CheckForNewVersion("http://doena-soft.de/dvdprofiler/3.9.0/versions.xml", new WindowHandle(), "Six Degrees of DVD Profiler", GetType().Assembly);
+        }
+
+        private void OnAboutToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            using (var aboutBox = new AboutBox(GetType().Assembly))
+            {
+                aboutBox.ShowDialog();
+            }
         }
     }
 }

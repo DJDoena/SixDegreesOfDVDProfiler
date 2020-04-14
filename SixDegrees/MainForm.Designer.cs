@@ -44,13 +44,16 @@
             System.Windows.Forms.Label MaxSearchDepthLabel;
             System.Windows.Forms.LinkLabel KevinBaconLinkLabel;
             System.Windows.Forms.LinkLabel SixDegreesLinkLabel;
-            System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.LeftResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
+            this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             this.LeftLookupNameButton = new System.Windows.Forms.Button();
             this.LeftLastNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.RightResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
+            this.RightBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             this.RightLookupNameButton = new System.Windows.Forms.Button();
             this.RightLastNameTextBox = new System.Windows.Forms.TextBox();
             this.RightMiddleNameTextBox = new System.Windows.Forms.TextBox();
@@ -59,13 +62,14 @@
             this.IncludeCrewCheckBox = new System.Windows.Forms.CheckBox();
             this.MaxSearchDepthUpDown = new System.Windows.Forms.NumericUpDown();
             this.StartShortSearchButton = new System.Windows.Forms.Button();
-            this.StartLongSearchButton = new System.Windows.Forms.Button();
             this.OnlyIncludeOwnedProfilesCheckBox = new System.Windows.Forms.CheckBox();
-            this.MaxSearchRequestsUpDown = new System.Windows.Forms.NumericUpDown();
-            this.LeftResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
-            this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
-            this.RightResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
-            this.RightBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
+            this.RootMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CheckForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProfilesLoadedLabel = new System.Windows.Forms.Label();
             LoadXmlButton = new System.Windows.Forms.Button();
             WelcomeLabel = new System.Windows.Forms.Label();
             InfoLabel = new System.Windows.Forms.Label();
@@ -82,22 +86,21 @@
             MaxSearchDepthLabel = new System.Windows.Forms.Label();
             KevinBaconLinkLabel = new System.Windows.Forms.LinkLabel();
             SixDegreesLinkLabel = new System.Windows.Forms.LinkLabel();
-            label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             LeftGroupBox.SuspendLayout();
-            RightGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).BeginInit();
+            RightGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).BeginInit();
+            this.RootMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoadXmlButton
             // 
-            LoadXmlButton.Location = new System.Drawing.Point(12, 178);
+            LoadXmlButton.Location = new System.Drawing.Point(15, 193);
             LoadXmlButton.Name = "LoadXmlButton";
             LoadXmlButton.Size = new System.Drawing.Size(175, 23);
-            LoadXmlButton.TabIndex = 7;
+            LoadXmlButton.TabIndex = 8;
             LoadXmlButton.Text = "Load DVD Profiler XML file";
             LoadXmlButton.UseVisualStyleBackColor = true;
             LoadXmlButton.Click += new System.EventHandler(this.OnLoadXmlButtonClick);
@@ -105,19 +108,19 @@
             // WelcomeLabel
             // 
             WelcomeLabel.AutoSize = true;
-            WelcomeLabel.Location = new System.Drawing.Point(9, 9);
+            WelcomeLabel.Location = new System.Drawing.Point(12, 24);
             WelcomeLabel.Name = "WelcomeLabel";
             WelcomeLabel.Size = new System.Drawing.Size(210, 13);
-            WelcomeLabel.TabIndex = 0;
+            WelcomeLabel.TabIndex = 1;
             WelcomeLabel.Text = "Welcome to \"Six Degrees of DVD Profiler\".";
             // 
             // InfoLabel
             // 
             InfoLabel.AutoSize = true;
-            InfoLabel.Location = new System.Drawing.Point(9, 30);
+            InfoLabel.Location = new System.Drawing.Point(12, 45);
             InfoLabel.Name = "InfoLabel";
             InfoLabel.Size = new System.Drawing.Size(655, 13);
-            InfoLabel.TabIndex = 1;
+            InfoLabel.TabIndex = 2;
             InfoLabel.Text = "This program is based on the idea of \"Six Degrees of Kevin Bacon\" which is in tur" +
     "n based on the concept of \"Six Degrees of Separation\".";
             // 
@@ -133,12 +136,33 @@
             LeftGroupBox.Controls.Add(this.LeftLastNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftMiddleNameTextBox);
             LeftGroupBox.Controls.Add(this.LeftFirstNameTextBox);
-            LeftGroupBox.Location = new System.Drawing.Point(12, 244);
+            LeftGroupBox.Location = new System.Drawing.Point(15, 259);
             LeftGroupBox.Name = "LeftGroupBox";
             LeftGroupBox.Size = new System.Drawing.Size(325, 160);
-            LeftGroupBox.TabIndex = 9;
+            LeftGroupBox.TabIndex = 11;
             LeftGroupBox.TabStop = false;
             LeftGroupBox.Text = "Left person";
+            // 
+            // LeftResetBirthYearCheckBox
+            // 
+            this.LeftResetBirthYearCheckBox.AutoSize = true;
+            this.LeftResetBirthYearCheckBox.Checked = true;
+            this.LeftResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.LeftResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
+            this.LeftResetBirthYearCheckBox.Name = "LeftResetBirthYearCheckBox";
+            this.LeftResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.LeftResetBirthYearCheckBox.TabIndex = 8;
+            this.LeftResetBirthYearCheckBox.Text = "(0 = not set)";
+            this.LeftResetBirthYearCheckBox.UseVisualStyleBackColor = true;
+            this.LeftResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnLeftResetBirthYearCheckBoxCheckedChanged);
+            // 
+            // LeftBirthYearUpDown
+            // 
+            this.LeftBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
+            this.LeftBirthYearUpDown.Name = "LeftBirthYearUpDown";
+            this.LeftBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
+            this.LeftBirthYearUpDown.TabIndex = 7;
+            this.LeftBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnLeftBirthYearUpDownValueChanged);
             // 
             // LeftLookupNameButton
             // 
@@ -219,12 +243,33 @@
             RightGroupBox.Controls.Add(this.RightLastNameTextBox);
             RightGroupBox.Controls.Add(this.RightMiddleNameTextBox);
             RightGroupBox.Controls.Add(this.RightFirstNameTextBox);
-            RightGroupBox.Location = new System.Drawing.Point(343, 244);
+            RightGroupBox.Location = new System.Drawing.Point(346, 259);
             RightGroupBox.Name = "RightGroupBox";
             RightGroupBox.Size = new System.Drawing.Size(325, 160);
-            RightGroupBox.TabIndex = 10;
+            RightGroupBox.TabIndex = 12;
             RightGroupBox.TabStop = false;
             RightGroupBox.Text = "Right person";
+            // 
+            // RightResetBirthYearCheckBox
+            // 
+            this.RightResetBirthYearCheckBox.AutoSize = true;
+            this.RightResetBirthYearCheckBox.Checked = true;
+            this.RightResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.RightResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
+            this.RightResetBirthYearCheckBox.Name = "RightResetBirthYearCheckBox";
+            this.RightResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.RightResetBirthYearCheckBox.TabIndex = 8;
+            this.RightResetBirthYearCheckBox.Text = "(0 = not set)";
+            this.RightResetBirthYearCheckBox.UseVisualStyleBackColor = true;
+            this.RightResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnRightResetBirthYearCheckBoxCheckedChanged);
+            // 
+            // RightBirthYearUpDown
+            // 
+            this.RightBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
+            this.RightBirthYearUpDown.Name = "RightBirthYearUpDown";
+            this.RightBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
+            this.RightBirthYearUpDown.TabIndex = 7;
+            this.RightBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnRightBirthYearUpDownValueChanged);
             // 
             // RightLookupNameButton
             // 
@@ -296,19 +341,19 @@
             // MaxSearchDepthLabel
             // 
             MaxSearchDepthLabel.AutoSize = true;
-            MaxSearchDepthLabel.Location = new System.Drawing.Point(9, 426);
+            MaxSearchDepthLabel.Location = new System.Drawing.Point(12, 441);
             MaxSearchDepthLabel.Name = "MaxSearchDepthLabel";
             MaxSearchDepthLabel.Size = new System.Drawing.Size(95, 13);
-            MaxSearchDepthLabel.TabIndex = 11;
+            MaxSearchDepthLabel.TabIndex = 13;
             MaxSearchDepthLabel.Text = "Max search depth:";
             // 
             // KevinBaconLinkLabel
             // 
             KevinBaconLinkLabel.AutoSize = true;
-            KevinBaconLinkLabel.Location = new System.Drawing.Point(9, 51);
+            KevinBaconLinkLabel.Location = new System.Drawing.Point(12, 66);
             KevinBaconLinkLabel.Name = "KevinBaconLinkLabel";
             KevinBaconLinkLabel.Size = new System.Drawing.Size(193, 13);
-            KevinBaconLinkLabel.TabIndex = 2;
+            KevinBaconLinkLabel.TabIndex = 3;
             KevinBaconLinkLabel.TabStop = true;
             KevinBaconLinkLabel.Text = "Wikipedia: Six Degrees of Kevin Bacon";
             KevinBaconLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnKevinBaconLinkLabelLinkClicked);
@@ -316,31 +361,21 @@
             // SixDegreesLinkLabel
             // 
             SixDegreesLinkLabel.AutoSize = true;
-            SixDegreesLinkLabel.Location = new System.Drawing.Point(9, 72);
+            SixDegreesLinkLabel.Location = new System.Drawing.Point(12, 87);
             SixDegreesLinkLabel.Name = "SixDegreesLinkLabel";
             SixDegreesLinkLabel.Size = new System.Drawing.Size(183, 13);
-            SixDegreesLinkLabel.TabIndex = 3;
+            SixDegreesLinkLabel.TabIndex = 4;
             SixDegreesLinkLabel.TabStop = true;
             SixDegreesLinkLabel.Text = "Wikipedia: Six Degrees of Separation";
             SixDegreesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnSixDegreesLinkLabelLinkClicked);
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Enabled = false;
-            label1.Location = new System.Drawing.Point(243, 426);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(108, 13);
-            label1.TabIndex = 13;
-            label1.Text = "Max search requests:";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(12, 220);
+            label2.Location = new System.Drawing.Point(15, 235);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(578, 13);
-            label2.TabIndex = 8;
+            label2.TabIndex = 10;
             label2.Text = "For performance reasons try to put the less relevant person on the left side. It\'" +
     "s easier to find the elephant than the mouse.";
             // 
@@ -349,10 +384,10 @@
             this.IncludeCastCheckBox.AutoSize = true;
             this.IncludeCastCheckBox.Checked = true;
             this.IncludeCastCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.IncludeCastCheckBox.Location = new System.Drawing.Point(12, 109);
+            this.IncludeCastCheckBox.Location = new System.Drawing.Point(15, 124);
             this.IncludeCastCheckBox.Name = "IncludeCastCheckBox";
             this.IncludeCastCheckBox.Size = new System.Drawing.Size(130, 17);
-            this.IncludeCastCheckBox.TabIndex = 4;
+            this.IncludeCastCheckBox.TabIndex = 5;
             this.IncludeCastCheckBox.Text = "Include cast in search";
             this.IncludeCastCheckBox.UseVisualStyleBackColor = true;
             this.IncludeCastCheckBox.CheckedChanged += new System.EventHandler(this.OnIncludeCastCheckBoxCheckedChanged);
@@ -360,17 +395,17 @@
             // IncludeCrewCheckBox
             // 
             this.IncludeCrewCheckBox.AutoSize = true;
-            this.IncludeCrewCheckBox.Location = new System.Drawing.Point(12, 132);
+            this.IncludeCrewCheckBox.Location = new System.Drawing.Point(15, 147);
             this.IncludeCrewCheckBox.Name = "IncludeCrewCheckBox";
             this.IncludeCrewCheckBox.Size = new System.Drawing.Size(133, 17);
-            this.IncludeCrewCheckBox.TabIndex = 5;
+            this.IncludeCrewCheckBox.TabIndex = 6;
             this.IncludeCrewCheckBox.Text = "Include crew in search";
             this.IncludeCrewCheckBox.UseVisualStyleBackColor = true;
             this.IncludeCrewCheckBox.CheckedChanged += new System.EventHandler(this.OnIncludeCrewCheckBoxCheckedChanged);
             // 
             // MaxSearchDepthUpDown
             // 
-            this.MaxSearchDepthUpDown.Location = new System.Drawing.Point(117, 424);
+            this.MaxSearchDepthUpDown.Location = new System.Drawing.Point(120, 439);
             this.MaxSearchDepthUpDown.Minimum = new decimal(new int[] {
             1,
             0,
@@ -378,7 +413,7 @@
             0});
             this.MaxSearchDepthUpDown.Name = "MaxSearchDepthUpDown";
             this.MaxSearchDepthUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchDepthUpDown.TabIndex = 12;
+            this.MaxSearchDepthUpDown.TabIndex = 14;
             this.MaxSearchDepthUpDown.Value = new decimal(new int[] {
             10,
             0,
@@ -387,7 +422,7 @@
             // 
             // StartShortSearchButton
             // 
-            this.StartShortSearchButton.Location = new System.Drawing.Point(12, 450);
+            this.StartShortSearchButton.Location = new System.Drawing.Point(15, 465);
             this.StartShortSearchButton.Name = "StartShortSearchButton";
             this.StartShortSearchButton.Size = new System.Drawing.Size(225, 23);
             this.StartShortSearchButton.TabIndex = 15;
@@ -395,110 +430,84 @@
             this.StartShortSearchButton.UseVisualStyleBackColor = true;
             this.StartShortSearchButton.Click += new System.EventHandler(this.OnStartShortSearchButtonClick);
             // 
-            // StartLongSearchButton
-            // 
-            this.StartLongSearchButton.Enabled = false;
-            this.StartLongSearchButton.Location = new System.Drawing.Point(12, 479);
-            this.StartLongSearchButton.Name = "StartLongSearchButton";
-            this.StartLongSearchButton.Size = new System.Drawing.Size(225, 23);
-            this.StartLongSearchButton.TabIndex = 16;
-            this.StartLongSearchButton.Text = "Search longest link";
-            this.StartLongSearchButton.UseVisualStyleBackColor = true;
-            this.StartLongSearchButton.Click += new System.EventHandler(this.OnStartLongSearchButtonClick);
-            // 
             // OnlyIncludeOwnedProfilesCheckBox
             // 
             this.OnlyIncludeOwnedProfilesCheckBox.AutoSize = true;
             this.OnlyIncludeOwnedProfilesCheckBox.Checked = true;
             this.OnlyIncludeOwnedProfilesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OnlyIncludeOwnedProfilesCheckBox.Location = new System.Drawing.Point(12, 155);
+            this.OnlyIncludeOwnedProfilesCheckBox.Location = new System.Drawing.Point(15, 170);
             this.OnlyIncludeOwnedProfilesCheckBox.Name = "OnlyIncludeOwnedProfilesCheckBox";
             this.OnlyIncludeOwnedProfilesCheckBox.Size = new System.Drawing.Size(161, 17);
-            this.OnlyIncludeOwnedProfilesCheckBox.TabIndex = 6;
+            this.OnlyIncludeOwnedProfilesCheckBox.TabIndex = 7;
             this.OnlyIncludeOwnedProfilesCheckBox.Text = "Only included owned profiles";
             this.OnlyIncludeOwnedProfilesCheckBox.UseVisualStyleBackColor = true;
             this.OnlyIncludeOwnedProfilesCheckBox.CheckedChanged += new System.EventHandler(this.OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged);
             // 
-            // MaxSearchRequestsUpDown
+            // RootMenuStrip
             // 
-            this.MaxSearchRequestsUpDown.Enabled = false;
-            this.MaxSearchRequestsUpDown.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.MaxSearchRequestsUpDown.Location = new System.Drawing.Point(351, 424);
-            this.MaxSearchRequestsUpDown.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.MaxSearchRequestsUpDown.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.MaxSearchRequestsUpDown.Name = "MaxSearchRequestsUpDown";
-            this.MaxSearchRequestsUpDown.Size = new System.Drawing.Size(120, 20);
-            this.MaxSearchRequestsUpDown.TabIndex = 14;
-            this.MaxSearchRequestsUpDown.Value = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
+            this.RootMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileToolStripMenuItem,
+            this.HelpToolStripMenuItem});
+            this.RootMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.RootMenuStrip.Name = "RootMenuStrip";
+            this.RootMenuStrip.Size = new System.Drawing.Size(709, 24);
+            this.RootMenuStrip.TabIndex = 0;
+            this.RootMenuStrip.Text = "menuStrip1";
             // 
-            // LeftResetBirthYearCheckBox
+            // FileToolStripMenuItem
             // 
-            this.LeftResetBirthYearCheckBox.AutoSize = true;
-            this.LeftResetBirthYearCheckBox.Checked = true;
-            this.LeftResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.LeftResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
-            this.LeftResetBirthYearCheckBox.Name = "LeftResetBirthYearCheckBox";
-            this.LeftResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
-            this.LeftResetBirthYearCheckBox.TabIndex = 8;
-            this.LeftResetBirthYearCheckBox.Text = "(0 = not set)";
-            this.LeftResetBirthYearCheckBox.UseVisualStyleBackColor = true;
-            this.LeftResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnLeftResetBirthYearCheckBoxCheckedChanged);
+            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExitToolStripMenuItem});
+            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.FileToolStripMenuItem.Text = "&File";
             // 
-            // LeftBirthYearUpDown
+            // ExitToolStripMenuItem
             // 
-            this.LeftBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
-            this.LeftBirthYearUpDown.Name = "LeftBirthYearUpDown";
-            this.LeftBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
-            this.LeftBirthYearUpDown.TabIndex = 7;
-            this.LeftBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnLeftBirthYearUpDownValueChanged);
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.ExitToolStripMenuItem.Text = "&Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.OnExitToolStripMenuItemClick);
             // 
-            // RightResetBirthYearCheckBox
+            // HelpToolStripMenuItem
             // 
-            this.RightResetBirthYearCheckBox.AutoSize = true;
-            this.RightResetBirthYearCheckBox.Checked = true;
-            this.RightResetBirthYearCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.RightResetBirthYearCheckBox.Location = new System.Drawing.Point(223, 98);
-            this.RightResetBirthYearCheckBox.Name = "RightResetBirthYearCheckBox";
-            this.RightResetBirthYearCheckBox.Size = new System.Drawing.Size(82, 17);
-            this.RightResetBirthYearCheckBox.TabIndex = 8;
-            this.RightResetBirthYearCheckBox.Text = "(0 = not set)";
-            this.RightResetBirthYearCheckBox.UseVisualStyleBackColor = true;
-            this.RightResetBirthYearCheckBox.CheckedChanged += new System.EventHandler(this.OnRightResetBirthYearCheckBoxCheckedChanged);
+            this.HelpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CheckForUpdatesToolStripMenuItem,
+            this.AboutToolStripMenuItem});
+            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.HelpToolStripMenuItem.Text = "&Help";
             // 
-            // RightBirthYearUpDown
+            // CheckForUpdatesToolStripMenuItem
             // 
-            this.RightBirthYearUpDown.Location = new System.Drawing.Point(105, 97);
-            this.RightBirthYearUpDown.Name = "RightBirthYearUpDown";
-            this.RightBirthYearUpDown.Size = new System.Drawing.Size(112, 20);
-            this.RightBirthYearUpDown.TabIndex = 7;
-            this.RightBirthYearUpDown.ValueChanged += new System.EventHandler(this.OnRightBirthYearUpDownValueChanged);
+            this.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem";
+            this.CheckForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.CheckForUpdatesToolStripMenuItem.Text = "&Check for Updates";
+            this.CheckForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.OnCheckForUpdatesToolStripMenuItemClick);
+            // 
+            // AboutToolStripMenuItem
+            // 
+            this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AboutToolStripMenuItem.Text = "&About";
+            this.AboutToolStripMenuItem.Click += new System.EventHandler(this.OnAboutToolStripMenuItemClick);
+            // 
+            // ProfilesLoadedLabel
+            // 
+            this.ProfilesLoadedLabel.AutoSize = true;
+            this.ProfilesLoadedLabel.Location = new System.Drawing.Point(196, 198);
+            this.ProfilesLoadedLabel.Name = "ProfilesLoadedLabel";
+            this.ProfilesLoadedLabel.Size = new System.Drawing.Size(0, 13);
+            this.ProfilesLoadedLabel.TabIndex = 9;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 526);
+            this.ClientSize = new System.Drawing.Size(709, 511);
+            this.Controls.Add(this.ProfilesLoadedLabel);
             this.Controls.Add(label2);
-            this.Controls.Add(label1);
-            this.Controls.Add(this.MaxSearchRequestsUpDown);
             this.Controls.Add(this.OnlyIncludeOwnedProfilesCheckBox);
-            this.Controls.Add(this.StartLongSearchButton);
             this.Controls.Add(this.StartShortSearchButton);
             this.Controls.Add(MaxSearchDepthLabel);
             this.Controls.Add(this.MaxSearchDepthUpDown);
@@ -511,18 +520,20 @@
             this.Controls.Add(this.IncludeCrewCheckBox);
             this.Controls.Add(this.IncludeCastCheckBox);
             this.Controls.Add(LoadXmlButton);
+            this.Controls.Add(this.RootMenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(700, 565);
+            this.MinimumSize = new System.Drawing.Size(725, 550);
             this.Name = "MainForm";
             this.Text = "Six Degrees of DVD Profiler";
             LeftGroupBox.ResumeLayout(false);
             LeftGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).EndInit();
             RightGroupBox.ResumeLayout(false);
             RightGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchRequestsUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftBirthYearUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightBirthYearUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxSearchDepthUpDown)).EndInit();
+            this.RootMenuStrip.ResumeLayout(false);
+            this.RootMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,13 +552,18 @@
         private System.Windows.Forms.Button LeftLookupNameButton;
         private System.Windows.Forms.Button RightLookupNameButton;
         private System.Windows.Forms.Button StartShortSearchButton;
-        private System.Windows.Forms.Button StartLongSearchButton;
         private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
-        private System.Windows.Forms.NumericUpDown MaxSearchRequestsUpDown;
         private System.Windows.Forms.CheckBox LeftResetBirthYearCheckBox;
         private System.Windows.Forms.NumericUpDown LeftBirthYearUpDown;
         private System.Windows.Forms.CheckBox RightResetBirthYearCheckBox;
         private System.Windows.Forms.NumericUpDown RightBirthYearUpDown;
+        private System.Windows.Forms.MenuStrip RootMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
+        private System.Windows.Forms.Label ProfilesLoadedLabel;
+        private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CheckForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
     }
 }
 

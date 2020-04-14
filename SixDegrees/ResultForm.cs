@@ -272,5 +272,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             Process.Start(fileInfo.FullName);
         }
+
+        private void OnShowPeoplesJobInImageToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.ShowJobs = ShowPeoplesJobInImageToolStripMenuItem.Checked;
+            Properties.Settings.Default.Save();
+        }
     }
 }
