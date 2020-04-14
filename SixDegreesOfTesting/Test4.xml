@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Collection>
+  <DVD>
+    <ProfileTimestamp>2016-12-24T19:50:21Z</ProfileTimestamp>
+    <ID>5053083085001.5</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>5</ID_LocalityID>
+    <ID_Type>UPCEAN</ID_Type>
+    <UPC>5-053083-085001</UPC>
+    <CollectionNumber>1258</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Star Trek II: Der Zorn des Khan</Title>
+    <DistTrait />
+    <OriginalTitle>Star Trek II: The Wrath of Khan</OriginalTitle>
+    <ProductionYear>1982</ProductionYear>
+    <RunningTime>113</RunningTime>
+    <RatingAge>12</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Kirk" Voice="false" Uncredited="false" Puppeteer="false" FirstName="William" MiddleName="" LastName="Shatner" BirthYear="1931" CreditedAs="" />
+      <Actor Role="Spock" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Leonard" MiddleName="" LastName="Nimoy" BirthYear="1931" CreditedAs="" />
+      <Actor Role="McCoy" Voice="false" Uncredited="false" Puppeteer="false" FirstName="DeForest" MiddleName="" LastName="Kelley" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Scotty" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Doohan" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Chekov" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Walter" MiddleName="" LastName="Koenig" BirthYear="1936" CreditedAs="" />
+      <Actor Role="Sulu" Voice="false" Uncredited="false" Puppeteer="false" FirstName="George" MiddleName="" LastName="Takei" BirthYear="1937" CreditedAs="" />
+      <Actor Role="Uhura" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nichelle" MiddleName="" LastName="Nichols" BirthYear="1932" CreditedAs="" />
+      <Actor Role="Carol" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bibi" MiddleName="" LastName="Besch" BirthYear="1940" CreditedAs="" />
+      <Actor Role="David" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Merritt" MiddleName="" LastName="Butrick" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Terrell" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="Winfield" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Saavik" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kirstie" MiddleName="" LastName="Alley" BirthYear="1951" CreditedAs="" />
+      <Actor Role="Khan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ricardo" MiddleName="" LastName="Montalban" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Preston" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ike" MiddleName="" LastName="Eisenmann" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Jedda" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Vargas" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Kyle" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Winston" BirthYear="1933" CreditedAs="" />
+      <Actor Role="Beach" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="Kent" BirthYear="1930" CreditedAs="" />
+      <Actor Role="Cadet" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicholas" MiddleName="" LastName="Guest" BirthYear="1951" CreditedAs="" />
+      <Actor Role="Madison" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Russell" MiddleName="" LastName="Takaki" BirthYear="47256" CreditedAs="" />
+      <Actor Role="March" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kevin" MiddleName="Rodney" LastName="Sullivan" BirthYear="1958" CreditedAs="Kevin Sullivan" />
+      <Actor Role="Crew Chief" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Joel" MiddleName="" LastName="Marston" BirthYear="1922" CreditedAs="Joel Marstan" />
+      <Actor Role="Bridge Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Teresa" MiddleName="E." LastName="Victor" BirthYear="1943" CreditedAs="" />
+      <Actor Role="Radio Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Dianne" MiddleName="" LastName="Harper" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Radio Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="David" MiddleName="" LastName="Ruprecht" BirthYear="1948" CreditedAs="" />
+      <Actor Role="Computer" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Marcy" MiddleName="" LastName="Vosburgh" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Khan's Navigator" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Banks" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Khan's Crewman #1" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Bond" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Khan's Crewman #2" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Brett" MiddleName="Baxter" LastName="Clark" BirthYear="63725" CreditedAs="" />
+      <Actor Role="Khan's Henchman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tim" MiddleName="" LastName="Culbertson" BirthYear="1363" CreditedAs="" />
+      <Actor Role="Khan's Crewman #4" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Gibson" BirthYear="17037" CreditedAs="" />
+      <Actor Role="Enterprise Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="James" MiddleName="" LastName="Horner" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Khan's Crewman #5" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Dennis" MiddleName="" LastName="Landry" BirthYear="5048" CreditedAs="" />
+      <Actor Role="Khan's Crewman #6" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Cristian" MiddleName="" LastName="Letelier" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Khan's Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="McBride" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Khan's Crewman #7" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Roger" MiddleName="" LastName="Menache" BirthYear="8670" CreditedAs="" />
+      <Actor Role="Khan's Crew Member" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nanci" MiddleName="" LastName="Rogers" BirthYear="37101" CreditedAs="" />
+      <Actor Role="Enterprise Trainee" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kimberly" MiddleName="L." LastName="Ryusaki" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Joachim" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Judson" MiddleName="" LastName="Scott" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Khan's Crewman #11" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Deney" MiddleName="" LastName="Terrio" BirthYear="1950" CreditedAs="" />
+      <Actor Role="Starfleet Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Philip" MiddleName="" LastName="Weyland" BirthYear="23388" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Nicholas" MiddleName="" LastName="Meyer" BirthYear="1945" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Television Series Star Trek" FirstName="Gene" MiddleName="" LastName="Roddenberry" BirthYear="1921" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Harve" MiddleName="" LastName="Bennett" BirthYear="1930" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Jack" MiddleName="B." LastName="Sowards" BirthYear="1929" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Screenwriter" CustomRole="Screenplay" FirstName="Jack" MiddleName="B." LastName="Sowards" BirthYear="1929" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="James" MiddleName="" LastName="Horner" BirthYear="1953" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Alexander" MiddleName="" LastName="Courage" BirthYear="1919" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Theme From Star Trek (TV Series)&quot;" FirstName="Alexander" MiddleName="" LastName="Courage" BirthYear="1919" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Amazing Grace (Scottish Bagpipes)&quot;" FirstName="John" MiddleName="" LastName="Newton" BirthYear="1725" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>2019-07-02T21:20:22Z</ProfileTimestamp>
+    <ID>883929087037.3</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>3</ID_LocalityID>
+    <ID_Type>UPCEAN</ID_Type>
+    <UPC>883929-087037</UPC>
+    <CollectionNumber>1467</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Eins und Eins macht Vier</Title>
+    <DistTrait />
+    <OriginalTitle>It Takes Two</OriginalTitle>
+    <ProductionYear>1995</ProductionYear>
+    <RunningTime>101</RunningTime>
+    <RatingAge>10</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Diane Barrows" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kirstie" MiddleName="" LastName="Alley" BirthYear="1951" CreditedAs="" />
+      <Actor Role="Roger Callaway" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Guttenberg" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Amanda Lemmon" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mary-Kate" MiddleName="" LastName="Olsen" BirthYear="1986" CreditedAs="" />
+      <Actor Role="Alyssa Callaway" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mary-Kate" MiddleName="" LastName="Olsen" BirthYear="1986" CreditedAs="" />
+      <Actor Role="Alyssa Callaway" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ashley" MiddleName="" LastName="Olsen" BirthYear="1986" CreditedAs="" />
+      <Actor Role="Amanda Lemmon" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ashley" MiddleName="" LastName="Olsen" BirthYear="1986" CreditedAs="" />
+      <Actor Role="Vincenzo" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Philip" MiddleName="" LastName="Bosco" BirthYear="1930" CreditedAs="" />
+      <Actor Role="Clarice Kensington" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jane" MiddleName="" LastName="Sibbett" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Carmen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michelle" MiddleName="" LastName="Grisom" BirthYear="42614" CreditedAs="" />
+      <Actor Role="Frankie" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Desmond" MiddleName="" LastName="Robertson" BirthYear="31807" CreditedAs="" />
+      <Actor Role="Tiny" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Tiny" MiddleName="" LastName="Mills" BirthYear="207" CreditedAs="" />
+      <Actor Role="Patty" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Shanelle" MiddleName="" LastName="Henry" BirthYear="7997" CreditedAs="" />
+      <Actor Role="Anthony" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anthony" MiddleName="" LastName="Aiello" BirthYear="14501" CreditedAs="" />
+      <Actor Role="Wanda" Voice="false" Uncredited="false" Puppeteer="false" FirstName="LaTonya" MiddleName="" LastName="Borsay" BirthYear="7445" CreditedAs="" />
+      <Actor Role="Michelle" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michèle" MiddleName="Lonsdale" LastName="Smith" BirthYear="6461" CreditedAs="Michelle Lonsdale-Smith" />
+      <Actor Role="Jerry" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Sean" MiddleName="" LastName="Orr" BirthYear="50604" CreditedAs="" />
+      <Actor Role="Emily" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Elizabeth" MiddleName="" LastName="Walsh" BirthYear="9627" CreditedAs="" />
+      <Actor Role="Blue Team Kid" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Vollans" BirthYear="1570" CreditedAs="" />
+      <Actor Role="Bernard Louffier" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="O'Sullivan" BirthYear="1964" CreditedAs="" />
+      <Actor Role="Mr. Kensington" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lawrence" MiddleName="" LastName="Dane" BirthYear="1937" CreditedAs="" />
+      <Actor Role="St. Bart's Priest" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gerard" MiddleName="" LastName="Parkes" BirthYear="1924" CreditedAs="Gerrard Parkes" />
+      <Actor Role="Muffy Bilderberg" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gina" MiddleName="" LastName="Clayton" BirthYear="5697" CreditedAs="" />
+      <Actor Role="Craig Bilderberg" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Douglas" MiddleName="" LastName="O'Keeffe" BirthYear="1966" CreditedAs="Doug O'Keefe" />
+      <Actor Role="Waiter at Party" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Mark" MiddleName="" LastName="Huisman" BirthYear="1262" CreditedAs="" />
+      <Actor Role="Miss Van Dyke" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Marilyn" MiddleName="" LastName="Boyle" BirthYear="2294" CreditedAs="" />
+      <Actor Role="Harry Butkis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ernie" MiddleName="" LastName="Grunwald" BirthYear="44649" CreditedAs="" />
+      <Actor Role="Fanny Butkis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ellen-Ray" MiddleName="" LastName="Hennessy" BirthYear="7286" CreditedAs="Ellen Ray Hennessey" />
+      <Actor Role="Harry Butkis Jr." Voice="false" Uncredited="false" Puppeteer="false" FirstName="Dov" MiddleName="" LastName="Tiefenbach" BirthYear="1981" CreditedAs="" />
+      <Actor Role="Brenda Butkis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Annick" MiddleName="" LastName="Obonsawin" BirthYear="1983" CreditedAs="" />
+      <Actor Role="Billy Butkis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Austin" MiddleName="" LastName="Pool" BirthYear="778" CreditedAs="" />
+      <Actor Role="Bobby Butkis" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Andre" MiddleName="" LastName="Lorant" BirthYear="20341" CreditedAs="" />
+      <Actor Role="Airport Tractor Driver" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Philip" MiddleName="" LastName="Williams" BirthYear="31477" CreditedAs="" />
+      <Actor Role="Butkis' Neighbor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Vito" MiddleName="" LastName="Rezza" BirthYear="22166" CreditedAs="" />
+      <Actor Role="Umpire" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Timothy" MiddleName="" LastName="Klein" BirthYear="59000" CreditedAs="" />
+      <Actor Role="Ball Player" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Marshall" MiddleName="Dancing Elk" LastName="Lucas" BirthYear="43912" CreditedAs="" />
+      <Actor Role="Batter" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Marshall" MiddleName="Dancing Elk" LastName="Lucas" BirthYear="43912" CreditedAs="" />
+      <Actor Role="Limo Driver" Voice="false" Uncredited="true" Puppeteer="false" FirstName="J." MiddleName="D." LastName="Walters" BirthYear="1968" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Andy" MiddleName="" LastName="Tennant" BirthYear="1955" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Writer" CustomRole="Written By" FirstName="Deborah" MiddleName="Dean" LastName="Davis" BirthYear="4456" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Sherman" MiddleName="" LastName="Foote" BirthYear="5232" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Hippy Hippy Shake&quot;" FirstName="Chan" MiddleName="" LastName="Romero" BirthYear="613" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Hippy Hippy Shake&quot;" FirstName="The Georgia Satellites" MiddleName="" LastName="" BirthYear="6127" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Cantaloop (Flip Fantasia)&quot;" FirstName="Herbie" MiddleName="" LastName="Hancock" BirthYear="1940" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Cantaloop (Flip Fantasia)&quot;" FirstName="Geoff" MiddleName="" LastName="Wilkinson" BirthYear="49944" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Cantaloop (Flip Fantasia)&quot;" FirstName="Us3" MiddleName="" LastName="" BirthYear="54039" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;I Got You (I Feel Good)&quot;" FirstName="James" MiddleName="" LastName="Brown" BirthYear="1933" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;I Got You (I Feel Good)&quot;" FirstName="James" MiddleName="" LastName="Brown" BirthYear="1933" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;(I've Got Spurs) Jingle Jangle Jingle&quot;" FirstName="Joseph" MiddleName="J." LastName="Lilley" BirthYear="1913" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;(I've Got Spurs) Jingle Jangle Jingle&quot;" FirstName="Frank" MiddleName="" LastName="Loesser" BirthYear="1910" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;A Horse With No Name&quot;" FirstName="Dewey" MiddleName="" LastName="Bunnell" BirthYear="1951" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Hoe Down&quot;" FirstName="Aaron" MiddleName="" LastName="Copland" BirthYear="1900" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Hoe Down&quot;" FirstName="Leonard" MiddleName="" LastName="Bernstein" BirthYear="1918" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Hoe Down&quot;" FirstName="New" MiddleName="York" LastName="Philharmonic" BirthYear="2757" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Theme from Bonanza&quot;" FirstName="Ray" MiddleName="" LastName="Evans" BirthYear="1915" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Theme from Bonanza&quot;" FirstName="Jay" MiddleName="" LastName="Livingston" BirthYear="1915" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Twilight Zone Theme&quot;" FirstName="Marius" MiddleName="" LastName="Constant" BirthYear="1925" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Theme from Psycho&quot;" FirstName="Bernard" MiddleName="" LastName="Herrmann" BirthYear="1911" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;It Takes Two&quot;" FirstName="Sylvia" MiddleName="" LastName="Moy" BirthYear="1938" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;It Takes Two&quot;" FirstName="William" MiddleName="" LastName="Stevenson" BirthYear="1937" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;It Takes Two&quot;" FirstName="Marvin" MiddleName="" LastName="Gaye" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;It Takes Two&quot;" FirstName="Kim" MiddleName="" LastName="Weston" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Tutti Frutti&quot;" FirstName="Little" MiddleName="" LastName="Richard" BirthYear="1932" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Tutti Frutti&quot;" FirstName="Dorothy" MiddleName="" LastName="La Bostrie" BirthYear="1928" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Tutti Frutti&quot;" FirstName="Little" MiddleName="" LastName="Richard" BirthYear="1932" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>2016-08-28T22:06:49Z</ProfileTimestamp>
+    <ID>VVR8K41OSFHKNIA01.4</ID>
+    <ID_VariantNum>1</ID_VariantNum>
+    <ID_LocalityID>4</ID_LocalityID>
+    <ID_Type>DiscID</ID_Type>
+    <UPC>Disc ID: DA28-40E3-8F8D-2F2A</UPC>
+    <CollectionNumber>1162</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Police Academy: Dümmer als die Polizei erlaubt</Title>
+    <DistTrait />
+    <OriginalTitle>Police Academy</OriginalTitle>
+    <ProductionYear>1984</ProductionYear>
+    <RunningTime>96</RunningTime>
+    <RatingAge>15</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Carey Mahoney" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Guttenberg" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Karen Thompson" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kim" MiddleName="" LastName="Cattrall" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Lt. Harris" Voice="false" Uncredited="false" Puppeteer="false" FirstName="G." MiddleName="W." LastName="Bailey" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Moses Hightower" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bubba" MiddleName="" LastName="Smith" BirthYear="1945" CreditedAs="" />
+      <Actor Role="Leslie Barbara" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Donovan" MiddleName="" LastName="Scott" BirthYear="1946" CreditedAs="" />
+      <Actor Role="Commandant Lassard" Voice="false" Uncredited="false" Puppeteer="false" FirstName="George" MiddleName="" LastName="Gaynes" BirthYear="1917" CreditedAs="" />
+      <Actor Role="George Martín" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Andrew" MiddleName="" LastName="Rubin" BirthYear="1946" CreditedAs="" />
+      <Actor Role="Tackleberry" Voice="false" Uncredited="false" Puppeteer="false" FirstName="David" MiddleName="" LastName="Graf" BirthYear="1950" CreditedAs="" />
+      <Actor Role="Sgt. Callahan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Leslie" MiddleName="" LastName="Easterbrook" BirthYear="1949" CreditedAs="" />
+      <Actor Role="Larvell Jones" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="" LastName="Winslow" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Mrs. Fackler" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Debralee" MiddleName="" LastName="Scott" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Doug Fackler" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bruce" MiddleName="" LastName="Mahler" BirthYear="1950" CreditedAs="" />
+      <Actor Role="Captain Reed" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Ross" BirthYear="1934" CreditedAs="" />
+      <Actor Role="Chad Copeland" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Scott" MiddleName="" LastName="Thomson" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Kyle Blankes" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brant" MiddleName="" LastName="von Hoffman" BirthYear="2443" CreditedAs="Brant Van Hoffman" />
+      <Actor Role="Laverne Hooks" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Marion" MiddleName="" LastName="Ramsey" BirthYear="1947" CreditedAs="" />
+      <Actor Role="Hooker" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Georgina" MiddleName="" LastName="Spelvin" BirthYear="1936" CreditedAs="" />
+      <Actor Role="Main Bad Guy" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Doug" MiddleName="" LastName="Lennox" BirthYear="2085" CreditedAs="" />
+      <Actor Role="Chief Hurnst" Voice="false" Uncredited="false" Puppeteer="false" FirstName="George" MiddleName="R." LastName="Robertson" BirthYear="1933" CreditedAs="" />
+      <Actor Role="Mr. Wig" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Don" MiddleName="" LastName="Lake" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Parking Lot Manager" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bill" MiddleName="" LastName="Lynn" BirthYear="28620" CreditedAs="" />
+      <Actor Role="Office Executive" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Michael" MiddleName="J." LastName="Reynolds" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Mrs. Thompson" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Joyce" MiddleName="" LastName="Gordon" BirthYear="30349" CreditedAs="" />
+      <Actor Role="Barber" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Don" MiddleName="" LastName="Payne" BirthYear="8306" CreditedAs="" />
+      <Actor Role="Supply Clerk" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bruce" MiddleName="" LastName="McFee" BirthYear="8846" CreditedAs="" />
+      <Actor Role="Little Old Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Beth" MiddleName="" LastName="Amos" BirthYear="1916" CreditedAs="" />
+      <Actor Role="Mrs. Lassard" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Araby" MiddleName="" LastName="Lockhart" BirthYear="1926" CreditedAs="" />
+      <Actor Role="Cadet with Hat" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Barry" MiddleName="" LastName="Greene" BirthYear="38675" CreditedAs="" />
+      <Actor Role="Sidewalk Store Owner" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gary" MiddleName="" LastName="Farmer" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Blue Oyster Dancer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Josef" MiddleName="" LastName="Field" BirthYear="5978" CreditedAs="" />
+      <Actor Role="Blue Oyster Dancer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gary" MiddleName="" LastName="Colwell" BirthYear="3458" CreditedAs="" />
+      <Actor Role="Driver" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Bearden" BirthYear="63963" CreditedAs="Jim Bearden" />
+      <Actor Role="Street Punk" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Fred" MiddleName="" LastName="Brigham" BirthYear="9106" CreditedAs="" />
+      <Actor Role="Tough" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Marco" MiddleName="" LastName="Bianco" BirthYear="735" CreditedAs="" />
+      <Actor Role="Tough" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ted" MiddleName="" LastName="Hanlan" BirthYear="60053" CreditedAs="" />
+      <Actor Role="Tough" Voice="false" Uncredited="false" Puppeteer="false" FirstName="F." MiddleName="Braun" LastName="McAsh" BirthYear="1953" CreditedAs="Braun McAsh" />
+      <Actor Role="Tough" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Rob" MiddleName="" LastName="Watson" BirthYear="14849" CreditedAs="" />
+      <Actor Role="Booking Sergeant" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Roger" MiddleName="" LastName="Dunn" BirthYear="42750" CreditedAs="" />
+      <Actor Role="Officer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Wally" MiddleName="" LastName="Bondarenko" BirthYear="4097" CreditedAs="" />
+      <Actor Role="Officer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="J." MiddleName="Winston" LastName="Carroll" BirthYear="40837" CreditedAs="" />
+      <Actor Role="Officer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="David" MiddleName="" LastName="Clement" BirthYear="6072" CreditedAs="" />
+      <Actor Role="Officer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="George" MiddleName="E." LastName="Zeeman" BirthYear="54197" CreditedAs="George Zeeman" />
+      <Actor Role="Arresting Cop" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gino" MiddleName="" LastName="Marrocco" BirthYear="50226" CreditedAs="" />
+      <Actor Role="Street Thug" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Gene" MiddleName="" LastName="Mack" BirthYear="32984" CreditedAs="" />
+      <Actor Role="Drill Instructor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bob" MiddleName="" LastName="Collins" BirthYear="2172" CreditedAs="" />
+      <Actor Role="Pool Hall Man" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Danny" MiddleName="" LastName="Pawlick" BirthYear="8032" CreditedAs="" />
+      <Actor Role="Mayor" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ruth" MiddleName="" LastName="Sisberg" BirthYear="2978" CreditedAs="" />
+      <Actor Role="Bar Patron" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Peter" MiddleName="" LastName="Cox" BirthYear="5196" CreditedAs="" />
+      <Actor Role="Bar Patron" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Danny" MiddleName="" LastName="Lima" BirthYear="10646" CreditedAs="" />
+      <Actor Role="Bar Patron" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Dwayne" MiddleName="" LastName="McLean" BirthYear="2540" CreditedAs="" />
+      <Actor Role="Bar Patron" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Brent" MiddleName="" LastName="Meyer" BirthYear="3042" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Carole" MiddleName="" LastName="Alderson" BirthYear="1964" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Suzanne" MiddleName="" LastName="Barker" BirthYear="54998" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kimberley" MiddleName="" LastName="Boorman" BirthYear="5575" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Jayne" MiddleName="" LastName="Broughton" BirthYear="12688" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Julie" MiddleName="" LastName="McLeod" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Martín's Lady" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Karen" MiddleName="" LastName="Robyn" BirthYear="33522" CreditedAs="" />
+      <Actor Role="Policeman Cadet" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Greg" MiddleName="" LastName="Anthony" BirthYear="9687" CreditedAs="" />
+      <Actor Role="Hippie Recruit with Sunglasses" Voice="false" Uncredited="true" Puppeteer="false" FirstName="James" MiddleName="D." LastName="Brown" BirthYear="13778" CreditedAs="" />
+      <Actor Role="Weird Waiter" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Charles" MiddleName="Woods" LastName="Gray" BirthYear="1949" CreditedAs="" />
+      <Actor Role="Surprise Party Lady" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kay" MiddleName="" LastName="Hawtrey" BirthYear="1926" CreditedAs="" />
+      <Actor Role="Menacing Thug in Plaid" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Dar" MiddleName="" LastName="Robinson" BirthYear="1947" CreditedAs="" />
+      <Actor Role="Tough" Voice="false" Uncredited="true" Puppeteer="false" FirstName="T." MiddleName="J." LastName="Scott" BirthYear="9830" CreditedAs="" />
+      <Actor Role="Angry Driver" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Hugh" MiddleName="" LastName="Wilson" BirthYear="1943" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Hugh" MiddleName="" LastName="Wilson" BirthYear="1943" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Screenwriter" CustomRole="Screenplay" FirstName="Neal" MiddleName="" LastName="Israel" BirthYear="1956" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Screenwriter" CustomRole="Screenplay" FirstName="Pat" MiddleName="" LastName="Proft" BirthYear="1947" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Screenwriter" CustomRole="Screenplay" FirstName="Hugh" MiddleName="" LastName="Wilson" BirthYear="1943" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Neal" MiddleName="" LastName="Israel" BirthYear="1956" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Pat" MiddleName="" LastName="Proft" BirthYear="1947" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Robert" MiddleName="" LastName="Folk" BirthYear="1949" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;SHE'S IN MY CORNER&quot;" FirstName="Jack" MiddleName="Mack and the Heart" LastName="Attack" BirthYear="6050" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;SHE'S IN MY CORNER&quot;" FirstName="Max" MiddleName="" LastName="Carl" BirthYear="1950" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;SHE'S IN MY CORNER&quot;" FirstName="Andrew" MiddleName="" LastName="Kastner" BirthYear="40982" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;I'M GONNA BE SOMEBODY&quot;" FirstName="Jack" MiddleName="Mack and the Heart" LastName="Attack" BirthYear="6050" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;I'M GONNA BE SOMEBODY&quot;" FirstName="Max" MiddleName="" LastName="Carl" BirthYear="1950" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;I'M GONNA BE SOMEBODY&quot;" FirstName="Andrew" MiddleName="" LastName="Kastner" BirthYear="40982" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;RELAX&quot;" FirstName="Holly" MiddleName="" LastName="Johnson" BirthYear="1960" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;RELAX&quot;" FirstName="Mark" MiddleName="" LastName="O'Toole" BirthYear="1964" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;RELAX&quot;" FirstName="Peter" MiddleName="" LastName="Gill" BirthYear="1964" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;RELAX&quot;" FirstName="Frankie" MiddleName="Goes to" LastName="Hollywood" BirthYear="6360" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;MAGIC MOMENTS&quot;" FirstName="Burt" MiddleName="" LastName="Bacharach" BirthYear="1928" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;MAGIC MOMENTS&quot;" FirstName="Hal" MiddleName="" LastName="David" BirthYear="1921" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;MAGIC MOMENTS&quot;" FirstName="Jon" MiddleName="" LastName="Joyce" BirthYear="31556" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;TRUE LOVIN' WOMAN&quot;" FirstName="Jack" MiddleName="Mack and the Heart" LastName="Attack" BirthYear="6050" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;THE BOYS COME TO TOWN&quot;" FirstName="Earlene" MiddleName="" LastName="Bentley" BirthYear="2806" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;WILL YOU LOVE ME TOMORROW&quot;" FirstName="Gerry" MiddleName="" LastName="Goffin" BirthYear="1939" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;WILL YOU LOVE ME TOMORROW&quot;" FirstName="Carole" MiddleName="" LastName="King" BirthYear="1942" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;WILL YOU LOVE ME TOMORROW&quot;" FirstName="The Shirelles" MiddleName="" LastName="" BirthYear="50997" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;CRAZY CHRIS&quot;" FirstName="Dave" MiddleName="" LastName="Brubeck" BirthYear="1920" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;PARTY&quot;" FirstName="Jack" MiddleName="Mack and the Heart" LastName="Attack" BirthYear="6050" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;PARTY&quot;" FirstName="Max" MiddleName="" LastName="Carl" BirthYear="1950" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;PARTY&quot;" FirstName="Andrew" MiddleName="" LastName="Kastner" BirthYear="40982" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+</Collection>
