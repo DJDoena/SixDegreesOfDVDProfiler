@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Collection>
+  <DVD>
+    <ProfileTimestamp>2012-06-09T16:42:45Z</ProfileTimestamp>
+    <ID>4006680016917.5</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>5</ID_LocalityID>
+    <ID_Type>UPCEAN</ID_Type>
+    <UPC>4-006680-016917</UPC>
+    <CollectionNumber>878</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Die Feuerzangenbowle</Title>
+    <DistTrait />
+    <OriginalTitle />
+    <ProductionYear>1944</ProductionYear>
+    <RunningTime>93</RunningTime>
+    <RatingAge>12</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Dr. Johannes Pfeiffer / Hans Pfeiffer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Heinz" MiddleName="" LastName="Rühmann" BirthYear="1902" CreditedAs="" />
+      <Actor Role="Eva Knauer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Karin" MiddleName="" LastName="Himboldt" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Marion" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hilde" MiddleName="" LastName="Sessak" BirthYear="1915" CreditedAs="" />
+      <Actor Role="Professor Grey - called Schnauz" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Erich" MiddleName="" LastName="Ponto" BirthYear="1884" CreditedAs="" />
+      <Actor Role="Professor Bömmel" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="Henckels" BirthYear="1885" CreditedAs="" />
+      <Actor Role="Gymnasialdirektor Knauer, called Zeus" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hans" MiddleName="" LastName="Leibelt" BirthYear="1885" CreditedAs="" />
+      <Actor Role="Oberlehrer Dr. Brett" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Lutz" MiddleName="" LastName="Götz" BirthYear="1891" CreditedAs="" />
+      <Actor Role="Rosen" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hans" MiddleName="" LastName="Richter" BirthYear="1919" CreditedAs="" />
+      <Actor Role="Rudi Knebel" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Clemens" MiddleName="" LastName="Hasse" BirthYear="1908" CreditedAs="" />
+      <Actor Role="Haushälterin bei Crey" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Hedwig" MiddleName="" LastName="Wangel" BirthYear="1875" CreditedAs="" />
+      <Actor Role="Frau Windscheidt" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Anneliese" MiddleName="" LastName="Würtz" BirthYear="1900" CreditedAs="" />
+      <Actor Role="Frau Knauer" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Margarete" MiddleName="" LastName="Schön" BirthYear="1895" CreditedAs="Marg. Schön" />
+      <Actor Role="Oberschulrat" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Max" MiddleName="" LastName="Gülstorff" BirthYear="1882" CreditedAs="" />
+      <Actor Role="Musiklehrer Fridolin" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Egon" MiddleName="" LastName="Vogel" BirthYear="1908" CreditedAs="" />
+      <Actor Role="Luck" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Rudi" MiddleName="" LastName="Schippel" BirthYear="1922" CreditedAs="" />
+      <Actor Role="Kastellan Kliemke" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ewald" MiddleName="" LastName="Wenck" BirthYear="1891" CreditedAs="" />
+      <Actor Role="Old Man" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Albert" MiddleName="" LastName="Florath" BirthYear="1888" CreditedAs="" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Karl" MiddleName="" LastName="Etlinger" BirthYear="1879" CreditedAs="Karl Ettlinger" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Georg" MiddleName="H." LastName="Schnell" BirthYear="1892" CreditedAs="G. H. Schnell" />
+      <Actor Role="" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Georg" MiddleName="" LastName="Vogelsang" BirthYear="1883" CreditedAs="" />
+      <Actor Role="Minor Role" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Erwin" MiddleName="" LastName="Biegel" BirthYear="1896" CreditedAs="" />
+      <Actor Role="Minor Role" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Maria" MiddleName="" LastName="Litto" BirthYear="1919" CreditedAs="" />
+      <Actor Role="Minor Role" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Karl" MiddleName="" LastName="Platen" BirthYear="1877" CreditedAs="" />
+      <Actor Role="Minor Role" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Walter" MiddleName="" LastName="Werner" BirthYear="1883" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Helmut" MiddleName="" LastName="Weiss" BirthYear="1907" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Original Material By" CustomRole="Novel And Screenplay" FirstName="Heinrich" MiddleName="" LastName="Spoerl" BirthYear="1887" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Werner" MiddleName="" LastName="Bochmann" BirthYear="1900" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+  <DVD>
+    <ProfileTimestamp>2016-12-24T19:50:21Z</ProfileTimestamp>
+    <ID>5053083085001.5</ID>
+    <ID_VariantNum>0</ID_VariantNum>
+    <ID_LocalityID>5</ID_LocalityID>
+    <ID_Type>UPCEAN</ID_Type>
+    <UPC>5-053083-085001</UPC>
+    <CollectionNumber>1258</CollectionNumber>
+    <CollectionType IsPartOfOwnedCollection="true">Owned</CollectionType>
+    <Title>Star Trek II: Der Zorn des Khan</Title>
+    <DistTrait />
+    <OriginalTitle>Star Trek II: The Wrath of Khan</OriginalTitle>
+    <ProductionYear>1982</ProductionYear>
+    <RunningTime>113</RunningTime>
+    <RatingAge>12</RatingAge>
+    <RatingVariant>0</RatingVariant>
+    <Actors>
+      <Actor Role="Kirk" Voice="false" Uncredited="false" Puppeteer="false" FirstName="William" MiddleName="" LastName="Shatner" BirthYear="1931" CreditedAs="" />
+      <Actor Role="Spock" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Leonard" MiddleName="" LastName="Nimoy" BirthYear="1931" CreditedAs="" />
+      <Actor Role="McCoy" Voice="false" Uncredited="false" Puppeteer="false" FirstName="DeForest" MiddleName="" LastName="Kelley" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Scotty" Voice="false" Uncredited="false" Puppeteer="false" FirstName="James" MiddleName="" LastName="Doohan" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Chekov" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Walter" MiddleName="" LastName="Koenig" BirthYear="1936" CreditedAs="" />
+      <Actor Role="Sulu" Voice="false" Uncredited="false" Puppeteer="false" FirstName="George" MiddleName="" LastName="Takei" BirthYear="1937" CreditedAs="" />
+      <Actor Role="Uhura" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nichelle" MiddleName="" LastName="Nichols" BirthYear="1932" CreditedAs="" />
+      <Actor Role="Carol" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Bibi" MiddleName="" LastName="Besch" BirthYear="1940" CreditedAs="" />
+      <Actor Role="David" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Merritt" MiddleName="" LastName="Butrick" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Terrell" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="Winfield" BirthYear="1939" CreditedAs="" />
+      <Actor Role="Saavik" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kirstie" MiddleName="" LastName="Alley" BirthYear="1951" CreditedAs="" />
+      <Actor Role="Khan" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ricardo" MiddleName="" LastName="Montalban" BirthYear="1920" CreditedAs="" />
+      <Actor Role="Preston" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Ike" MiddleName="" LastName="Eisenmann" BirthYear="1962" CreditedAs="" />
+      <Actor Role="Jedda" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Vargas" BirthYear="1958" CreditedAs="" />
+      <Actor Role="Kyle" Voice="false" Uncredited="false" Puppeteer="false" FirstName="John" MiddleName="" LastName="Winston" BirthYear="1933" CreditedAs="" />
+      <Actor Role="Beach" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Paul" MiddleName="" LastName="Kent" BirthYear="1930" CreditedAs="" />
+      <Actor Role="Cadet" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Nicholas" MiddleName="" LastName="Guest" BirthYear="1951" CreditedAs="" />
+      <Actor Role="Madison" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Russell" MiddleName="" LastName="Takaki" BirthYear="47256" CreditedAs="" />
+      <Actor Role="March" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Kevin" MiddleName="Rodney" LastName="Sullivan" BirthYear="1958" CreditedAs="Kevin Sullivan" />
+      <Actor Role="Crew Chief" Voice="false" Uncredited="false" Puppeteer="false" FirstName="Joel" MiddleName="" LastName="Marston" BirthYear="1922" CreditedAs="Joel Marstan" />
+      <Actor Role="Bridge Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Teresa" MiddleName="E." LastName="Victor" BirthYear="1943" CreditedAs="" />
+      <Actor Role="Radio Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Dianne" MiddleName="" LastName="Harper" BirthYear="1944" CreditedAs="" />
+      <Actor Role="Radio Voice" Voice="true" Uncredited="false" Puppeteer="false" FirstName="David" MiddleName="" LastName="Ruprecht" BirthYear="1948" CreditedAs="" />
+      <Actor Role="Computer" Voice="true" Uncredited="false" Puppeteer="false" FirstName="Marcy" MiddleName="" LastName="Vosburgh" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Khan's Navigator" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Laura" MiddleName="" LastName="Banks" BirthYear="1956" CreditedAs="" />
+      <Actor Role="Khan's Crewman #1" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Steve" MiddleName="" LastName="Bond" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Khan's Crewman #2" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Brett" MiddleName="Baxter" LastName="Clark" BirthYear="63725" CreditedAs="" />
+      <Actor Role="Khan's Henchman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Tim" MiddleName="" LastName="Culbertson" BirthYear="1363" CreditedAs="" />
+      <Actor Role="Khan's Crewman #4" Voice="false" Uncredited="true" Puppeteer="false" FirstName="John" MiddleName="" LastName="Gibson" BirthYear="17037" CreditedAs="" />
+      <Actor Role="Enterprise Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="James" MiddleName="" LastName="Horner" BirthYear="1953" CreditedAs="" />
+      <Actor Role="Khan's Crewman #5" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Dennis" MiddleName="" LastName="Landry" BirthYear="5048" CreditedAs="" />
+      <Actor Role="Khan's Crewman #6" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Cristian" MiddleName="" LastName="Letelier" BirthYear="1957" CreditedAs="" />
+      <Actor Role="Khan's Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Jeff" MiddleName="" LastName="McBride" BirthYear="1959" CreditedAs="" />
+      <Actor Role="Khan's Crewman #7" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Roger" MiddleName="" LastName="Menache" BirthYear="8670" CreditedAs="" />
+      <Actor Role="Khan's Crew Member" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Nanci" MiddleName="" LastName="Rogers" BirthYear="37101" CreditedAs="" />
+      <Actor Role="Enterprise Trainee" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Kimberly" MiddleName="L." LastName="Ryusaki" BirthYear="1960" CreditedAs="" />
+      <Actor Role="Joachim" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Judson" MiddleName="" LastName="Scott" BirthYear="1952" CreditedAs="" />
+      <Actor Role="Khan's Crewman #11" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Deney" MiddleName="" LastName="Terrio" BirthYear="1950" CreditedAs="" />
+      <Actor Role="Starfleet Crewman" Voice="false" Uncredited="true" Puppeteer="false" FirstName="Philip" MiddleName="" LastName="Weyland" BirthYear="23388" CreditedAs="" />
+    </Actors>
+    <Credits>
+      <Credit CreditType="Direction" CreditSubtype="Director" FirstName="Nicholas" MiddleName="" LastName="Meyer" BirthYear="1945" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Custom" CustomRole="Television Series Star Trek" FirstName="Gene" MiddleName="" LastName="Roddenberry" BirthYear="1921" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Harve" MiddleName="" LastName="Bennett" BirthYear="1930" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Story By" CustomRole="Story" FirstName="Jack" MiddleName="B." LastName="Sowards" BirthYear="1929" CreditedAs="" />
+      <Credit CreditType="Writing" CreditSubtype="Screenwriter" CustomRole="Screenplay" FirstName="Jack" MiddleName="B." LastName="Sowards" BirthYear="1929" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="James" MiddleName="" LastName="Horner" BirthYear="1953" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Composer" FirstName="Alexander" MiddleName="" LastName="Courage" BirthYear="1919" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Theme From Star Trek (TV Series)&quot;" FirstName="Alexander" MiddleName="" LastName="Courage" BirthYear="1919" CreditedAs="" />
+      <Credit CreditType="Music" CreditSubtype="Custom" CustomRole="&quot;Amazing Grace (Scottish Bagpipes)&quot;" FirstName="John" MiddleName="" LastName="Newton" BirthYear="1725" CreditedAs="" />
+    </Credits>
+    <WishPriority>0</WishPriority>
+    <CountAs>1</CountAs>
+  </DVD>
+</Collection>

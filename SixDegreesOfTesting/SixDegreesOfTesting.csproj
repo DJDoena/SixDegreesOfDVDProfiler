@@ -43,6 +43,7 @@
     <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FullDistances.cs" />
     <Compile Include="ForwardUnitTest3.cs" />
     <Compile Include="StepsChecker.cs" />
     <Compile Include="ForwardUnitTestSample.cs" />
@@ -84,6 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Test4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test5.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
