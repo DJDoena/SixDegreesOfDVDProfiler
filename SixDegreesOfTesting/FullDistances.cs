@@ -11,7 +11,7 @@ using mitoSoft.Graphs;
 using mitoSoft.Graphs.ShortestPathAlgorithms;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
-{
+{   
     [TestClass]
     public class FullDistances
     {
@@ -36,6 +36,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             _graph = GraphBuilder.Build(collection.DVDList);
         }
 
+        [TestCategory("Long Running")]
         [TestMethod]
         public void FullTestWithWinner()
         {

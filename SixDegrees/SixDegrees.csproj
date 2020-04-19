@@ -84,9 +84,9 @@
       <Project>{2e90cc6f-892e-45b3-8812-ee52ffa3b222}</Project>
       <Name>DVDProfilerXML</Name>
     </ProjectReference>
-    <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.Dijkstra\mitoSoft.Graphs.ShortestPathAlgorithms.csproj">
+    <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.Dijkstra\mitoSoft.Graphs.Analysis.csproj">
       <Project>{14363941-83c1-485e-9ef9-f20a29ba354d}</Project>
-      <Name>mitoSoft.Graphs.ShortestPathAlgorithms</Name>
+      <Name>mitoSoft.Graphs.Analysis</Name>
     </ProjectReference>
     <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.GraphVizInterop\mitoSoft.Graphs.GraphVizInterop.csproj">
       <Project>{17afc31c-093c-4043-bb62-6c0d16459f7e}</Project>
