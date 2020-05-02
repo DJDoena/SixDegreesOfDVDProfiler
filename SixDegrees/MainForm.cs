@@ -24,6 +24,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             InitializeComponent();
 
+            Icon = Properties.Resource.djdsoft;
+
             Collection = null;
 
             Graph = null;

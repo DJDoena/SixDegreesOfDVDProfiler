@@ -23,6 +23,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             InitializeComponent();
 
+            Icon = Properties.Resource.djdsoft;
+
             ShowPeoplesJobInImageToolStripMenuItem.Checked = Properties.Settings.Default.ShowJobs;
 
             var rows = _results.Select(r => CreateRow(r)).ToArray();

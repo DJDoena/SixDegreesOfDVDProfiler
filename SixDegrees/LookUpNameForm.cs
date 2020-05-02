@@ -16,6 +16,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             InitializeComponent();
 
+            Icon = Properties.Resource.djdsoft;
+
             BirthYearUpDown.Maximum = ushort.MaxValue;
 
             FirstNameTextBox.Text = searchFor.FirstName;
