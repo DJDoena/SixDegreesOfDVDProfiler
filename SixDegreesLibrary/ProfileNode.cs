@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Threading;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using mitoSoft.Graphs.ShortestPathAlgorithms;
+using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

@@ -61,13 +61,9 @@
       <Project>{2e90cc6f-892e-45b3-8812-ee52ffa3b222}</Project>
       <Name>DVDProfilerXML</Name>
     </ProjectReference>
-    <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.Dijkstra\mitoSoft.Graphs.Analysis.csproj">
-      <Project>{14363941-83c1-485e-9ef9-f20a29ba354d}</Project>
+    <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.Analysis\mitoSoft.Graphs.Analysis.csproj">
+      <Project>{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}</Project>
       <Name>mitoSoft.Graphs.Analysis</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs.GraphVizInterop\mitoSoft.Graphs.GraphVizInterop.csproj">
-      <Project>{17afc31c-093c-4043-bb62-6c0d16459f7e}</Project>
-      <Name>mitoSoft.Graphs.GraphVizInterop</Name>
     </ProjectReference>
     <ProjectReference Include="..\mitoSoft.Graphs\mitoSoft.Graphs\mitoSoft.Graphs.csproj">
       <Project>{b91d512c-8e60-4e8e-a6a2-626311e58840}</Project>

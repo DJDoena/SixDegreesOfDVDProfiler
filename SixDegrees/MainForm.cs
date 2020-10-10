@@ -8,9 +8,9 @@ using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using mitoSoft.Graphs;
+using mitoSoft.Graphs.Analysis;
+using mitoSoft.Graphs.Analysis.Exceptions;
 using mitoSoft.Graphs.Exceptions;
-using mitoSoft.Graphs.ShortestPathAlgorithms;
-using mitoSoft.Graphs.ShortestPathAlgorithms.Exceptions;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

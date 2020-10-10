@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using mitoSoft.Graphs;
-using mitoSoft.Graphs.ShortestPathAlgorithms;
+using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using mitoSoft.Graphs.ShortestPathAlgorithms;
+using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {

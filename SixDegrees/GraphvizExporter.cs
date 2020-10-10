@@ -89,7 +89,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                     var jobs = personNode.GetJobs(profileNode);
 
-                    edge.Description = PersonFormatter.GetJob(jobs.First()).Replace("\"","'");
+                    edge.Description = PersonFormatter.GetJob(jobs.First()).Replace("\"", "'");
                 }
                 else
                 {

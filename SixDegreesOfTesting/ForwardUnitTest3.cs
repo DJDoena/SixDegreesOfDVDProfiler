@@ -3,7 +3,7 @@ using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using mitoSoft.Graphs;
-using mitoSoft.Graphs.ShortestPathAlgorithms;
+using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
