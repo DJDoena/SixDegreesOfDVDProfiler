@@ -7,23 +7,23 @@ using System.Windows.Forms;
 using mitoSoft.Graphs;
 using mitoSoft.Graphs.Analysis;
 
-namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 {
     internal partial class ResultForm : Form
     {
-        private readonly Graph _resultGraph;
+        private readonly DirectedGraph _resultGraph;
 
         private readonly IEnumerable<Steps> _results;
 
-        internal ResultForm(Graph resultGraph, DistanceNode resultGraphTargetNode)
+        internal ResultForm(DirectedGraph resultGraph, DistanceNode resultGraphTargetNode)
         {
             _resultGraph = resultGraph;
 
-            _results = GraphHelper.GetPaths(resultGraphTargetNode); ;
+            _results = GraphHelper.GetPaths(resultGraphTargetNode);
 
-            InitializeComponent();
+            this.InitializeComponent();
 
-            Icon = Properties.Resource.djdsoft;
+            this.Icon = Properties.Resource.djdsoft;
 
             ShowPeoplesJobInImageToolStripMenuItem.Checked = Properties.Settings.Default.ShowJobs;
 
@@ -41,9 +41,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var degree = (result.Degree / 2).ToString();
 
-            var firstStep = result.GetSteps().Last();
+            var steps = result.GetSteps().ToList();
 
-            var lastStep = result.GetSteps().First();
+            var firstStep = steps.Last();
+
+            var lastStep = steps.First();
 
             var firstProfile = (ProfileNode)firstStep.Left.Tag;
 

@@ -15,7 +15,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     [TestClass]
     public class FullDistances
     {
-        private static Graph _graph;
+        private static DirectedGraph _graph;
 
         private object _threadLock;
 
@@ -33,7 +33,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var collection = DVDProfilerSerializer<Collection>.Deserialize(SampleXml);
 
-            _graph = GraphBuilder.Build(collection.DVDList);
+            _graph = (new ProfileGraphBuilder()).Build(collection.DVDList);
         }
 
         [TestCategory("Long Running")]
@@ -62,7 +62,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     var startNode = startNodes[nodeIndex];
 
-                    var task = Task.Run(() => GetAllDistancesWithWinner(ref maxUndefined, ref minUndefined, ref maxMaxDistance, ref minMaxDistance, startNode));
+                    var task = Task.Run(() => this.GetAllDistancesWithWinner(ref maxUndefined, ref minUndefined, ref maxMaxDistance, ref minMaxDistance, startNode));
 
                     tasks.Add(task);
                 }
@@ -119,7 +119,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             var maxDistances = results.Where(kvp => kvp.Value == maxDistance).ToList();
         }
 
-        private void GetAllDistancesWithWinner(ref int maxUndefined, ref int minUndefined, ref double maxMaxDistance, ref double minMaxDistance, GraphNode startNode)
+        private void GetAllDistancesWithWinner(ref int maxUndefined, ref int minUndefined, ref double maxMaxDistance, ref double minMaxDistance, DirectedGraphNode startNode)
         {
             var results = (new DeepFirstAlgorithm(_graph)).GetAllDistances(startNode);
 
@@ -139,7 +139,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private static void CheckNewWinner(ref int maxUndefined, ref int minUndefined, ref double maxMaxDistance, ref double minMaxDistance, GraphNode startNode, int? numUndefined, double? numMaxDistance)
+        private static void CheckNewWinner(ref int maxUndefined, ref int minUndefined, ref double maxMaxDistance, ref double minMaxDistance, DirectedGraphNode startNode, int? numUndefined, double? numMaxDistance)
         {
             if ((numUndefined.HasValue && numUndefined > maxUndefined)
                 || (numUndefined.HasValue && numUndefined < minUndefined)
@@ -180,9 +180,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             }
         }
 
-        private void ExportFile(GraphNode startNode, IDictionary<string, double> results)
+        private void ExportFile(DirectedGraphNode startNode, IDictionary<string, double> results)
         {
-            var fileName = MakeFileName(startNode.Name);
+            var fileName = this.MakeFileName(startNode.Name);
 
             using (var sw = new StreamWriter(fileName, false, Encoding.UTF8))
             {

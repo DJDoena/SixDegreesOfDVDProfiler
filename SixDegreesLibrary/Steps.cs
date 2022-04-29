@@ -11,22 +11,22 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         internal Steps()
         {
-            this._steps = new List<Step>();
+            _steps = new List<Step>();
         }
 
         private Steps(List<Step> previous, Step next)
         {
-            this._steps = new List<Step>(previous)
+            _steps = new List<Step>(previous)
             {
                 next,
             };
         }
 
-        public int Degree => this._steps.Count;
+        public int Degree => _steps.Count;
 
         public IEnumerable<Step> GetSteps()
         {
-            foreach (var step in this._steps)
+            foreach (var step in _steps)
             {
                 yield return step;
             }
@@ -34,6 +34,6 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         public override string ToString() => $"Degree: {this.Degree}";
 
-        internal Steps Add(DistanceNode left, DistanceNode right) => new Steps(this._steps, new Step(left, right));
+        internal Steps Add(DistanceNode left, DistanceNode right) => new Steps(_steps, new Step(left, right));
     }
 }

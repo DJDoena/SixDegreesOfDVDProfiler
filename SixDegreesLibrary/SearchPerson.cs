@@ -44,10 +44,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         public SearchPerson(string firstName, string middleName = "", string lastName = "", int birthYear = 0)
         {
-            FirstName = firstName;
-            MiddleName = middleName;
-            LastName = lastName;
-            BirthYear = birthYear;
+            this.FirstName = firstName;
+            this.MiddleName = middleName;
+            this.LastName = lastName;
+            this.BirthYear = birthYear;
         }
 
         public override string ToString() => PersonFormatter.GetName(this);

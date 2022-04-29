@@ -1,4 +1,4 @@
-﻿namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
+﻿namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
 {
     partial class ResultForm
     {
@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.ColumnHeader DegreeColumn;
-            System.Windows.Forms.ColumnHeader StartingTitleColumn;
-            System.Windows.Forms.ColumnHeader EndingTitleColumn;
-            System.Windows.Forms.ColumnHeader TitleColumn;
-            System.Windows.Forms.ColumnHeader LeftPersonNameColumn;
+            System.Windows.Forms.ColumnHeader StartingPersonColumn;
+            System.Windows.Forms.ColumnHeader EndingPersonColumn;
+            System.Windows.Forms.ColumnHeader PersonNameColumn;
+            System.Windows.Forms.ColumnHeader LeftTitleColumn;
             System.Windows.Forms.ColumnHeader LeftPersonJobColumn;
-            System.Windows.Forms.ColumnHeader RightPersonNameColumn;
+            System.Windows.Forms.ColumnHeader RightTitleeColumn;
             System.Windows.Forms.ColumnHeader RightPersonJobColumn;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.ResultListView = new System.Windows.Forms.ListView();
             this.StepsListView = new System.Windows.Forms.ListView();
             this.RootMenuStrip = new System.Windows.Forms.MenuStrip();
@@ -44,15 +43,15 @@
             this.WhatIsGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DownloadGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConfigureGraphvizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunGraphvizWithResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ShowPeoplesJobInImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunGraphvizWithResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             DegreeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            StartingTitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            EndingTitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            TitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            LeftPersonNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            StartingPersonColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            EndingPersonColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            PersonNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            LeftTitleColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             LeftPersonJobColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            RightPersonNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            RightTitleeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             RightPersonJobColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RootMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -62,49 +61,49 @@
             DegreeColumn.Text = "Degree of separation";
             DegreeColumn.Width = 120;
             // 
-            // StartingTitleColumn
+            // StartingPersonColumn
             // 
-            StartingTitleColumn.Text = "Starting title";
-            StartingTitleColumn.Width = 200;
+            StartingPersonColumn.Text = "Starting person";
+            StartingPersonColumn.Width = 200;
             // 
-            // EndingTitleColumn
+            // EndingPersonColumn
             // 
-            EndingTitleColumn.Text = "Ending title";
-            EndingTitleColumn.Width = 200;
+            EndingPersonColumn.Text = "Ending person";
+            EndingPersonColumn.Width = 200;
             // 
-            // TitleColumn
+            // PersonNameColumn
             // 
-            TitleColumn.Text = "Title";
-            TitleColumn.Width = 200;
+            PersonNameColumn.Text = "Person";
+            PersonNameColumn.Width = 200;
             // 
-            // LeftPersonNameColumn
+            // LeftTitleColumn
             // 
-            LeftPersonNameColumn.Text = "Left person";
-            LeftPersonNameColumn.Width = 150;
+            LeftTitleColumn.Text = "Left title";
+            LeftTitleColumn.Width = 150;
             // 
             // LeftPersonJobColumn
             // 
-            LeftPersonJobColumn.Text = "Left person\'s job";
+            LeftPersonJobColumn.Text = "Person\'s job on left title";
             LeftPersonJobColumn.Width = 150;
             // 
-            // RightPersonNameColumn
+            // RightTitleeColumn
             // 
-            RightPersonNameColumn.Text = "Right person";
-            RightPersonNameColumn.Width = 150;
+            RightTitleeColumn.Text = "Right title";
+            RightTitleeColumn.Width = 150;
             // 
             // RightPersonJobColumn
             // 
-            RightPersonJobColumn.Text = "Right person\'s job";
+            RightPersonJobColumn.Text = "Person\'s job on right title";
             RightPersonJobColumn.Width = 150;
             // 
             // ResultListView
             // 
-            this.ResultListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ResultListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             DegreeColumn,
-            StartingTitleColumn,
-            EndingTitleColumn});
+            StartingPersonColumn,
+            EndingPersonColumn});
             this.ResultListView.FullRowSelect = true;
             this.ResultListView.HideSelection = false;
             this.ResultListView.Location = new System.Drawing.Point(12, 27);
@@ -119,14 +118,14 @@
             // 
             // StepsListView
             // 
-            this.StepsListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.StepsListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StepsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            TitleColumn,
-            LeftPersonNameColumn,
+            PersonNameColumn,
+            LeftTitleColumn,
             LeftPersonJobColumn,
-            RightPersonNameColumn,
+            RightTitleeColumn,
             RightPersonJobColumn});
             this.StepsListView.FullRowSelect = true;
             this.StepsListView.HideSelection = false;
@@ -181,13 +180,6 @@
             this.ConfigureGraphvizToolStripMenuItem.Text = "Configure Graphviz";
             this.ConfigureGraphvizToolStripMenuItem.Click += new System.EventHandler(this.OnConfigureGraphvizToolStripMenuItemClick);
             // 
-            // RunGraphvizWithResultToolStripMenuItem
-            // 
-            this.RunGraphvizWithResultToolStripMenuItem.Name = "RunGraphvizWithResultToolStripMenuItem";
-            this.RunGraphvizWithResultToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
-            this.RunGraphvizWithResultToolStripMenuItem.Text = "Export Result as an image with Graphviz";
-            this.RunGraphvizWithResultToolStripMenuItem.Click += new System.EventHandler(this.OnRunGraphvizWithResultToolStripMenuItemClick);
-            // 
             // ShowPeoplesJobInImageToolStripMenuItem
             // 
             this.ShowPeoplesJobInImageToolStripMenuItem.CheckOnClick = true;
@@ -196,7 +188,14 @@
             this.ShowPeoplesJobInImageToolStripMenuItem.Text = "Show people\'s job in image";
             this.ShowPeoplesJobInImageToolStripMenuItem.Click += new System.EventHandler(this.OnShowPeoplesJobInImageToolStripMenuItemClick);
             // 
-            // ResultForm
+            // RunGraphvizWithResultToolStripMenuItem
+            // 
+            this.RunGraphvizWithResultToolStripMenuItem.Name = "RunGraphvizWithResultToolStripMenuItem";
+            this.RunGraphvizWithResultToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.RunGraphvizWithResultToolStripMenuItem.Text = "Export Result as an image with Graphviz";
+            this.RunGraphvizWithResultToolStripMenuItem.Click += new System.EventHandler(this.OnRunGraphvizWithResultToolStripMenuItemClick);
+            // 
+            // ProfileResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,10 +203,9 @@
             this.Controls.Add(this.StepsListView);
             this.Controls.Add(this.ResultListView);
             this.Controls.Add(this.RootMenuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.RootMenuStrip;
             this.MinimumSize = new System.Drawing.Size(865, 525);
-            this.Name = "ResultForm";
+            this.Name = "ProfileResultForm";
             this.Text = "Six Degrees of DVD Profiler: Result";
             this.RootMenuStrip.ResumeLayout(false);
             this.RootMenuStrip.PerformLayout();

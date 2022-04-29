@@ -7,11 +7,11 @@ using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    public static class GraphBuilder
+    public abstract class GraphBuilderBase
     {
-        public static Graph Build(IEnumerable<DVD> collection, bool considerCast = true, bool considerCrew = false)
+        public DirectedGraph Build(IEnumerable<DVD> collection, bool considerCast = true, bool considerCrew = false)
         {
-            var graph = new Graph();
+            var graph = new DirectedGraph();
 
             var duplicateChecker = new Dictionary<string, HashSet<string>>(); //for multiple movies with the same people we con't want to add multiple connections
 
@@ -30,21 +30,21 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     var castMembers = profile.CastList?.OfType<IPerson>() ?? Enumerable.Empty<IPerson>();
 
-                    AddPersonNodes(graph, profileNode, castMembers, duplicateChecker[profileNode.Name]);
+                    this.AddPersonNodes(graph, profileNode, castMembers, duplicateChecker[profileNode.Name]);
                 }
 
                 if (considerCrew)
                 {
                     var crewMembers = profile.CrewList?.OfType<IPerson>() ?? Enumerable.Empty<IPerson>();
 
-                    AddPersonNodes(graph, profileNode, crewMembers, duplicateChecker[profileNode.Name]);
+                    this.AddPersonNodes(graph, profileNode, crewMembers, duplicateChecker[profileNode.Name]);
                 }
             }
 
             return graph;
         }
 
-        private static void AddPersonNodes(Graph graph, DistanceNode profileNode, IEnumerable<IPerson> people, HashSet<string> duplicateChecker)
+        private void AddPersonNodes(DirectedGraph graph, DistanceNode profileNode, IEnumerable<IPerson> people, HashSet<string> duplicateChecker)
         {
             foreach (var person in people)
             {
@@ -57,11 +57,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
                 if (duplicateChecker.Add(personNode.Name)) //a person can have multiple jobs in the same profiles
                 {
-                    graph.AddEdge(profileNode, personNode, 1, true);
+                    this.AddEdge(graph, profileNode, personNode);
                 }
 
                 ((PersonNode)personNode).AddJob((ProfileNode)profileNode, person);
             }
         }
+
+        protected abstract void AddEdge(DirectedGraph graph, DistanceNode profileNode, DistanceNode personNode);
     }
 }

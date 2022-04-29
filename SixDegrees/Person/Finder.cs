@@ -4,11 +4,11 @@ using System.Linq;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using mitoSoft.Graphs;
 
-namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 {
-    internal static class PersonFinder
+    internal static class Finder
     {
-        internal static IEnumerable<PersonKey> Find(IPerson searchFor, Graph searchIn)
+        internal static IEnumerable<PersonKey> Find(IPerson searchFor, DirectedGraph searchIn)
         {
             var searchKey = new PersonKey(searchFor);
 

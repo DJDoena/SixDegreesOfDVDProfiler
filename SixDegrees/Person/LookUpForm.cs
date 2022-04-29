@@ -4,19 +4,19 @@ using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using mitoSoft.Graphs;
 
-namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
+namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 {
-    internal partial class LookUpNameForm : Form
+    internal partial class LookUpForm : Form
     {
-        private readonly Graph _searchIn;
+        private readonly DirectedGraph _searchIn;
 
-        internal LookUpNameForm(IPerson searchFor, Graph searchIn)
+        internal LookUpForm(IPerson searchFor, DirectedGraph searchIn)
         {
             _searchIn = searchIn ?? throw new ArgumentNullException(nameof(searchIn));
 
-            InitializeComponent();
+            this.InitializeComponent();
 
-            Icon = Properties.Resource.djdsoft;
+            this.Icon = Properties.Resource.djdsoft;
 
             BirthYearUpDown.Maximum = ushort.MaxValue;
 
@@ -27,7 +27,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             if (!string.IsNullOrWhiteSpace(FirstNameTextBox.Text))
             {
-                LookUpName();
+                this.LookUpName();
             }
         }
 
@@ -35,11 +35,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void OnLookupNameButtonClick(object sender, EventArgs e)
         {
-            Enabled = false;
+            this.Enabled = false;
 
-            LookUpName();
+            this.LookUpName();
 
-            Enabled = true;
+            this.Enabled = true;
         }
 
         private void LookUpName()
@@ -48,7 +48,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var searchFor = new SearchPerson(FirstNameTextBox.Text, MiddleNameTextBox.Text, LastNameTextBox.Text, (ushort)BirthYearUpDown.Value);
 
-            var matches = PersonFinder.Find(searchFor, _searchIn);
+            var matches = Finder.Find(searchFor, _searchIn);
 
             var rows = matches.Select(CreateRow).ToArray();
 
@@ -78,11 +78,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 var match = (PersonKey)ResultListView.SelectedItems[0].Tag;
 
-                Match = new SearchPerson(match.FirstName, match.MiddleName, match.LastName, match.BirthYear);
+                this.Match = new SearchPerson(match.FirstName, match.MiddleName, match.LastName, match.BirthYear);
 
-                DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
 
-                Close();
+                this.Close();
             }
             else
             {
@@ -92,14 +92,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void OnAbortButtonClick(object sender, System.EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
 
-            Close();
+            this.Close();
         }
 
         private void OnResultListViewDoubleClick(object sender, EventArgs e)
         {
-            OnChooseButtonClick(this, EventArgs.Empty);
+            this.OnChooseButtonClick(this, EventArgs.Empty);
         }
 
         private void OnResetBirthYearCheckBoxCheckedChanged(object sender, EventArgs e)

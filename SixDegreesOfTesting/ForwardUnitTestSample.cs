@@ -13,7 +13,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     [TestClass]
     public class ForwardUnitTestSample
     {
-        private static Graph _graph;
+        private static DirectedGraph _graph;
 
         [ClassInitialize]
         public static void Initialize(TestContext _)
@@ -29,7 +29,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             var collection = DVDProfilerSerializer<Collection>.Deserialize(SampleXml);
 
-            _graph = GraphBuilder.Build(collection.DVDList);
+            _graph = (new ProfileGraphBuilder()).Build(collection.DVDList);
         }
 
         [TestMethod]

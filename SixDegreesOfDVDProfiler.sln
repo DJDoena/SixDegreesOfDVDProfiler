@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29926.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{09EB1A14-2B43-4DBC-9447-727A7991CCB1}"
 EndProject
@@ -14,14 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegrees", "SixDegrees\SixDegrees.csproj", "{2B197685-477A-4898-8D7E-558167E7B4BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesOfTesting", "SixDegreesOfTesting\SixDegreesOfTesting.csproj", "{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphs", "Graphs", "{0015E7E0-F94B-457B-A876-AB9B9F9D7025}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mitoSoft.Graphs", "mitoSoft.Graphs\mitoSoft.Graphs\mitoSoft.Graphs.csproj", "{B91D512C-8E60-4E8E-A6A2-626311E58840}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mitoSoft.Graphs.GraphVizInterop", "mitoSoft.Graphs\mitoSoft.Graphs.GraphVizInterop\mitoSoft.Graphs.GraphVizInterop.csproj", "{17AFC31C-093C-4043-BB62-6C0D16459F7E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mitoSoft.Graphs.Analysis", "mitoSoft.Graphs\mitoSoft.Graphs.Analysis\mitoSoft.Graphs.Analysis.csproj", "{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,30 +54,6 @@ Global
 		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Release|Any CPU.Build.0 = Debug|x64
 		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Release|x64.ActiveCfg = Debug|x64
 		{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}.Release|x64.Build.0 = Debug|x64
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Debug|x64.Build.0 = Debug|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Release|x64.ActiveCfg = Release|Any CPU
-		{B91D512C-8E60-4E8E-A6A2-626311E58840}.Release|x64.Build.0 = Release|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Debug|x64.Build.0 = Debug|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Release|x64.ActiveCfg = Release|Any CPU
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E}.Release|x64.Build.0 = Release|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Debug|x64.Build.0 = Debug|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Release|x64.ActiveCfg = Release|Any CPU
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,10 +61,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{461DACCA-8EBF-4C03-AD1A-C438E4EB3B36} = {09EB1A14-2B43-4DBC-9447-727A7991CCB1}
 		{2E90CC6F-892E-45B3-8812-EE52FFA3B222} = {09EB1A14-2B43-4DBC-9447-727A7991CCB1}
-		{0015E7E0-F94B-457B-A876-AB9B9F9D7025} = {09EB1A14-2B43-4DBC-9447-727A7991CCB1}
-		{B91D512C-8E60-4E8E-A6A2-626311E58840} = {0015E7E0-F94B-457B-A876-AB9B9F9D7025}
-		{17AFC31C-093C-4043-BB62-6C0D16459F7E} = {0015E7E0-F94B-457B-A876-AB9B9F9D7025}
-		{5ABA1C15-E9EE-43A8-87B6-FF1851A40F88} = {0015E7E0-F94B-457B-A876-AB9B9F9D7025}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB1F5F78-B1A4-425C-9456-0967B07A6CEC}

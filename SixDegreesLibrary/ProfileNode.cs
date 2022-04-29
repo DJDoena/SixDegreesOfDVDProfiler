@@ -5,14 +5,14 @@ using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    [DebuggerDisplay(nameof(ProfileNode) + " ({ToString()})")]
+    [DebuggerDisplay(nameof(ProfileNode) + " ({Profile})")]
     public sealed partial class ProfileNode : DistanceNode
     {
         public ProfileNode(DVD profile) : base(BuildNodeName(profile))
         {
-            Profile = profile;
+            this.Profile = profile;
 
-            Tag = this;
+            this.Tag = this;
         }
 
         public DVD Profile { get; }

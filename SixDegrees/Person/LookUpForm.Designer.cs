@@ -1,6 +1,6 @@
-﻿namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
+﻿namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 {
-    partial class LookUpNameForm
+    partial class LookUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             System.Windows.Forms.Label FirstNameLabel;
             System.Windows.Forms.Button ChooseButton;
             System.Windows.Forms.Button AbortButton;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LookUpNameForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LookUpForm));
             this.BirthYearUpDown = new System.Windows.Forms.NumericUpDown();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.MiddleNameTextBox = new System.Windows.Forms.TextBox();

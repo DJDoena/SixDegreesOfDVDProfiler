@@ -12,7 +12,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
     {
         private readonly ImageRenderer _renderer;
 
-        private Graph _resultGraph;
+        private DirectedGraph _resultGraph;
 
         private bool _withJobs;
 
@@ -21,7 +21,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             _renderer = new ImageRenderer(graphvizPath);
         }
 
-        public void SaveImage(Graph resultGraph, bool withJobs)
+        public void SaveImage(DirectedGraph resultGraph, bool withJobs)
         {
             _resultGraph = resultGraph;
 
@@ -29,7 +29,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
             try
             {
-                TrySaveImage();
+                this.TrySaveImage();
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    SaveImage(new FileInfo(sfd.FileName));
+                    this.SaveImage(new FileInfo(sfd.FileName));
                 }
             }
         }
@@ -75,16 +75,15 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 {
                     PersonNode personNode;
                     ProfileNode profileNode;
-
-                    if (edge.SourceNode.Tag is PersonNode temp)
+                    if (edge.Source.Tag is PersonNode temp)
                     {
                         personNode = temp;
-                        profileNode = (ProfileNode)edge.TargetNode.Tag;
+                        profileNode = (ProfileNode)edge.Target.Tag;
                     }
                     else
                     {
-                        personNode = (PersonNode)edge.TargetNode.Tag;
-                        profileNode = (ProfileNode)edge.SourceNode.Tag;
+                        personNode = (PersonNode)edge.Target.Tag;
+                        profileNode = (ProfileNode)edge.Source.Tag;
                     }
 
                     var jobs = personNode.GetJobs(profileNode);

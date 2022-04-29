@@ -6,7 +6,7 @@ using mitoSoft.Graphs.Analysis;
 
 namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 {
-    [DebuggerDisplay(nameof(PersonNode) + " ({ToString()})")]
+    [DebuggerDisplay(nameof(PersonNode) + " ({Person})")]
     public sealed partial class PersonNode : DistanceNode
     {
         private readonly Dictionary<string, Jobs> _profiles;
@@ -15,9 +15,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             _profiles = new Dictionary<string, Jobs>();
 
-            Person = new SearchPerson(person.FirstName, person.MiddleName, person.LastName, person.BirthYear);
+            this.Person = new SearchPerson(person.FirstName, person.MiddleName, person.LastName, person.BirthYear);
 
-            Tag = this;
+            this.Tag = this;
         }
 
         public IPerson Person { get; }
