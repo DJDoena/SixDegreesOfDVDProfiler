@@ -66,8 +66,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
 
         private void SwitchControls(bool enabled)
         {
-            LeftLookupTitleButton.Enabled = enabled;
-            RightLookupTitleButton.Enabled = enabled;
+            LeftLookupButton.Enabled = enabled;
+            RightLookupButton.Enabled = enabled;
             StartShortSearchButton.Enabled = enabled;
         }
 
@@ -157,13 +157,13 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
 
         private void OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged(object sender, EventArgs e) => this.BuildPersons();
 
-        private void OnLeftLookupTitleButtonClick(object sender, EventArgs e) => this.LookUpTitleAndSet(LeftTitleTextBox);
+        private void OnLeftLookupButtonClick(object sender, EventArgs e) => this.LookUpTitleAndSet(LeftTitleTextBox);
 
-        private void OnRightLookupTitleButtonClick(object sender, EventArgs e) => this.LookUpTitleAndSet(RightTitleTextBox);
+        private void OnRightLookupButtonClick(object sender, EventArgs e) => this.LookUpTitleAndSet(RightTitleTextBox);
 
         private void LookUpTitleAndSet(TextBox titleTextBox)
         {
-            var profile = this.LookUpTitle(titleTextBox);
+            var profile = this.LookUp(titleTextBox);
 
             if (profile != null)
             {
@@ -171,7 +171,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
             }
         }
 
-        private DVD LookUpTitle(TextBox titleTextBox)
+        private DVD LookUp(TextBox titleTextBox)
         {
             var matches = Finder.Find(titleTextBox.Text, this.Graph).ToList();
 
@@ -230,9 +230,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
 
         private void Find()
         {
-            var leftProfile = this.LookUpTitle(LeftTitleTextBox);
+            var leftProfile = this.LookUp(LeftTitleTextBox);
 
-            var rightProfile = this.LookUpTitle(RightTitleTextBox);
+            var rightProfile = this.LookUp(RightTitleTextBox);
 
             if (leftProfile == null)
             {
@@ -243,14 +243,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
                 MessageBox.Show("Right title could not be found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            var leftProfileNode = _graph.GetDistanceNode(ProfileNode.BuildNodeName(leftProfile));
+            var leftNode = _graph.GetDistanceNode(ProfileNode.BuildNodeName(leftProfile));
 
-            var rightProfileNode = _graph.GetDistanceNode(ProfileNode.BuildNodeName(rightProfile));
+            var rightNode = _graph.GetDistanceNode(ProfileNode.BuildNodeName(rightProfile));
 
             DirectedGraph resultGraph;
             try
             {
-                resultGraph = (new DeepFirstAlgorithm(this.Graph, (int)(MaxSearchDepthUpDown.Value * 2))).GetShortestGraph(leftProfileNode, rightProfileNode);
+                resultGraph = (new DeepFirstAlgorithm(this.Graph, (int)(MaxSearchDepthUpDown.Value * 2))).GetShortestGraph(leftNode, rightNode);
             }
             catch (PathNotFoundException)
             {
@@ -265,7 +265,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
             }
             else
             {
-                var resultGraphTargetNode = resultGraph.GetDistanceNode(rightProfileNode.Name);
+                var resultGraphTargetNode = resultGraph.GetDistanceNode(rightNode.Name);
 
                 using (var resultForm = new ResultForm(resultGraph, resultGraphTargetNode))
                 {

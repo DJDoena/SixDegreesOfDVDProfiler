@@ -43,13 +43,13 @@
             System.Windows.Forms.Label label2;
             this.LeftResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
             this.LeftBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
-            this.LeftLookupNameButton = new System.Windows.Forms.Button();
+            this.LeftLookupButton = new System.Windows.Forms.Button();
             this.LeftLastNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.LeftFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.RightResetBirthYearCheckBox = new System.Windows.Forms.CheckBox();
             this.RightBirthYearUpDown = new System.Windows.Forms.NumericUpDown();
-            this.RightLookupNameButton = new System.Windows.Forms.Button();
+            this.RightLookupButton = new System.Windows.Forms.Button();
             this.RightLastNameTextBox = new System.Windows.Forms.TextBox();
             this.RightMiddleNameTextBox = new System.Windows.Forms.TextBox();
             this.RightFirstNameTextBox = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             // 
             LeftGroupBox.Controls.Add(this.LeftResetBirthYearCheckBox);
             LeftGroupBox.Controls.Add(this.LeftBirthYearUpDown);
-            LeftGroupBox.Controls.Add(this.LeftLookupNameButton);
+            LeftGroupBox.Controls.Add(this.LeftLookupButton);
             LeftGroupBox.Controls.Add(LeftBirthYearLabel);
             LeftGroupBox.Controls.Add(LeftLastNameLabel);
             LeftGroupBox.Controls.Add(LeftMiddleNameLabel);
@@ -131,13 +131,13 @@
             // 
             // LeftLookupNameButton
             // 
-            this.LeftLookupNameButton.Location = new System.Drawing.Point(105, 123);
-            this.LeftLookupNameButton.Name = "LeftLookupNameButton";
-            this.LeftLookupNameButton.Size = new System.Drawing.Size(200, 23);
-            this.LeftLookupNameButton.TabIndex = 9;
-            this.LeftLookupNameButton.Text = "Look up name";
-            this.LeftLookupNameButton.UseVisualStyleBackColor = true;
-            this.LeftLookupNameButton.Click += new System.EventHandler(this.OnLeftLookupNameButtonClick);
+            this.LeftLookupButton.Location = new System.Drawing.Point(105, 123);
+            this.LeftLookupButton.Name = "LeftLookupNameButton";
+            this.LeftLookupButton.Size = new System.Drawing.Size(200, 23);
+            this.LeftLookupButton.TabIndex = 9;
+            this.LeftLookupButton.Text = "Look up name";
+            this.LeftLookupButton.UseVisualStyleBackColor = true;
+            this.LeftLookupButton.Click += new System.EventHandler(this.OnLeftLookupButtonClick);
             // 
             // LeftBirthYearLabel
             // 
@@ -200,7 +200,7 @@
             // 
             RightGroupBox.Controls.Add(this.RightResetBirthYearCheckBox);
             RightGroupBox.Controls.Add(this.RightBirthYearUpDown);
-            RightGroupBox.Controls.Add(this.RightLookupNameButton);
+            RightGroupBox.Controls.Add(this.RightLookupButton);
             RightGroupBox.Controls.Add(RightBirthYearLabel);
             RightGroupBox.Controls.Add(RightLastNameLabel);
             RightGroupBox.Controls.Add(RightMiddleNameLabel);
@@ -238,13 +238,13 @@
             // 
             // RightLookupNameButton
             // 
-            this.RightLookupNameButton.Location = new System.Drawing.Point(105, 123);
-            this.RightLookupNameButton.Name = "RightLookupNameButton";
-            this.RightLookupNameButton.Size = new System.Drawing.Size(200, 23);
-            this.RightLookupNameButton.TabIndex = 9;
-            this.RightLookupNameButton.Text = "Look up name";
-            this.RightLookupNameButton.UseVisualStyleBackColor = true;
-            this.RightLookupNameButton.Click += new System.EventHandler(this.OnRightLookupNameButtonClick);
+            this.RightLookupButton.Location = new System.Drawing.Point(105, 123);
+            this.RightLookupButton.Name = "RightLookupNameButton";
+            this.RightLookupButton.Size = new System.Drawing.Size(200, 23);
+            this.RightLookupButton.TabIndex = 9;
+            this.RightLookupButton.Text = "Look up name";
+            this.RightLookupButton.UseVisualStyleBackColor = true;
+            this.RightLookupButton.Click += new System.EventHandler(this.OnRightLookupButtonClick);
             // 
             // RightBirthYearLabel
             // 
@@ -437,8 +437,8 @@
         private System.Windows.Forms.TextBox RightMiddleNameTextBox;
         private System.Windows.Forms.TextBox RightFirstNameTextBox;
         private System.Windows.Forms.NumericUpDown MaxSearchDepthUpDown;
-        private System.Windows.Forms.Button LeftLookupNameButton;
-        private System.Windows.Forms.Button RightLookupNameButton;
+        private System.Windows.Forms.Button LeftLookupButton;
+        private System.Windows.Forms.Button RightLookupButton;
         private System.Windows.Forms.Button StartShortSearchButton;
         private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
         private System.Windows.Forms.CheckBox LeftResetBirthYearCheckBox;

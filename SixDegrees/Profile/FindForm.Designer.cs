@@ -35,9 +35,9 @@
             System.Windows.Forms.Label RightTitleLabel;
             System.Windows.Forms.Label MaxSearchDepthLabel;
             System.Windows.Forms.Label label2;
-            this.LeftLookupTitleButton = new System.Windows.Forms.Button();
+            this.LeftLookupButton = new System.Windows.Forms.Button();
             this.LeftTitleTextBox = new System.Windows.Forms.TextBox();
-            this.RightLookupTitleButton = new System.Windows.Forms.Button();
+            this.RightLookupButton = new System.Windows.Forms.Button();
             this.RightTitleTextBox = new System.Windows.Forms.TextBox();
             this.IncludeCastCheckBox = new System.Windows.Forms.CheckBox();
             this.IncludeCrewCheckBox = new System.Windows.Forms.CheckBox();
@@ -69,7 +69,7 @@
             // 
             // LeftGroupBox
             // 
-            LeftGroupBox.Controls.Add(this.LeftLookupTitleButton);
+            LeftGroupBox.Controls.Add(this.LeftLookupButton);
             LeftGroupBox.Controls.Add(LeftTitleLabel);
             LeftGroupBox.Controls.Add(this.LeftTitleTextBox);
             LeftGroupBox.Location = new System.Drawing.Point(12, 162);
@@ -80,13 +80,13 @@
             // 
             // LeftLookupTitleButton
             // 
-            this.LeftLookupTitleButton.Location = new System.Drawing.Point(105, 45);
-            this.LeftLookupTitleButton.Name = "LeftLookupTitleButton";
-            this.LeftLookupTitleButton.Size = new System.Drawing.Size(200, 23);
-            this.LeftLookupTitleButton.TabIndex = 9;
-            this.LeftLookupTitleButton.Text = "Look up title";
-            this.LeftLookupTitleButton.UseVisualStyleBackColor = true;
-            this.LeftLookupTitleButton.Click += new System.EventHandler(this.OnLeftLookupTitleButtonClick);
+            this.LeftLookupButton.Location = new System.Drawing.Point(105, 45);
+            this.LeftLookupButton.Name = "LeftLookupTitleButton";
+            this.LeftLookupButton.Size = new System.Drawing.Size(200, 23);
+            this.LeftLookupButton.TabIndex = 9;
+            this.LeftLookupButton.Text = "Look up title";
+            this.LeftLookupButton.UseVisualStyleBackColor = true;
+            this.LeftLookupButton.Click += new System.EventHandler(this.OnLeftLookupButtonClick);
             // 
             // LeftTitleLabel
             // 
@@ -106,7 +106,7 @@
             // 
             // RightGroupBox
             // 
-            RightGroupBox.Controls.Add(this.RightLookupTitleButton);
+            RightGroupBox.Controls.Add(this.RightLookupButton);
             RightGroupBox.Controls.Add(RightTitleLabel);
             RightGroupBox.Controls.Add(this.RightTitleTextBox);
             RightGroupBox.Location = new System.Drawing.Point(343, 162);
@@ -117,13 +117,13 @@
             // 
             // RightLookupTitleButton
             // 
-            this.RightLookupTitleButton.Location = new System.Drawing.Point(105, 45);
-            this.RightLookupTitleButton.Name = "RightLookupTitleButton";
-            this.RightLookupTitleButton.Size = new System.Drawing.Size(200, 23);
-            this.RightLookupTitleButton.TabIndex = 9;
-            this.RightLookupTitleButton.Text = "Look up title";
-            this.RightLookupTitleButton.UseVisualStyleBackColor = true;
-            this.RightLookupTitleButton.Click += new System.EventHandler(this.OnRightLookupTitleButtonClick);
+            this.RightLookupButton.Location = new System.Drawing.Point(105, 45);
+            this.RightLookupButton.Name = "RightLookupTitleButton";
+            this.RightLookupButton.Size = new System.Drawing.Size(200, 23);
+            this.RightLookupButton.TabIndex = 9;
+            this.RightLookupButton.Text = "Look up title";
+            this.RightLookupButton.UseVisualStyleBackColor = true;
+            this.RightLookupButton.Click += new System.EventHandler(this.OnRightLookupButtonClick);
             // 
             // RightTitleLabel
             // 
@@ -269,8 +269,8 @@
         private System.Windows.Forms.TextBox LeftTitleTextBox;
         private System.Windows.Forms.TextBox RightTitleTextBox;
         private System.Windows.Forms.NumericUpDown MaxSearchDepthUpDown;
-        private System.Windows.Forms.Button LeftLookupTitleButton;
-        private System.Windows.Forms.Button RightLookupTitleButton;
+        private System.Windows.Forms.Button LeftLookupButton;
+        private System.Windows.Forms.Button RightLookupButton;
         private System.Windows.Forms.Button StartShortSearchButton;
         private System.Windows.Forms.CheckBox OnlyIncludeOwnedProfilesCheckBox;
         private System.Windows.Forms.Label ProfilesLoadedLabel;

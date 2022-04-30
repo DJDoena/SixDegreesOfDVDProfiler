@@ -69,8 +69,8 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 
         private void SwitchControls(bool enabled)
         {
-            LeftLookupNameButton.Enabled = enabled;
-            RightLookupNameButton.Enabled = enabled;
+            LeftLookupButton.Enabled = enabled;
+            RightLookupButton.Enabled = enabled;
             StartShortSearchButton.Enabled = enabled;
         }
 
@@ -160,11 +160,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 
         private void OnOnlyIncludeOwnedProfilesCheckBoxCheckedChanged(object sender, EventArgs e) => this.BuildPersons();
 
-        private void OnLeftLookupNameButtonClick(object sender, EventArgs e) => this.LookUpName(LeftFirstNameTextBox, LeftMiddleNameTextBox, LeftLastNameTextBox, LeftBirthYearUpDown);
+        private void OnLeftLookupButtonClick(object sender, EventArgs e) => this.LookUp(LeftFirstNameTextBox, LeftMiddleNameTextBox, LeftLastNameTextBox, LeftBirthYearUpDown);
 
-        private void OnRightLookupNameButtonClick(object sender, EventArgs e) => this.LookUpName(RightFirstNameTextBox, RightMiddleNameTextBox, RightLastNameTextBox, RightBirthYearUpDown);
+        private void OnRightLookupButtonClick(object sender, EventArgs e) => this.LookUp(RightFirstNameTextBox, RightMiddleNameTextBox, RightLastNameTextBox, RightBirthYearUpDown);
 
-        private bool LookUpName(TextBox firstNameTextBox, TextBox middleNameTextBox, TextBox lastNameTextBox, NumericUpDown birthYearUpDown)
+        private bool LookUp(TextBox firstNameTextBox, TextBox middleNameTextBox, TextBox lastNameTextBox, NumericUpDown birthYearUpDown)
         {
             var searchFor = new SearchPerson(firstNameTextBox.Text, middleNameTextBox.Text, lastNameTextBox.Text, (ushort)birthYearUpDown.Value);
 
@@ -241,11 +241,11 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 
         private void Find()
         {
-            if (!this.LookUpName(LeftFirstNameTextBox, LeftMiddleNameTextBox, LeftLastNameTextBox, LeftBirthYearUpDown))
+            if (!this.LookUp(LeftFirstNameTextBox, LeftMiddleNameTextBox, LeftLastNameTextBox, LeftBirthYearUpDown))
             {
                 MessageBox.Show("Left person could not be found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (!this.LookUpName(RightFirstNameTextBox, RightMiddleNameTextBox, RightLastNameTextBox, RightBirthYearUpDown))
+            else if (!this.LookUp(RightFirstNameTextBox, RightMiddleNameTextBox, RightLastNameTextBox, RightBirthYearUpDown))
             {
                 MessageBox.Show("Right person could not be found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -254,14 +254,14 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 
             var rightPerson = new SearchPerson(RightFirstNameTextBox.Text, RightMiddleNameTextBox.Text, RightLastNameTextBox.Text, (ushort)RightBirthYearUpDown.Value);
 
-            var leftPersonNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(leftPerson));
+            var leftNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(leftPerson));
 
-            var rightPersonNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(rightPerson));
+            var rightNode = _graph.GetDistanceNode(PersonNode.BuildNodeName(rightPerson));
 
             DirectedGraph resultGraph;
             try
             {
-                resultGraph = (new DeepFirstAlgorithm(this.Graph, (int)(MaxSearchDepthUpDown.Value * 2))).GetShortestGraph(leftPersonNode, rightPersonNode);
+                resultGraph = (new DeepFirstAlgorithm(this.Graph, (int)(MaxSearchDepthUpDown.Value * 2))).GetShortestGraph(leftNode, rightNode);
             }
             catch (PathNotFoundException)
             {
@@ -276,7 +276,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
             }
             else
             {
-                var resultGraphTargetNode = resultGraph.GetDistanceNode(rightPersonNode.Name);
+                var resultGraphTargetNode = resultGraph.GetDistanceNode(rightNode.Name);
 
                 using (var resultForm = new ResultForm(resultGraph, resultGraphTargetNode))
                 {
