@@ -57,6 +57,16 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
 
         private void SaveImage(FileInfo fileInfo)
         {
+            this.AddDescriptions();
+
+            if (this.Render(fileInfo))
+            {
+                Process.Start(fileInfo.FullName);
+            }
+        }
+
+        private void AddDescriptions()
+        {
             foreach (var node in _resultGraph.Nodes)
             {
                 if (node.Tag is PersonNode personNode)
@@ -95,53 +105,62 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                     edge.Description = string.Empty;
                 }
             }
+        }
 
+        private bool Render(FileInfo fileInfo)
+        {
             var dotText = _resultGraph.ToDotText();
 
+            if (fileInfo.Extension.ToLower() == ".svg")
+            {
+                _renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.svg);
+
+                return true;
+            }
+
+            mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat renderFormat;
+            System.Drawing.Imaging.ImageFormat imageFormat;
             switch (fileInfo.Extension.ToLower())
             {
                 case ".png":
                     {
-                        _renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+                        renderFormat = mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png;
+
+                        imageFormat = System.Drawing.Imaging.ImageFormat.Png;
 
                         break;
                     }
-                case ".svg":
-                    {
-                        _renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.svg);
-
-                        break;
-                    }
-
                 case ".bmp":
                     {
-                        var image = _renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+                        renderFormat = mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png;
 
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Bmp);
+                        imageFormat = System.Drawing.Imaging.ImageFormat.Bmp;
 
                         break;
                     }
                 case ".tif":
                 case ".tiff":
                     {
-                        var image = _renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+                        renderFormat = mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png;
 
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Tiff);
+                        imageFormat = System.Drawing.Imaging.ImageFormat.Tiff;
 
                         break;
                     }
                 case ".jpg":
                 case ".jpeg":
                     {
-                        _renderer.RenderImage(dotText, fileInfo.FullName, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.jpg);
+                        renderFormat = mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.jpg;
+
+                        imageFormat = System.Drawing.Imaging.ImageFormat.Jpeg;
 
                         break;
                     }
                 case ".gif":
                     {
-                        var image = _renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png);
+                        renderFormat = mitoSoft.Graphs.GraphVizInterop.Enums.ImageFormat.png;
 
-                        image.Save(fileInfo.FullName, System.Drawing.Imaging.ImageFormat.Gif);
+                        imageFormat = System.Drawing.Imaging.ImageFormat.Gif;
 
                         break;
                     }
@@ -149,11 +168,15 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                     {
                         MessageBox.Show($"Unknown file format: {fileInfo.Extension}", "GraphWiz", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                        return;
+                        return false;
                     }
             }
 
-            Process.Start(fileInfo.FullName);
+            var image = _renderer.RenderImage(dotText, mitoSoft.Graphs.GraphVizInterop.Enums.LayoutEngine.dot, renderFormat);
+
+            image.Save(fileInfo.FullName, imageFormat);
+
+            return true;
         }
     }
 }

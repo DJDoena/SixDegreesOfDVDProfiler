@@ -10,7 +10,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Profile
     {
         internal static IEnumerable<DVD> Find(string searchFor, DirectedGraph searchIn)
         {
-            var matches = searchIn.Nodes.OfType<ProfileNode>().Where(node => IsMatch(searchFor, node)).Select(node => node.Profile);
+            var matches = searchIn.Nodes
+                .OfType<ProfileNode>()
+                .Where(node => IsMatch(searchFor, node))
+                .Select(node => node.Profile);
 
             return matches;
         }

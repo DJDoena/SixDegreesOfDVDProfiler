@@ -12,7 +12,10 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
         {
             var searchKey = new PersonKey(searchFor);
 
-            var matches = searchIn.Nodes.OfType<PersonNode>().Where(node => IsMatch(searchKey, node)).Select(node => new PersonKey(node.Person));
+            var matches = searchIn.Nodes
+                .OfType<PersonNode>()
+                .Where(node => IsMatch(searchKey, node))
+                .Select(node => new PersonKey(node.Person));
 
             return matches;
         }
