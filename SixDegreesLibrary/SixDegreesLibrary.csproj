@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler</RootNamespace>
-    <AssemblyName>SixDegreesLibrary</AssemblyName>
+    <AssemblyName>DoenaSoft.SixDegrees</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
