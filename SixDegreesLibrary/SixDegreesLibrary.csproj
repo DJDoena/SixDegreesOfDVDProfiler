@@ -56,19 +56,12 @@
     <Compile Include="Steps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DVDProfilerXML\DVDProfilerHelper\DVDProfilerHelper\DVDProfilerHelper.csproj">
-      <Project>{461dacca-8ebf-4c03-ad1a-c438e4eb3b36}</Project>
-      <Name>DVDProfilerHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DVDProfilerXML\DVDProfilerXML\DVDProfilerXML.csproj">
-      <Project>{2e90cc6f-892e-45b3-8812-ee52ffa3b222}</Project>
-      <Name>DVDProfilerXML</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DoenaSoft.DVDProfilerXML">
+      <Version>4.1.2</Version>
+    </PackageReference>
     <PackageReference Include="mitoSoft.Graphs">
       <Version>1.3.1</Version>
     </PackageReference>
