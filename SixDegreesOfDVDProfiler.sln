@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesLibrary", "SixDegreesLibrary\SixDegreesLibrary.csproj", "{5666EEE9-DBB3-4AA2-B4C5-93165C5B14F0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegrees", "SixDegrees\SixDegrees.csproj", "{2B197685-477A-4898-8D7E-558167E7B4BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesLibrary", "SixDegreesLibrary\SixDegreesLibrary.csproj", "{5666EEE9-DBB3-4AA2-B4C5-93165C5B14F0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixDegreesOfTesting", "SixDegreesOfTesting\SixDegreesOfTesting.csproj", "{E9D620EA-6B65-4FF2-9896-5D03459EAAAE}"
 EndProject
