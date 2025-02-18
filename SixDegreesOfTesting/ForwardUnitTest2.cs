@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using DoenaSoft.DVDProfiler.DVDProfilerHelper;
-using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
+using DoenaSoft.ToolBox.Generics;
 using mitoSoft.Graphs;
 using mitoSoft.Graphs.Analysis;
 
@@ -17,7 +15,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
         {
             var fileName = "Test2.xml";
 
-            var collection = DVDProfilerSerializer<Collection>.Deserialize(fileName);
+            var collection = XmlSerializer<Collection>.Deserialize(fileName);
 
             _graph = (new ProfileGraphBuilder()).Build(collection.DVDList);
         }

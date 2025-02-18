@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.DVDProfilerXML;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
+using DoenaSoft.ToolBox.Generics;
 using mitoSoft.Graphs;
 using mitoSoft.Graphs.Analysis;
 using mitoSoft.Graphs.Analysis.Exceptions;
@@ -124,7 +124,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
 
         private void TryLoad(string fileName)
         {
-            var collection = DVDProfilerSerializer<Collection>.Deserialize(fileName);
+            var collection = XmlSerializer<Collection>.Deserialize(fileName);
 
             this.Collection = collection.DVDList;
 
@@ -204,7 +204,7 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler.Person
             birthYearUpDown.Value = match.BirthYear;
         }
 
-        private void OnStartShortSearchButtonClick(object sender, EventArgs e) 
+        private void OnStartShortSearchButtonClick(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(LeftFirstNameTextBox.Text))
             {

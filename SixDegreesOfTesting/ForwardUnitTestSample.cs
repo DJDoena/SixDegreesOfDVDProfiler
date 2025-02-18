@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using DoenaSoft.DVDProfiler.DVDProfilerHelper;
+﻿using System.IO.Compression;
 using DoenaSoft.DVDProfiler.DVDProfilerXML.Version400;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DoenaSoft.ToolBox.Generics;
 using mitoSoft.Graphs;
 using mitoSoft.Graphs.Analysis;
 
@@ -25,9 +21,9 @@ namespace DoenaSoft.DVDProfiler.SixDegreesOfDVDProfiler
                 File.Delete(SampleXml);
             }
 
-            ZipFile.ExtractToDirectory(@"..\..\..\..\sample_xml.zip", ".");
+            ZipFile.ExtractToDirectory(@"..\..\..\..\..\sample_xml.zip", ".");
 
-            var collection = DVDProfilerSerializer<Collection>.Deserialize(SampleXml);
+            var collection = XmlSerializer<Collection>.Deserialize(SampleXml);
 
             _graph = (new ProfileGraphBuilder()).Build(collection.DVDList);
         }
